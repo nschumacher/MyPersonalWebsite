@@ -5,10 +5,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  	<!-- Bootstrap partial -->
+ 	<%= render 'layouts/bootstrapStuff' %>
+</head>
+<body style="background-color:#242424; color:#00ACE6">
+
+	<!-- My Header -->
+	<%= render 'layouts/myHeader' %>
+
+	<%= yield %>
+
+	<!-- My Footer -->
+	<%= render 'layouts/myFooter' %>
 
 </body>
 </html>
