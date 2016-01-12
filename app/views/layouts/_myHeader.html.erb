@@ -9,28 +9,49 @@
 	text-decoration: none;
 }
 .link:link{
-	color:#757575;
+	color:#00ACE6;
 	margin-right: 15px;
 }
 .link:visited{
-	color:#757575;
+	color:#00ACE6;
 	background-color: none;
 }
 </style>
 
 <div class="container" align="right" style="margin:15px 2% 15px 2%; font-size: large">
 	<div class="row">
-		<div class="col-md-3" align="left" style="">
-			<img src="/images/arctis-logo.png" style="width:45px; margin-right:0px">
-			<img src="/images/centurion_1.png" style="width:45px; margin-right:0px">
-			<img src="/images/newsymbol.png" style="width:45px;">
+		<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3" align="left" style="text-shadow: 2px 2px 4px #00ACE6; font-size: 100%">
+			<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px">
+			<!--<img src="/images/centurion_1.png" style="width:45px; margin-right:0px">
+			<img src="/images/newsymbol.png" style="width:45px;">-->
+			Nick Schumacher
 		</div>
-		<div class="col-md-9" style="margin-top: 10px">	
-			<%= link_to "Home", pages_home_path, class:"link" %>
-			<%= link_to "About", pages_about_path, class:"link" %>
-			<%= link_to "Contact", pages_contact_path, class:"link" %>
-			<%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
-			<%= link_to "Projects", pages_projects_path, class:"link" %>
+		<div class="col-xs-8 col-sm-8 col-md-9 col-lg-9" style="margin-top: 10px">
+			<% if current_page?(pages_home_path) %>
+				<%= link_to "Home", pages_home_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "Home", pages_home_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_about_path) %>
+				<%= link_to "About", pages_about_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "About", pages_about_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_contact_path) %>
+				<%= link_to "Contact", pages_contact_path, class:"link", style:"color: #CF0000" %>
+			<% else %>	
+				<%= link_to "Contact", pages_contact_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_inDevelopment_path) %>
+				<%= link_to "In Development", pages_inDevelopment_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_projects_path) %>
+				<%= link_to "Projects", pages_projects_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "Projects", pages_projects_path, class:"link" %>
+			<% end %>
 		</div>
 	</div>
 </div>

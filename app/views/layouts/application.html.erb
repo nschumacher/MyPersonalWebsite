@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nick Schumacher</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/images/arctis-logo.png">
+  	<title>Nick Schumacher</title>
   
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
 
   	<!-- Bootstrap partial -->
  	<%= render 'layouts/bootstrapStuff' %>
@@ -14,14 +15,20 @@
  	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 </head>
 
-<!-- background-color:#1C1C1C -->
+<!-- background-color:#1C1C1C 
+	color:#00ACE6  blue 
+-->
 
-<body style="background-image:url('/images/wood_background.jpg'); color:#00ACE6; font-family:Play">
+<body style="background-image:url('/images/wood_background.jpg'); color:white; font-family:Play">
 
 	<!-- My Header -->
+<div align="center">
 	<%= render 'layouts/myHeader' %>
+</div>
 
+<div align="center">
 	<%= yield %>
+</div>
 
 	<!-- My Footer -->
 	<%= render 'layouts/myFooter' %>
