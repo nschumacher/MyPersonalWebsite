@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Good To Knows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @good_to_knows.each do |good_to_know| %>
+      <tr>
+        <td><%= good_to_know.title %></td>
+        <td><%= good_to_know.content %></td>
+        <td><%= good_to_know.tags %></td>
+        <td><%= link_to 'Show', good_to_know %></td>
+        <td><%= link_to 'Edit', edit_good_to_know_path(good_to_know) %></td>
+        <td><%= link_to 'Destroy', good_to_know, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Good to know', new_good_to_know_path %>

@@ -1,0 +1,9 @@
+<header class="" align="right" style="margin: 2% 2% 3px 2%; font-size: large">
+	<%= link_to "Home", pages_home_path %>
+	<%= link_to "About", pages_about_path %>
+	<%= link_to "Contact", pages_contact_path %>
+	<%= link_to "In Development", pages_inDevelopment_path %>
+	<%= link_to "Projects", pages_projects_path %>
+</header>
+
+<hr style="border-color: #00ACE6; margin:0px 0px 10px 0px">

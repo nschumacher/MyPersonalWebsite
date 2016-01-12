@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @good_to_know.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @good_to_know.content %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @good_to_know.tags %>
+</p>
+
+<%= link_to 'Edit', edit_good_to_know_path(@good_to_know) %> |
+<%= link_to 'Back', good_to_knows_path %>
