@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nick Schumacher</title>
-  
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" scr="javascripts/jquery.raty.js"></script>
+  <script type="text/javascript" scr="javascripts/ratyrate.js.erb"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+  <script src="//cdn.ckeditor.com/4.5.6/full/ckeditor.js"></script> 
+
+
+
+  	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  	<script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script> 
+  	<%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%#= csrf_meta_tags %>-->
+
+
+	<link rel="shortcut icon" type="image/x-icon" href="/images/arctis-logo.png">
+  	<title>Nick Schumacher</title>
+  
   	<!-- Bootstrap partial -->
  	<%= render 'layouts/bootstrapStuff' %>
 
  	<!-- Custom Font -->
  	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <%= yield :javascript_includes %>
 </head>
+<%= yield :javascript_includes %>
 
-<!-- background-color:#1C1C1C -->
+<!-- background-color:#1C1C1C 
+	color:#00ACE6  blue 
+-->
 
-<body style="background-image:url('/images/wood_background.jpg'); color:#00ACE6; font-family:Play">
+<body style="background-image:url('/images/wood_background.jpg'); color:white; font-family:Play">
 
 	<!-- My Header -->
+<div align="center">
 	<%= render 'layouts/myHeader' %>
+</div>
 
+<div align="center">
 	<%= yield %>
+</div>
 
 	<!-- My Footer -->
 	<%= render 'layouts/myFooter' %>

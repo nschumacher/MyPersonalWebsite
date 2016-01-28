@@ -1,38 +1,156 @@
 <style>
-.link:hover:visited{
-	color:#0095D8;
-	background-color: none;
+	.link:hover:visited{
+		color:#0095D8;
+		background-color: transparent;
+	}
+	.link:hover{
+		color:#757575;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	.link:link{
+		color:#00ACE6;
+		margin-right: 15px;
+	}
+	.link:visited{
+		color:#00ACE6;
+		background-color: none;
+	}
+	@media(max-width:767px) {
+    .navbar .navbar-form {
+        width: 185px;
+        padding-left:0;
+        padding-right:0;
+    }
 }
-.link:hover{
-	color:#757575;
-	background-color: none;
-	text-decoration: none;
+@media(min-width:768px) {
+    .navbar .navbar-form {
+        width: 250px;
+    }
 }
-.link:link{
-	color:#757575;
-	margin-right: 15px;
-}
-.link:visited{
-	color:#757575;
-	background-color: none;
+.navbar {
+	margin-top: 10px;
+	background-color: transparent;
 }
 </style>
 
+<script>
+$(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+
+<!-- OLD NAVBAR
 <div class="container" align="right" style="margin:15px 2% 15px 2%; font-size: large">
 	<div class="row">
-		<div class="col-md-3" align="left" style="">
-			<img src="/images/arctis-logo.png" style="width:45px; margin-right:0px">
-			<img src="/images/centurion_1.png" style="width:45px; margin-right:0px">
-			<img src="/images/newsymbol.png" style="width:45px;">
+		<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3" align="left" style="text-shadow: 2px 2px 4px #00ACE6; font-size: 100%">
+			<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
+				<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px">
+				<-<img src="/images/centurion_1.png" style="width:45px; margin-right:0px">
+				<img src="/images/newsymbol.png" style="width:45px;">->
+				Nick Schumacher
+			</a>
 		</div>
-		<div class="col-md-9" style="margin-top: 10px">	
-			<%= link_to "Home", pages_home_path, class:"link" %>
-			<%= link_to "About", pages_about_path, class:"link" %>
-			<%= link_to "Contact", pages_contact_path, class:"link" %>
-			<%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
-			<%= link_to "Projects", pages_projects_path, class:"link" %>
+		<div class="col-xs-8 col-sm-8 col-md-9 col-lg-9" style="margin-top: 10px">
+			<%# if current_page?(pages_home_path) %>
+				<%#= link_to "Home", pages_home_path, class:"link", style:"color: #CF0000" %>
+			<%# else %>
+				<%#= link_to "Home", pages_home_path, class:"link" %>
+			<%# end %>
+			<%# if current_page?(pages_about_path) %>
+				<%#= link_to "About", pages_about_path, class:"link", style:"color: #CF0000" %>
+			<%# else %>
+				<%#= link_to "About", pages_about_path, class:"link" %>
+			<%# end %>
+			<%# if current_page?(contacts_path) %>
+				<%#= link_to "Contact", contacts_path, class:"link", style:"color: #CF0000" %>
+			<%# else %>	
+				<%#= link_to "Contact", contacts_path, class:"link" %>
+			<%# end %>
+			<%# if current_page?(pages_inDevelopment_path) %>
+				<%#= link_to "In Development", pages_inDevelopment_path, class:"link", style:"color: #CF0000" %>
+			<%# else %>
+				<%#= link_to "In Development", pages_inDevelopment_path, class:"link" %>
+			<%# end %>
+			<%# if current_page?(pages_projects_path) %>
+				<%#= link_to "Projects", pages_projects_path, class:"link", style:"color: #CF0000" %>
+			<%# else %>
+				<%#= link_to "Projects", pages_projects_path, class:"link" %>
+			<%# end %>
+			<%# if current_page?(good_to_knows_path) %>
+				<%#= link_to "My Brain", good_to_knows_path, class:"link", style:"color: #CF0000" %>
+			<%# else %>
+				<%#= link_to "My Brain", good_to_knows_path, class:"link" %>
+			<%# end %>
 		</div>
 	</div>
+</div>-->
+
+
+<div class="navbar" style="">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" style="margin-left: 2%">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <img src="/images/arrow-down.png" style="width:40px; margin: -10px; padding: -5px">
+      </button>
+      <!--<a class="navbar-brand" href="#">Nick Schumacher</a>-->
+      <div class="navbar-brand" align="left" style="text-shadow: 2px 2px 4px #00ACE6; font-size: 17px; margin-top: -11px">
+			<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
+				<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px">
+				Nick Schumacher
+			</a>
+		</div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!--<form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+        	<div class="" style="margin-top: 15px; font-size: 15px">
+			<% if current_page?(pages_home_path) %>
+				<%= link_to "Home", pages_home_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "Home", pages_home_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_about_path) %>
+				<%= link_to "About", pages_about_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "About", pages_about_path, class:"link" %>
+			<% end %>
+			<% if current_page?(contacts_path) %>
+				<%= link_to "Contact", contacts_path, class:"link", style:"color: #CF0000" %>
+			<% else %>	
+				<%= link_to "Contact", contacts_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_inDevelopment_path) %>
+				<%= link_to "In Development", pages_inDevelopment_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
+			<% end %>
+			<% if current_page?(pages_projects_path) %>
+				<%= link_to "Projects", pages_projects_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "Projects", pages_projects_path, class:"link" %>
+			<% end %>
+			<% if current_page?(good_to_knows_path) %>
+				<%= link_to "My Brain", good_to_knows_path, class:"link", style:"color: #CF0000" %>
+			<% else %>
+				<%= link_to "My Brain", good_to_knows_path, class:"link" %>
+			<% end %>
+		</div>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </div>
+
+
 
 <!--<hr style="border-color: #00ACE6; margin:0px 0px 10px 0px">-->
