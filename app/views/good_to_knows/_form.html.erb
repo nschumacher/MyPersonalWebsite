@@ -1,3 +1,11 @@
+<script>
+  if ($('textarea').length > 0) {
+    var data = $('textarea');
+    $.each(data, function(i) {
+      CKEDITOR.replace(data[i].id);
+    });
+  }
+</script>
 <%= form_for(@good_to_know) do |f| %>
   <% if @good_to_know.errors.any? %>
     <div id="error_explanation">
@@ -11,19 +19,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :tags %><br>
-    <%= f.text_field :tags %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="container">
+    <div class="form-group">
+      <%= f.label :title, style:'color: #00ACE6' %><br>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :content, style:'color: #00ACE6' %><br>
+      <%= f.text_area :content, class: "ckeditor", style: "height: 75px" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :tags, "Tags (add/edit tags to make searching easier)", style:'color: #00ACE6' %><br>
+      <%= f.text_field :tags, class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Submit', :class=> "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

@@ -1,18 +1,52 @@
-<div align="center" style="">
-  <h3>Send A message to Us</h3>
+<style>
+  label {
+    text-align: left;
+    color: #00ACE6;
+    display: block;
+    font-size: 16px;
+  }
 
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal', :style => 'color:red' } do |f| %>
-  	<div class="form-group" style="color:blue">
-    <%= f.input :name, class:"form-control", style: "margin-left: 10px; padding-left: 10px; background-color: red", :required => true %>
+  input {
+    width: 300px;
+    margin-bottom: 15px;
+    color: black;
+  }
+
+   textarea {
+    width: 500px;
+    height: 100px;
+    color: black;
+  }
+
+  .btn {
+    width: 175px;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">&nbsp</div>
+    <div class="col-sm-8" align="left" style="">
+      <h3 align="center">Send Me a Message!</h3>
+      <div align="center" style="font-size: 15px">I will get back to you as soon as I can.</div>
+
+      <%= simple_form_for @contact, :html => {:class => 'form-horizontal'} do |f| %>
+        <div style="width: 300px">
+          <%= f.input :name , :required => true %>
+          
+          <%= f.input :email, :required => true %>
+          <%= f.input :message, :as => :text, :required => true, style:'width: 500px' %>
+          
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div align="left">
+            </br>
+            <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <%= f.input :email, :required => true %>
-    <%= f.input :message, :as => :text, :required => true %>
-    <div class= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-    </div>
-    <div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-    </div>
-  <% end %>
+    <div class="col-sm-2">&nbsp</div>
+  </div>
 </div>

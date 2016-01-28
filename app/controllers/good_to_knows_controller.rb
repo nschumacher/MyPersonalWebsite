@@ -28,7 +28,7 @@ class GoodToKnowsController < ApplicationController
 
     respond_to do |format|
       if @good_to_know.save
-        format.html { redirect_to @good_to_know, notice: 'Good to know was successfully created.' }
+        format.html { redirect_to @good_to_know, notice: 'Entry was successfully created.' }
         format.json { render :show, status: :created, location: @good_to_know }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GoodToKnowsController < ApplicationController
   def update
     respond_to do |format|
       if @good_to_know.update(good_to_know_params)
-        format.html { redirect_to @good_to_know, notice: 'Good to know was successfully updated.' }
+        format.html { redirect_to @good_to_know, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @good_to_know }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class GoodToKnowsController < ApplicationController
   def destroy
     @good_to_know.destroy
     respond_to do |format|
-      format.html { redirect_to good_to_knows_url, notice: 'Good to know was successfully destroyed.' }
+      format.html { redirect_to good_to_knows_url, notice: 'Entry was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
