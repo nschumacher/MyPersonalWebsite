@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  get 'pages/test'
+
   get 'pages/projects'
 
   get 'pages/inDevelopment'
