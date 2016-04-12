@@ -10,15 +10,6 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
   <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
 
-
-
-  	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  	<script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script> 
-  	<%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  	<%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  	<%#= csrf_meta_tags %>-->
-
-
 	<link rel="shortcut icon" type="image/x-icon" href="/images/arctis-logo.png">
   	<title>Nick Schumacher</title>
   
@@ -48,11 +39,15 @@
   }
   .tilt-out {
     position: relative;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
+    /*-webkit-perspective: 1000px;*/
+    /*perspective: 1000px;*/
+    /*max-height: 680px;*/
+    /*min-height: 680px;*/
+    -webkit-perspective: 1100px;
+    perspective: 1100px;
+    width: 1100px;
+
     /*border: 1px solid #6F7500; */
-    max-height: 680px;
-    min-height: 680px;
     /*overflow: auto; */
     /*background: rgba(158, 158, 158, 0.2);*/
   }
@@ -62,9 +57,9 @@
     margin-top: 30px;
     margin-right: 40px;
     padding: 20px;
-    -webkit-transform: rotateY(-3deg);
-    transition: rotateY(-3deg);
-    max-height: 600px;
+    -webkit-transform: rotateY(-5deg);
+    transition: rotateY(-5deg);
+    max-height: 580px;
     width: 95%;
     overflow: auto;
     background: rgba(80, 80, 80, 0.6);
@@ -76,13 +71,44 @@
     width: 95%;
     margin-right: 40px;
     padding: px;
-    -webkit-transform: rotateY(-3deg);
-    transition: rotateY(-3deg);
+    -webkit-transform: rotateY(-5deg);
+    transition: rotateY(-5deg);
     max-height: 600px;
     overflow: auto;
     /*background: rgba(158, 158, 158, 0.15);*/
     /*box-shadow: 8px 8px 50px black;*/
   }
+    .content:before {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      
+      display: block;
+      background-image: url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      
+      -webkit-filter: blur(4px);
+      -moz-filter: blur(4px);
+      -o-filter: blur(4px);
+      -ms-filter: blur(4px);
+      filter: blur(4px);
+    }
+
+    .content {
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      /*margin-left: 20px;*/
+      /*margin-right: 20px;*/
+      color:white; 
+      font-family:Play;
+    }
     </style>
  
 </head>
@@ -91,12 +117,14 @@
 <!-- background-color:#1C1C1C 
 	color:#00ACE6  blue 
   background-image:url('/images/wood_background.jpg')
+  style="background-image:url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg'); background-size: cover; color:white; font-family:Play"
 -->
 
-<body style="background-image:url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg'); background-size: cover; color:white; font-family:Play">
+<body> 
+<div class="content">
 
 	<!-- My Header -->
-<div align="center">&nbsp
+<div align="" style="margin-bottom: 70px">
 	<%= render 'layouts/myHeader' %>
 </div>
 
@@ -177,6 +205,6 @@
 
 	<!-- My Footer -->
 	<%= render 'layouts/myFooter' %>
-
+</div>
 </body>
 </html>

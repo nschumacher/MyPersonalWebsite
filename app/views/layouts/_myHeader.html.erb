@@ -65,6 +65,37 @@
 		margin-top: 10px;
 		background-color: transparent;
 	}
+	.tilt-out2 {
+    position: relative;
+    /*-webkit-perspective: 1000px;*/
+    /*perspective: 1000px;*/
+    /*max-height: 680px;*/
+    /*min-height: 680px;*/
+    -webkit-perspective: 250px;
+    perspective: 250px;
+    width: 250px;
+
+    /*border: 1px solid #6F7500; */
+    /*overflow: auto; */
+    /*background: rgba(158, 158, 158, 0.2);*/
+  }
+  .tilt-in2 {
+    position: absolute;
+    top:10px;
+    left: 50px;
+    margin-top: 10px;
+    margin-right: 40px;
+    padding: 15px;
+    -webkit-transform: rotateY(5deg);
+    transition: rotateY(5deg);
+    /*-webkit-transform: rotateY(3deg);*/
+    /*transition: rotateY(3deg);*/
+    max-height: 600px;
+    width: 100%;
+    overflow: auto;
+    background: rgba(80, 80, 80, 0.6);
+    box-shadow: -8px 8px 50px black;
+  }
 </style>
 
 <script>
@@ -72,6 +103,15 @@ $(document).ready(function () {
         $('.dropdown-toggle').dropdown();
     });
 </script>
+
+<div class="tilt-out2" align="">
+<div class="tilt-in2" align="" style="text-shadow: 2px 2px 4px #00ACE6; font-size: 17px;">
+		<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
+			<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px">
+			Nick Schumacher
+		</a>
+</div>
+</div>
 
 
 <div class="navbar" style="">
@@ -82,12 +122,12 @@ $(document).ready(function () {
         <img src="/images/arrow-down.png" style="width:40px; margin: -10px; padding: -5px">
       </button>
       <!--<a class="navbar-brand" href="#">Nick Schumacher</a>-->
-      <div class="navbar-brand" align="left" style="text-shadow: 2px 2px 4px #00ACE6; font-size: 17px; margin-top: -11px">
+      <!-- <div class="navbar-brand" align="left" style="text-shadow: 2px 2px 4px #00ACE6; font-size: 17px; margin-top: -11px">
 			<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
 				<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px">
 				Nick Schumacher
 			</a>
-		</div>
+		</div> -->
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

@@ -26,8 +26,8 @@
 
 <p id="notice"><%= notice %></p>
 <!-- or MCD for short -->
-<h1 style="text-shadow: 2px 2px 4px #00ACE6">Welcome to My Cerebal Database!</h1>
-<div class="container">
+<h1 style="text-shadow: 2px 2px 4px #00ACE6" align="center">Welcome to My Cerebal Database!</h1>
+<div class="">
   <div class="entry2" align="center" style="padding 10px">
     My Cerebral Database, or My Brain, is a knowledgebase of good-to-knows and how to's that I have compiled as I have gained experience through my Computer Science undergraduate education, while at work, and while developing my side projects. Having a personlized knowledgebase makes searching for specific solutions easier.
   </div>
@@ -39,7 +39,7 @@
 </div>
 <% counter = 0 %>
 <% @good_to_knows.each do |good_to_know| %>
-  <div class="container">
+  <div class="">
     <a href="/good_to_knows/<%= good_to_know.id %>" style="text-decoration: none">
       <div class="entry" align="left" style="padding: 8px">
         <h4 align="center" style="color: #00ACE6"><%=good_to_know.title %></h4>
