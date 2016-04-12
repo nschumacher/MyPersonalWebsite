@@ -28,22 +28,151 @@
  	<!-- Custom Font -->
  	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <%= yield :javascript_includes %>
+
+
+    <style>
+  ::-webkit-scrollbar
+  {
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+  }
+
+  ::-webkit-scrollbar-track
+  {
+    background: rgba(158, 158, 158, 0.15);
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background: rgba(158, 158, 158, 0.4);
+  }
+  .tilt-out {
+    position: relative;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    /*border: 1px solid #6F7500; */
+    max-height: 680px;
+    min-height: 680px;
+    /*overflow: auto; */
+    /*background: rgba(158, 158, 158, 0.2);*/
+  }
+  .tilt-in {
+    position: absolute;
+    top:40px;
+    margin-top: 30px;
+    margin-right: 40px;
+    padding: 20px;
+    -webkit-transform: rotateY(-3deg);
+    transition: rotateY(-3deg);
+    max-height: 600px;
+    width: 95%;
+    overflow: auto;
+    background: rgba(80, 80, 80, 0.6);
+    box-shadow: 8px 8px 50px black;
+  }
+  .tilt-in-top {
+    position: absolute;
+    height: 60px;
+    width: 95%;
+    margin-right: 40px;
+    padding: px;
+    -webkit-transform: rotateY(-3deg);
+    transition: rotateY(-3deg);
+    max-height: 600px;
+    overflow: auto;
+    /*background: rgba(158, 158, 158, 0.15);*/
+    /*box-shadow: 8px 8px 50px black;*/
+  }
+    </style>
+ 
 </head>
 <%= yield :javascript_includes %>
 
 <!-- background-color:#1C1C1C 
 	color:#00ACE6  blue 
+  background-image:url('/images/wood_background.jpg')
 -->
 
-<body style="background-image:url('/images/wood_background.jpg'); color:white; font-family:Play">
+<body style="background-image:url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg'); background-size: cover; color:white; font-family:Play">
 
 	<!-- My Header -->
-<div align="center">
+<div align="center">&nbsp
 	<%= render 'layouts/myHeader' %>
 </div>
 
-<div align="center">
-	<%= yield %>
+<div class="container" style="margin-right: 1%; margin-left: 1%; width: 98%">
+  <div class="row">
+	  <div class="col-xs-3" style="border: 1px solid #007375"><img src="/images/mypic.jpg" style="width: 300px"></div>
+    <div class="col-xs-9 tilt-out" >
+      <div class="tilt-in-top" align="right">
+        <div class="" style="margin-top: 15px; font-size: 15px">
+        <% if current_page?(pages_home_path) || current_page?('/') %>
+          <div class="nav-box-current" align="center">
+            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+            <%= link_to "Home", pages_home_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
+        <% else %>
+          <div class="nav-box" align="center">
+            <%= link_to "Home", pages_home_path, class:"link" %>
+          </div>
+        <% end %>
+        <% if current_page?(pages_about_path) %>
+          <div class="nav-box-current" align="center">
+            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+            <%= link_to "About", pages_about_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
+        <% else %>
+          <div class="nav-box" align="center">
+            <%= link_to "About", pages_about_path, class:"link" %>
+          </div>
+        <% end %>
+        <% if current_page?(contacts_path) %>
+          <div class="nav-box-current" align="center">
+            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+            <%= link_to "Contact", contacts_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
+        <% else %>
+          <div class="nav-box" align="center">  
+            <%= link_to "Contact", contacts_path, class:"link" %>
+          </div>
+        <% end %>
+        <% if current_page?(pages_inDevelopment_path) %>
+          <div class="nav-box-current" align="center">
+            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+            <%= link_to "In Development", pages_inDevelopment_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
+        <% else %>
+          <div class="nav-box" align="center">
+            <%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
+          </div>
+        <% end %>
+        <% if current_page?(pages_projects_path) %>
+          <div class="nav-box-current" align="center">
+            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+            <%= link_to "Projects", pages_projects_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
+        <% else %>
+          <div class="nav-box" align="center">
+            <%= link_to "Projects", pages_projects_path, class:"link" %>
+          </div>
+        <% end %>
+        <% if current_page?(good_to_knows_path) %>
+          <div class="nav-box-current" align="center">
+            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+            <%= link_to "My Brain", good_to_knows_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
+        <% else %>
+          <div class="nav-box" align="center">
+            <%= link_to "My Brain", good_to_knows_path, class:"link" %>
+          </div>
+        <% end %>
+      </div>
+      </div>
+      <div class="tilt-in">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </div>
 
 	<!-- My Footer -->
