@@ -1,293 +1,443 @@
+<!-- <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/radar.js"></script> -->
+<%= javascript_include_tag "patterns" %>
+<!-- amCharts javascript sources -->
+<!-- <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script> -->
+<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/radar.js"></script>
+<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/dark.js"></script>
+<style>
+	.entry {
+		background-color: #1C1C1C;
+		box-shadow: 0px 0px 25px black; 
+		margin: 10px 0px 10px 0px; 
+		padding: 10px 10px 10px 10px; 
+		font-size: 85%;
+	}
+	h2{
+		color: #00ACE6;
+	}
+	.mylink:hover:visited{
+		color:#0095D8;
+		background-color: transparent;
+	}
+	.mylink:hover{
+		color:#0095D8;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	.mylink:link{
+		color:#00ACE6;
+		margin-right: 0px;
+	}
+	.mylink:visited{
+		color:#00ACE6;
+		background-color: none;
+	}
+	td {
+		padding-right: 10px;
+	}
+	hr {
+		border-color: white;
+	}
+	.box {
+		border: 2px solid red;
+		width: 100px;
+	}
+	.intro {
+		background: rgba(70, 70, 70, 0.7);
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    margin: 10px 0px 10px -12px;
+	    padding: 10px;
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
+	}
+	.bod {
+		background: rgba(70, 70, 70, 0.7);
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    margin: 10px 0px 10px -12px;
+	    padding: 10px;
+	    max-height: 200px;
+	    overflow: auto;
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
+	}
+	.bodi {
+		background: rgba(70, 70, 70, 0.7);
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    /*margin: 10px 0px 10px -12px;*/
+	    padding: 10px 10px 10px 10px;
+	    max-height: 230px;
+	    overflow: auto;
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
+	}
+	.foot {
+		float: right;
+		background: rgba(70, 70, 70, 0.7);
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    width: 300px;
+	    margin: 0px 0px 0px 5px;
+	    padding: 0px 5px 0px 5px;
+	    /*text-shadow: 2px 2px 4px #00ACE6;	*/
+	}
+	#chartdiv {
+		/*width: 100%;*/
+		height: 230px;
+		font-size: 15px;
+		margin-left: -12px;
+	}
+</style>
 
-	<style>
-		.entry {
-			background-color: #1C1C1C;
-			box-shadow: 0px 0px 25px black; 
-			margin: 10px 0px 10px 0px; 
-			padding: 10px 10px 10px 10px; 
-			font-size: 85%;
+<!--  Radar Chart -->
+<script type="text/javascript">
+	AmCharts.makeChart("chartdiv",
+		{
+			"type": "radar",
+			"categoryField": "skills",
+			"radius" : "32%",
+			"colors": [
+				"#00ace6",
+				"#aab9f7",
+				"#b6d2ff",
+				"#c9e6f2",
+				"#c9f0e1",
+				"#e8d685",
+				"#e0ad63",
+				"#d48652",
+				"#d27362",
+				"#495fba",
+				"#7a629b",
+				"#8881cc"
+			],
+			"startDuration": 2,
+			"backgroundAlpha": 0.68,
+			"backgroundColor": "#464646",
+			"color": "#FFFFFF",
+			"fontFamily": "Veranda",
+			"fontSize": 15,
+			"theme": "dark",
+			"graphs": [
+				{
+					"animationPlayed": true,
+					"balloonText": "[[value]]% confident in [[skills]]",
+					"bullet": "round",
+					"bulletSize": 9,
+					"id": "AmGraph-1",
+					"lineAlpha": 1,
+					"lineThickness": 2,
+					"valueField": "confidence"
+				}
+			],
+			"guides": [],
+			"valueAxes": [
+				{
+					"axisTitleOffset": 20,
+					"id": "ValueAxis-1",
+					"minimum": 0,
+					"zeroGridAlpha": -2,
+					"axisAlpha": 0.54,
+					"axisThickness": 2,
+					"dashLength": 0,
+					"fontSize": 14,
+					"gridAlpha": 0.51,
+					"labelsEnabled": false,
+					"minHorizontalGap": 73,
+					"minorGridAlpha": 0,
+					"minVerticalGap": 33,
+					"showFirstLabel": false,
+					"showLastLabel": false
+				}
+			],
+			"allLabels": [],
+			"balloon": {},
+			"titles": [],
+			"dataProvider": [
+				{
+					"skills": "HTML",
+					"confidence": "95"
+				},
+				{
+					"skills": "CSS",
+					"confidence": "95"
+				},
+				{
+					"skills": "Javascript",
+					"confidence": "45"
+				},
+				{
+					"skills": "Ruby on Rails",
+					"confidence": "80"
+				},
+				{
+					"skills": "Java",
+					"confidence": "85"
+				},
+				{
+					"skills": "C",
+					"confidence": "85"
+				},
+				{
+					"skills": "C++",
+					"confidence": "50"
+				},
+				{
+					"skills": "Python",
+					"confidence": "60"
+				}
+			]
 		}
-		h2{
-			color: #00ACE6;
-		}
-		.mylink:hover:visited{
-			color:#0095D8;
-			background-color: transparent;
-		}
-		.mylink:hover{
-			color:#0095D8;
-			background-color: transparent;
-			text-decoration: none;
-		}
-		.mylink:link{
-			color:#00ACE6;
-			margin-right: 0px;
-		}
-		.mylink:visited{
-			color:#00ACE6;
-			background-color: none;
-		}
-		td {
-			padding-right: 10px;
-		}
-		hr {
-			border-color: white;
-		}
-		.box {
-			border: 2px solid red;
-			width: 100px;
-		}
-	</style>
-	<script>
-$(document).ready(function(){
-	// Row 1
-	$(".detailsLeft1").hide();
-    $(".expandingBoxLeftRow1").click(
-    	function(){
-	        $(this).animate({width: '100%', height: '400px'}, 1000);
-	        $("#row1").animate({height:'400px'}, 1000);
-	        $(".detailsLeft1").delay(1000).show('500');
-    	},
-		function(){
-			$(this).animate({width: '15%', height: '50px'}, 1000);
-			$("#row1").animate({height:'50px'}, 1000);
-			$(".detailsLeft1").hide('slow');
-    	}
 	);
-	$(".detailsRight1").hide();
-    $(".expandingBoxRightRow1").hover(
-    	function(){
-	        $(this).animate({width: '75%', height: '400px'}, 1000);
-	        $("#row1").animate({height:'400px'}, 1000);
-	        $(".detailsRight1").delay(1000).show('500');
-    	},
-		function(){
-			$(this).animate({width: '15%', height: '50px'}, 1000);
-			$("#row1").animate({height:'50px'}, 1000);
-			$(".detailsRight1").hide('slow');
-    	}
-	);
-	//row 2
-});
-</script> 
+</script>
 
-<div class="" align="left" style="border: 2px solid blue; padding: 40px">
-	<div id="row1" style="border: 2px solid red"> <!-- row 1 -->
-		<!-- BOX 1 -->
-		<div class="expandingBoxLeftRow1" style="display: inline-block; border: 2px solid yellow; width: 15%; height: 50px;">
-			<div align="center" style="background-color: black"><h3>Education</h3></div>
-			<div class="detailsLeft1 container-fluid" style="background-color: black; width: 100%">
-				<h3 style="text-shadow: 2px 2px 4px #00ACE6">Purdue University</h3>
-				<div style="margin: 5px 10px 8px 10px">
-					<hr style="margin:3px 0px 10px 0px">
-				</div>
-				<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 entry" align="left">
-					I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
-				</div>
-				<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 entry" align="center">
-					<img src="/images/purdue.png" style="width: 100%">
-				</div>
-				<br>
-				<h3>Online Courses</h3>
-				<div style="margin: 5px 10px 8px 10px">
-					<hr style="margin:3px 0px 10px 0px">
-				</div>
-				<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 entry" align="left">
-					I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. 
-				</div>
-				<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 entry" align="center">
-					<img src="/images/purdue.png" style="width: 100%"> <!-- THIS NEEDS TO BE CHANGED TO UDEMY LOGO and the EXPANSION NEEDS TO BE ADJUSTED -->
-				</div>
-			</div>
-		</div>
+<div style="background-color: rgba(200,200,200,.2); margin: ; padding: 40px 40px 70px 40px;">
+	<!-- Navigation pane -->
+	<div align="" style="">
+		<%= render 'layouts/navigation' %>
+	</div>
 
-		<!-- BOX 2 -->
-		<div class="expandingBoxRightRow1" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
-			box 2 Skills
-			<div class="detailsRight1 container" style="background-color: black; width: 100%">
-				<h2>Skills:</h2>
-				<div style="margin: 5px 10px 8px 10px">
-					<hr style="margin:3px 0px 10px 0px">
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-					<table>
-						<tr>
-							<td>- Java </td>
-							<td>- C </td>
-							<td>- C++ </td>
-							<td>- HTML </td>
-							<td>- CSS </td>
-							<td>- Ruy on Rails </td>
-						</tr>
-						<tr>
-							<td>- Leadership </td>
-							<td>- Interpersonal Communications </td>
-							<td>- Office </td>
-							<td>- Basic Photoshop </td>
-							<td>- Teamwork </td>
-							<td>- Linux </td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div><!-- row 1 -->
+	<!-- Intro Title -->
+	<div class="intro" align="">
+		<h1 align="center">Let Me Show You What I've Got</h1>
+	</div>
 
-	<div id="row2" style="border: 5px solid cyan; height: 50px"><!-- row 2 -->
-		<!-- BOX 3 -->
-		<div class="expandingBoxLeftRow2" style="display: inline; position: absolute; border: 2px solid orange; width: 15%; text-align: left; height: 50px;">
-			box 3 RSA Security
-		</div>
-		<!-- BOX 4 -->
-		<div class="expandingBoxRightRow2" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
-			box 4 Meijer
-		</div>
-	</div><!-- row 2 -->
 
-	<div id="row3" style="border: 5px solid purple; height: 50px"><!-- row 3 -->
-		<!-- BOX 5 -->
-		<div class="expandingBoxLeftRow3" style="display: inline; position: absolute; border: 2px solid orange; width: 15%; text-align: left; height: 50px;">
-			box 5 Android Developer
-		</div>
-		<!-- BOX 6 -->
-		<div class="expandingBoxRightRow3" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
-			box 6 Cart Staff
-		</div>
-	</div><!-- row 3 -->
-</div><!-- blue box... -->
-
-<div class="" align="center" style="margin:10px 15px 5px 15px; font-size: large">
-	<div class="row" style="margin-bottom:20px">
-		<h1 style="text-shadow: 2px 2px 4px #00ACE6">A Little About Me</h1>
-		<!--<div style="margin: 5px 10px 8px 10px">
-			<hr style="border-color: white; margin:3px 0px 10px 0px">
-		</div>-->
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="center">
-			I am a Computer Science major at Purdue University. My main focus is software engineering but I also have great interst in security. I like to keep myself busy with projects such as: building software to be used in RSA Security's Anti-Fraud Command Center, building Android applications with various purposes, contructing my own NFC ring for controller my phone, and many more. Check out my other endevors on my <a class="mylink" href="/pages/projects">Projects</a> page and my <a class="mylink" href="/pages/inDevelopment">In Development</a> page! Below is a summary of my work experience and other background information. Feel free to contact me with any questions or comments!
-			<br><br>
+	<div class="row">
+		<!-- Skill Chart -->
+		<div class="col-xs-5" id="chartdiv"></div>
+		<div class="col-xs-7 bodi">
+			Other skills table and education accordion will go here
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
 	</div>
-	<div class="row" style="margin-bottom:20px">
-		<h2>Skills:</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+
+	<!-- Main content -->
+	<div class="bod">
+		<h2 style="font-size: 150%; color: white;">
+			Jobs Accordion will go here
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</h2>
+	</div>
+
+	<!-- Footer -->
+	<div class="foot" align="right">
+		<%= render 'layouts/myFooter' %>
+	</div>
+
+	<div class="" align="left" style="border: 2px solid blue; padding: 40px; margin-top: 100px;">
+		<div id="row1" style="border: 2px solid red"> <!-- row 1 -->
+			<!-- BOX 1 -->
+			<div class="expandingBoxLeftRow1" style="display: inline-block; border: 2px solid yellow; width: 15%; height: 50px;">
+				<div align="center" style="background-color: black"><h3>Education</h3></div>
+				<div class="detailsLeft1 container-fluid" style="background-color: black; width: 100%">
+					<h3 style="text-shadow: 2px 2px 4px #00ACE6">Purdue University</h3>
+					<div style="margin: 5px 10px 8px 10px">
+						<hr style="margin:3px 0px 10px 0px">
+					</div>
+					<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 entry" align="left">
+						I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 entry" align="center">
+						<img src="/images/purdue.png" style="width: 100%">
+					</div>
+					<br>
+					<h3>Online Courses</h3>
+					<div style="margin: 5px 10px 8px 10px">
+						<hr style="margin:3px 0px 10px 0px">
+					</div>
+					<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 entry" align="left">
+						I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. 
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 entry" align="center">
+						<img src="/images/purdue.png" style="width: 100%"> <!-- THIS NEEDS TO BE CHANGED TO UDEMY LOGO and the EXPANSION NEEDS TO BE ADJUSTED -->
+					</div>
+				</div>
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-		
-			<table>
-				<tr>
-					<td>- Java </td>
-					<td>- C </td>
-					<td>- C++ </td>
-					<td>- HTML </td>
-					<td>- CSS </td>
-					<td>- Ruy on Rails </td>
-				</tr>
-				<tr>
-					<td>- Leadership </td>
-					<td>- Interpersonal Communications </td>
-					<td>- Office </td>
-					<td>- Basic Photoshop </td>
-					<td>- Teamwork </td>
-					<td>- Linux </td>
-				</tr>
-			</table>
+
+			<!-- BOX 2 -->
+			<div class="expandingBoxRightRow1" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
+				box 2 Skills
+				<div class="detailsRight1 container" style="background-color: black; width: 100%">
+					<h2>Skills:</h2>
+					<div style="margin: 5px 10px 8px 10px">
+						<hr style="margin:3px 0px 10px 0px">
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+						<table>
+							<tr>
+								<td>- Java </td>
+								<td>- C </td>
+								<td>- C++ </td>
+								<td>- HTML </td>
+								<td>- CSS </td>
+								<td>- Ruy on Rails </td>
+							</tr>
+							<tr>
+								<td>- Leadership </td>
+								<td>- Interpersonal Communications </td>
+								<td>- Office </td>
+								<td>- Basic Photoshop </td>
+								<td>- Teamwork </td>
+								<td>- Linux </td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!-- row 1 -->
+
+		<div id="row2" style="border: 5px solid cyan; height: 50px"><!-- row 2 -->
+			<!-- BOX 3 -->
+			<div class="expandingBoxLeftRow2" style="display: inline; position: absolute; border: 2px solid orange; width: 15%; text-align: left; height: 50px;">
+				box 3 RSA Security
+			</div>
+			<!-- BOX 4 -->
+			<div class="expandingBoxRightRow2" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
+				box 4 Meijer
+			</div>
+		</div><!-- row 2 -->
+
+		<div id="row3" style="border: 5px solid purple; height: 50px"><!-- row 3 -->
+			<!-- BOX 5 -->
+			<div class="expandingBoxLeftRow3" style="display: inline; position: absolute; border: 2px solid orange; width: 15%; text-align: left; height: 50px;">
+				box 5 Android Developer
+			</div>
+			<!-- BOX 6 -->
+			<div class="expandingBoxRightRow3" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
+				box 6 Cart Staff
+			</div>
+		</div><!-- row 3 -->
+	</div><!-- blue box... -->
+
+	<div class="" align="center" style="margin:10px 15px 5px 15px; font-size: large">
+		<div class="row" style="margin-bottom:20px">
+			<h1 style="text-shadow: 2px 2px 4px #00ACE6">A Little About Me</h1>
+			<!--<div style="margin: 5px 10px 8px 10px">
+				<hr style="border-color: white; margin:3px 0px 10px 0px">
+			</div>-->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="center">
+				I am a Computer Science major at Purdue University. My main focus is software engineering but I also have great interst in security. I like to keep myself busy with projects such as: building software to be used in RSA Security's Anti-Fraud Command Center, building Android applications with various purposes, contructing my own NFC ring for controller my phone, and many more. Check out my other endevors on my <a class="mylink" href="/pages/projects">Projects</a> page and my <a class="mylink" href="/pages/inDevelopment">In Development</a> page! Below is a summary of my work experience and other background information. Feel free to contact me with any questions or comments!
+				<br><br>
+			</div>
+		</div>
+		<div class="row" style="margin-bottom:20px">
+			<h2>Skills:</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
 			
-		</div>
-	</div>
-
-	<!-- Work Divider -->
-	<div class="row" style="margin-bottom:20px; margin-top: 50px">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
-			Work Experience
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-	</div>
-
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>RSA, The Security Division of EMC2</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+				<table>
+					<tr>
+						<td>- Java </td>
+						<td>- C </td>
+						<td>- C++ </td>
+						<td>- HTML </td>
+						<td>- CSS </td>
+						<td>- Ruy on Rails </td>
+					</tr>
+					<tr>
+						<td>- Leadership </td>
+						<td>- Interpersonal Communications </td>
+						<td>- Office </td>
+						<td>- Basic Photoshop </td>
+						<td>- Teamwork </td>
+						<td>- Linux </td>
+					</tr>
+				</table>
+				
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			Shift Manager | Senior Anti-Fraud Analyst
-			<ul>
-				<li>Responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.)</li>
-				<li>Taking prevention steps, terminating online frauds and performing computer forensic analysis.</li>
-				<li>Comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
-				<li>Communicating with customers to update on attack status</li>
-			</ul>
 		</div>
-	</div>
 
-	<div class="row" style="margin-bottom:20px">
-		<h2>Android Developer</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+		<!-- Work Divider -->
+		<div class="row" style="margin-bottom:20px; margin-top: 50px">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
+				<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			In my free time, I am slowly teaching myself how to develop Android applications. See <a class="mylink" href="/pages/projects">Projects</a> for examples.
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Meijer</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
+				Work Experience
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			General Merchandise Clerk<br>
-			I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Cart Staff</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
+				<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			Coyote Crossing Golf Course and Birk Boilermaker Golf Complex<br>
-			The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
 		</div>
-	</div>
 
-	<!-- Education Divider -->
-	<div class="row" style="margin-bottom:20px; margin-top: 50px">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
-			Education
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-	</div>
 
-	<div class="row" style="margin-bottom:20px">
-		<h2>Purdue University</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+		<div class="row" style="margin-bottom:20px">
+			<h2>RSA, The Security Division of EMC2</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+				Shift Manager | Senior Anti-Fraud Analyst
+				<ul>
+					<li>Responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.)</li>
+					<li>Taking prevention steps, terminating online frauds and performing computer forensic analysis.</li>
+					<li>Comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
+					<li>Communicating with customers to update on attack status</li>
+				</ul>
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
 		</div>
-	</div>
 
-	<div class="row" style="margin-bottom:20px">
-		<h2>Online Courses</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+		<div class="row" style="margin-bottom:20px">
+			<h2>Android Developer</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+				In my free time, I am slowly teaching myself how to develop Android applications. See <a class="mylink" href="/pages/projects">Projects</a> for examples.
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. 
+		</div>
+
+		<div class="row" style="margin-bottom:20px">
+			<h2>Meijer</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+				General Merchandise Clerk<br>
+				I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
+			</div>
+		</div>
+
+		<div class="row" style="margin-bottom:20px">
+			<h2>Cart Staff</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+				Coyote Crossing Golf Course and Birk Boilermaker Golf Complex<br>
+				The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
+			</div>
+		</div>
+
+		<!-- Education Divider -->
+		<div class="row" style="margin-bottom:20px; margin-top: 50px">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
+				<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
+				Education
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
+				<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
+			</div>
+		</div>
+
+		<div class="row" style="margin-bottom:20px">
+			<h2>Purdue University</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+				I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
+			</div>
+		</div>
+
+		<div class="row" style="margin-bottom:20px">
+			<h2>Online Courses</h2>
+				<div style="margin: 5px 10px 8px 10px">
+					<hr style="margin:3px 0px 10px 0px">
+				</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+				I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. 
+			</div>
 		</div>
 	</div>
 </div>

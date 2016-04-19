@@ -1,0 +1,164 @@
+<style>
+	.link:hover:visited{
+	}
+	.link:hover{
+		text-decoration: none;
+	}
+	.link{
+		color:#00ACE6;
+		font-style: italic;
+	}
+	.link:visited{
+		color:#00ACE6;
+	}
+	
+	.nav-box {
+		background: rgba(70, 70, 70, 0.6);
+		display: inline-block;
+		min-width:85px;
+		text-align: center !important;
+		padding: 2px 5px 2px 5px;
+		margin-right: 15px;
+		margin-bottom: 10px;
+		/*box-shadow: 2px 2px 10px gray;*/
+	}
+	.nav-box-last {
+		background: rgba(70, 70, 70, 0.6);
+		display: inline-block;
+		min-width:85px;
+		text-align: center !important;
+		padding: 2px 5px 2px 5px;
+		margin-right: 0px;
+		/*box-shadow: 2px 2px 10px gray;*/
+	}
+	.nav-box-last:hover {
+		background: rgba(70, 70, 70, 0.9);
+		display: inline-block;
+		min-width:85px;
+		text-align: center !important;
+		padding: 2px 5px 2px 5px;
+		transform: scale(1.1);
+		margin-right: 0px;
+		/*box-shadow: 2px 2px 10px gray;*/
+	}
+	.nav-box:hover {
+		background: rgba(70, 70, 70, 0.9);
+		display: inline-block;
+		min-width:85px;
+		text-align: center !important;
+		padding: 2px 5px 2px 5px;
+		transform: scale(1.1);
+		margin-right: 15px;
+		/*box-shadow: 2px 2px 10px gray;*/
+		/*font-size: 15px;*/
+	}
+	.nav-box-current {
+		background: rgba(70, 70, 70, 0.9);
+		display: inline-block;
+		min-width:85px;
+		text-align: center !important;
+		padding: 2px 5px 2px 5px;
+		transform: scale(1.1);
+		margin-right: 15px;
+		/*box-shadow: 2px 2px 10px gray;*/
+		/*font-size: 15px;*/
+	}
+	.nav-box-current-last {
+		background: rgba(70, 70, 70, 0.9);
+		display: inline-block;
+		min-width:85px;
+		text-align: center !important;
+		padding: 2px 5px 2px 5px;
+		transform: scale(1.1);
+		margin-right: 0px;
+		/*box-shadow: 2px 2px 10px gray;*/
+		/*font-size: 15px;*/
+	}
+	.name-box {
+		background: rgba(70, 70, 70, 0.6);
+		display: inline-block;
+		min-width:250px;
+		text-align: center !important;
+		padding: 15px 10px 2px 5px;
+		transform: scale(1.1);
+		/*margin-right: 20%;*/
+		float: left;
+		margin-top: -20px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		text-shadow: 2px 2px 4px #00ACE6;
+		/*box-shadow: 2px 2px 10px gray;*/
+	}
+</style>
+<div class="" >
+    <div class="" align="right">
+        <div class="" style="margin-top: 15px; font-size: 15px">
+        	<div class="name-box" align="" style="">
+					<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
+						<img src="/images/arctis-logo.png" style="width:40px; margin-right:10px; margin-top: -10px">
+						Nick Schumacher
+					</a>
+			</div>
+	        <% if current_page?(pages_home_path) || current_page?('/') %>
+	        	<div class="nav-box-current" align="center">
+	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+	            	<%= link_to "Home", pages_home_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+	          	</div>
+	        <% else %>
+	          	<div class="nav-box" align="center">
+	            	<%= link_to "Home", pages_home_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	        <% if current_page?(pages_about_path) %>
+	          	<div class="nav-box-current" align="center">
+	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+	            	<%= link_to "About", pages_about_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+	          	</div>
+	        <% else %>
+	          	<div class="nav-box" align="center">
+	            	<%= link_to "About", pages_about_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	        <% if current_page?(contacts_path) %>
+	          	<div class="nav-box-current" align="center">
+	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+	            	<%= link_to "Contact", contacts_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+	          	</div>
+	        <% else %>
+	          	<div class="nav-box" align="center">  
+	            	<%= link_to "Contact", contacts_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	        <% if current_page?(pages_inDevelopment_path) %>
+		        <div class="nav-box-current" align="center">
+		        	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+		            <%= link_to "In Development", pages_inDevelopment_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+		        </div>
+	        <% else %>
+	          	<div class="nav-box" align="center">
+	           		<%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	        <% if current_page?(pages_projects_path) %>
+	          	<div class="nav-box-current" align="center">
+	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+	            	<%= link_to "Projects", pages_projects_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+	          	</div>
+	        <% else %>
+	          	<div class="nav-box" align="center">
+	            	<%= link_to "Projects", pages_projects_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	        <% if current_page?(good_to_knows_path) %>
+	          	<div class="nav-box-current-last" align="center">
+	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+	            	<%= link_to "My Brain", good_to_knows_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+	          	</div>
+	        <% else %>
+	          	<div class="nav-box-last" align="center">
+	            	<%= link_to "My Brain", good_to_knows_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	     </div>
+    </div>
+</div>

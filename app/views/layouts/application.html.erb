@@ -21,63 +21,45 @@
     <%= yield :javascript_includes %>
 
 
-    <style>
-  ::-webkit-scrollbar
-  {
-    width: 12px;  /* for vertical scrollbars */
-    height: 12px; /* for horizontal scrollbars */
-  }
+  <style>
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 4px;  /* for vertical scrollbars */
+      height: 4px; /* for horizontal scrollbars */
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(158, 158, 158, 0.15);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(158, 158, 158, 0.4);
+    }
+    /* End Scrollbar styling */
 
-  ::-webkit-scrollbar-track
-  {
-    background: rgba(158, 158, 158, 0.15);
-  }
-
-  ::-webkit-scrollbar-thumb
-  {
-    background: rgba(158, 158, 158, 0.4);
-  }
-  .tilt-out {
-    position: relative;
-    /*-webkit-perspective: 1000px;*/
-    /*perspective: 1000px;*/
-    /*max-height: 680px;*/
-    /*min-height: 680px;*/
-    -webkit-perspective: 1100px;
-    perspective: 1100px;
-    width: 1100px;
-
-    /*border: 1px solid #6F7500; */
-    /*overflow: auto; */
-    /*background: rgba(158, 158, 158, 0.2);*/
-  }
-  .tilt-in {
-    position: absolute;
-    top:40px;
-    margin-top: 30px;
-    margin-right: 40px;
-    padding: 20px;
-    -webkit-transform: rotateY(-5deg);
-    transition: rotateY(-5deg);
-    max-height: 580px;
-    width: 95%;
-    overflow: auto;
-    background: rgba(80, 80, 80, 0.6);
-    box-shadow: 8px 8px 50px black;
-  }
-  .tilt-in-top {
-    position: absolute;
-    height: 60px;
-    width: 95%;
-    margin-right: 40px;
-    padding: px;
-    -webkit-transform: rotateY(-5deg);
-    transition: rotateY(-5deg);
-    max-height: 600px;
-    overflow: auto;
-    /*background: rgba(158, 158, 158, 0.15);*/
-    /*box-shadow: 8px 8px 50px black;*/
-  }
+    .tilt-out {
+      position: relative;
+      -webkit-perspective: 1100px;
+      perspective: 1200px;
+      /*width: 1100px;*/
+      height: 850px;
+      border: 1px solid #6F7500; 
+      /*overflow: auto; */
+      /*background: rgba(158, 158, 158, 0.2);*/
+    }
+    .tilt-in {
+      position: absolute;
+      top:5px;
+      right: 20px;
+      margin-top: 30px;
+      margin-right: 50px;
+      padding: 20px;
+      -webkit-transform: rotateY(-12deg);
+      transition: rotateY(-12deg);
+      max-height: 730px;
+      width: 95%;
+      overflow: hidden;
+      /*background: rgba(80, 80, 80, 0.6);*/
+      /*box-shadow: 8px 8px 50px black;*/
+    }
     .content:before {
       content: "";
       position: fixed;
@@ -86,17 +68,17 @@
       z-index: -1;
       
       display: block;
-      background-image: url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg');
+      background-image: url('/images/office.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
       height: 100%;
       
-      -webkit-filter: blur(4px);
-      -moz-filter: blur(4px);
-      -o-filter: blur(4px);
-      -ms-filter: blur(4px);
-      filter: blur(4px);
+      -webkit-filter: blur(6px);
+      -moz-filter: blur(6px);
+      -o-filter: blur(6px);
+      -ms-filter: blur(6px);
+      filter: blur(6px);
     }
 
     .content {
@@ -104,12 +86,10 @@
       left: 0;
       right: 0;
       z-index: 0;
-      /*margin-left: 20px;*/
-      /*margin-right: 20px;*/
       color:white; 
       font-family:Play;
     }
-    </style>
+  </style>
  
 </head>
 <%= yield :javascript_includes %>
@@ -121,90 +101,23 @@
 -->
 
 <body> 
-<div class="content">
-
-	<!-- My Header -->
-<div align="" style="margin-bottom: 70px">
-	<%= render 'layouts/myHeader' %>
-</div>
-
-<div class="container" style="margin-right: 1%; margin-left: 1%; width: 98%">
-  <div class="row">
-	  <div class="col-xs-3" style="border: 1px solid #007375"><img src="/images/mypic.jpg" style="width: 300px"></div>
-    <div class="col-xs-9 tilt-out" >
-      <div class="tilt-in-top" align="right">
-        <div class="" style="margin-top: 15px; font-size: 15px">
-        <% if current_page?(pages_home_path) || current_page?('/') %>
-          <div class="nav-box-current" align="center">
-            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-            <%= link_to "Home", pages_home_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+  <div class="content">
+    <div class="container-fluid" style="margin-right: 1%; margin-left: 1%; width: 98%">
+      <div class="row">
+      
+        <!-- My picture -->
+    	  <div class="col-xs-3" style="border: 1px solid #007375; margin-top: 50px">
+          <img src="/images/mypictureplaceholder.png" style="width: 300px">
+        </div>
+        
+        <!-- My angled body content -->
+        <div class="col-xs-9 tilt-out" >
+          <div class="tilt-in">
+            <%= yield %>
           </div>
-        <% else %>
-          <div class="nav-box" align="center">
-            <%= link_to "Home", pages_home_path, class:"link" %>
-          </div>
-        <% end %>
-        <% if current_page?(pages_about_path) %>
-          <div class="nav-box-current" align="center">
-            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-            <%= link_to "About", pages_about_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-          </div>
-        <% else %>
-          <div class="nav-box" align="center">
-            <%= link_to "About", pages_about_path, class:"link" %>
-          </div>
-        <% end %>
-        <% if current_page?(contacts_path) %>
-          <div class="nav-box-current" align="center">
-            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-            <%= link_to "Contact", contacts_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-          </div>
-        <% else %>
-          <div class="nav-box" align="center">  
-            <%= link_to "Contact", contacts_path, class:"link" %>
-          </div>
-        <% end %>
-        <% if current_page?(pages_inDevelopment_path) %>
-          <div class="nav-box-current" align="center">
-            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-            <%= link_to "In Development", pages_inDevelopment_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-          </div>
-        <% else %>
-          <div class="nav-box" align="center">
-            <%= link_to "In Development", pages_inDevelopment_path, class:"link" %>
-          </div>
-        <% end %>
-        <% if current_page?(pages_projects_path) %>
-          <div class="nav-box-current" align="center">
-            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-            <%= link_to "Projects", pages_projects_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-          </div>
-        <% else %>
-          <div class="nav-box" align="center">
-            <%= link_to "Projects", pages_projects_path, class:"link" %>
-          </div>
-        <% end %>
-        <% if current_page?(good_to_knows_path) %>
-          <div class="nav-box-current" align="center">
-            <div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-            <%= link_to "My Brain", good_to_knows_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-          </div>
-        <% else %>
-          <div class="nav-box" align="center">
-            <%= link_to "My Brain", good_to_knows_path, class:"link" %>
-          </div>
-        <% end %>
-      </div>
-      </div>
-      <div class="tilt-in">
-        <%= yield %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-	<!-- My Footer -->
-	<%= render 'layouts/myFooter' %>
-</div>
 </body>
 </html>
