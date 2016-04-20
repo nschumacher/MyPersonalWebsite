@@ -119,16 +119,6 @@
 	            	<%= link_to "About", pages_about_path, class:"link" %>
 	          	</div>
 	        <% end %>
-	        <% if current_page?(contacts_path) %>
-	          	<div class="nav-box-current" align="center">
-	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
-	            	<%= link_to "Contact", contacts_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-	          	</div>
-	        <% else %>
-	          	<div class="nav-box" align="center">  
-	            	<%= link_to "Contact", contacts_path, class:"link" %>
-	          	</div>
-	        <% end %>
 	        <% if current_page?(pages_inDevelopment_path) %>
 		        <div class="nav-box-current" align="center">
 		        	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
@@ -150,13 +140,23 @@
 	          	</div>
 	        <% end %>
 	        <% if current_page?(good_to_knows_path) %>
-	          	<div class="nav-box-current-last" align="center">
+	          	<div class="nav-box-current" align="center">
 	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
 	            	<%= link_to "My Brain", good_to_knows_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
 	          	</div>
 	        <% else %>
-	          	<div class="nav-box-last" align="center">
+	          	<div class="nav-box" align="center">
 	            	<%= link_to "My Brain", good_to_knows_path, class:"link" %>
+	          	</div>
+	        <% end %>
+	        <% if current_page?(contacts_path) %>
+	          	<div class="nav-box-current-last" align="center">
+	            	<div style="height: 1px; background-color: #00ACE6">&nbsp</div>
+	            	<%= link_to "Contact", contacts_path, class:"link", style:"color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+	          	</div>
+	        <% else %>
+	          	<div class="nav-box-last" align="center">  
+	            	<%= link_to "Contact", contacts_path, class:"link" %>
 	          	</div>
 	        <% end %>
 	     </div>

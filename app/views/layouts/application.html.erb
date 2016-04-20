@@ -28,33 +28,35 @@
       height: 4px; /* for horizontal scrollbars */
     }
     ::-webkit-scrollbar-track {
-      background: rgba(158, 158, 158, 0.15);
+      /*background: rgba(158, 158, 158, 0.15);*/
+      background: rgba(0, 172, 230, 0.15);
     }
     ::-webkit-scrollbar-thumb {
-      background: rgba(158, 158, 158, 0.4);
+      /*background: rgba(158, 158, 158, 0.4);*/
+      background: rgba(0, 172, 230, 0.4);
     }
     /* End Scrollbar styling */
 
     .tilt-out {
       position: relative;
-      -webkit-perspective: 1100px;
+      -webkit-perspective: 1200px;
       perspective: 1200px;
       /*width: 1100px;*/
       height: 850px;
-      border: 1px solid #6F7500; 
+      /*border: 1px solid #6F7500; */
       /*overflow: auto; */
       /*background: rgba(158, 158, 158, 0.2);*/
     }
     .tilt-in {
       position: absolute;
-      top:5px;
+      top:10px;
       right: 20px;
       margin-top: 30px;
       margin-right: 50px;
       padding: 20px;
       -webkit-transform: rotateY(-12deg);
       transition: rotateY(-12deg);
-      max-height: 730px;
+      max-height: 760px;
       width: 95%;
       overflow: hidden;
       /*background: rgba(80, 80, 80, 0.6);*/
@@ -106,14 +108,14 @@
       <div class="row">
       
         <!-- My picture -->
-    	  <div class="col-xs-3" style="border: 1px solid #007375; margin-top: 50px">
+    	  <div class="col-xs-2" style="border: 0px solid #007375; margin-top: 50px">
           <img src="/images/mypictureplaceholder.png" style="width: 300px">
         </div>
         
         <!-- My angled body content -->
-        <div class="col-xs-9 tilt-out" >
+        <div class="col-xs-10 tilt-out" >
           <div class="tilt-in">
-            <%= yield %>
+              <%= yield %>
           </div>
         </div>
       </div>
