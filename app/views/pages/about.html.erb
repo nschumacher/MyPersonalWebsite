@@ -275,11 +275,12 @@
 	$(document).ready(function(){
 	// Panel 1
 	$('.panel').click(function(){
-	   $('.isSelected').removeClass('isSelected');
-	   if ($(this).attr("aria-expanded") === 'false')
+	   if ($(this).hasClass('isSelected'))
 	   	$(this).removeClass('isSelected');
-	   else
+	   else {
+	   	$('.isSelected').removeClass('isSelected');
 	   	$(this).addClass('isSelected');
+	   }
 	});
 });
 </script>
