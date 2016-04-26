@@ -1,26 +1,49 @@
 <style>
 	.intro {
-		background: rgba(70, 70, 70, 0.7);
+		/*background: rgba(70, 70, 70, 0.7);*/
 	    /*box-shadow: 6px 6px 15px gray;*/
 	    margin: 10px 0px 10px -12px;
-	    padding: 10px;
-	    text-shadow: 2px 2px 4px #00ACE6;
+	    /*padding: 10px;*/
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
 	}
 	.bod {
-		background: rgba(70, 70, 70, 0.7);
+		background: rgba(90, 90, 90, 0.7);
 	    /*box-shadow: 6px 6px 15px gray;*/
 	    margin: 10px 0px 5px -12px;
 	    padding: 10px 10px 0px 10px;
-	    text-shadow: 2px 2px 4px #00ACE6;
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
+	    text-shadow: 1px 1px 2px rgba(70,70,70,.6);
 	}
 	.foot {
 		float: right;
-		background: rgba(70, 70, 70, 0.7);
+		/*background: rgba(70, 70, 70, 0.7);*/
 	    /*box-shadow: 6px 6px 15px gray;*/
 	    width: 300px;
 	    margin: 0px 0px 0px 5px;
 	    padding: 0px 5px 0px 5px;
 	    text-shadow: 2px 2px 4px #00ACE6;	
+	}
+	#pageLabel {
+		/*text-shadow: 1px 1px 2px rgba(70,70,70,.6);*/
+		text-shadow: 1px 1px 1px #00ACE6;
+		padding: 18px 15px 23px 15px;
+		/*color: #00ACE6;*/
+		display: inline-block;
+		margin-right: 5px;
+		background: rgba(90, 90, 90, 0.7);
+		/*background-color: red;*/
+	}
+	#pageSummary {
+		text-shadow: 1px 1px 2px rgba(70,70,70,.6);
+		padding: 23px 15px 0px 15px;
+		display: inline-block;
+		width: 80%;
+		height: 80px;
+		overflow: auto;
+		background: rgba(90, 90, 90, 0.7);
+		text-align: center;
+		font-size: 25px;
+		/*background-color: blue;*/
 	}
 </style>
 
@@ -30,14 +53,23 @@
 		<%= render 'layouts/navigation' %>
 	</div>
 
+	<hr style="border-color: rgba(240,240,240,.4)">
+
 	<!-- Intro Title -->
-	<div class="intro" align="">
-		<h1 align="center">Nicholas A. Schumacher</h1>
+	<div class="intro">
+		<div id="pageLabel">
+			<h1 align="center" style="display: inline">Home</h1>
+		</div>
+		<div id="pageSummary" class="pull-right">
+			 Nicholas A. Schumacher
+		</div>
 	</div>
+
 
 	<!-- Intro Statement -->
 	<div class="bod" align="center">
 		<h2 style="font-size: 150%">
+			I am a Computer Science major at Purdue University. My main focus is software engineering but I also have great interst in security. I like to keep myself busy with projects such as: building software to be used in RSA Security's Anti-Fraud Command Center, building Android applications with various purposes, contructing my own NFC ring for controlling my phone, and many more. <br><br>
 			Whether it's building an Android application, a website, or something entirely new, I am always up for a new challenge! <br><br>
 
 			Check out my current projects and send me an email if you have questions<br>

@@ -17,7 +17,7 @@
 		border-bottom: 2px solid rgba(70,70,70, .7);
 	}
 	.entryTitle {
-		color: rgb(200,200,200);
+		color: rgb(240,240,240);
 		text-shadow: 3px 3px 3px rgba(70,70,70,.4);
 	}
 	/*h2{
@@ -25,6 +25,12 @@
 	}*/
 	a:link {
 		text-decoration: none;
+	}
+	.Title:hover {
+		color: white;
+	}
+	.Title:link {
+		color: white;
 	}
 	.mylink:hover:visited{
 		color:#0095D8;
@@ -55,10 +61,10 @@
 		width: 100px;
 	}
 	.intro {
-		background: rgba(70, 70, 70, 0.7);
+		/*background: rgba(70, 70, 70, 0.7);*/
 	    /*box-shadow: 6px 6px 15px gray;*/
-	    margin: 10px 0px 10px -12px;
-	    padding: 10px;
+	    margin: 10px 0px 25px -12px;
+	    /*padding: 10px;*/
 	    /*text-shadow: 2px 2px 4px #00ACE6;*/
 	}
 	.bod {
@@ -71,11 +77,11 @@
 	    /*text-shadow: 2px 2px 4px #00ACE6;*/
 	}
 	.bodi {
-		background: rgba(70, 70, 70, 0.7);
+		/*background: rgba(70, 70, 70, 0.7);*/
 	    /*box-shadow: 6px 6px 15px gray;*/
 	    /*margin: 10px 0px 10px -12px;*/
-	    padding: 10px 10px 5px 10px;
-	    max-height: 225px;
+	    padding: 0px 10px 5px 10px;
+	    max-height: 457px;
 	    overflow: auto;
 	    /*text-shadow: 2px 2px 4px #00ACE6;*/
 	}
@@ -95,18 +101,25 @@
 		margin-left: -12px;
 		text-shadow: 1px 1px 2px rgba(70,70,70,.6);
 	}
+	#skillBox {
+		background: rgba(50, 50, 50, 0.5);
+		text-shadow: 2px 1px 1px rgba(70,70,70,.6);
+		margin-right: 5px;
+		margin-left: -10px;
+		padding: 10px;
+	}
 	.panel-body {
-		color: rgb(240,240,240);
+		color: rgb(250,250,250);
 		text-shadow: 2px 2px 1px rgba(70,70,70,.4);
-		border: 1px solid rgba(0,172,230,.7);
-		background-color: rgba(0,172,230,.2);
+		border: 1px solid rgba(0,110,170,.7);
+		background-color: rgba(0,110,170,.5);
 		font-size: 16px;
 	}
 	.panel-title {
 		font-size: 20px;
 	}
 	.panel-subTitle {
-		color: rgb(240,240,240);
+		color: rgb(250,250,250);
 		text-shadow: 2px 2px 1px rgba(70,70,70,.4);
 		margin-left: 15px;
 		font-size: 15px;
@@ -114,14 +127,47 @@
 	.panel {
 		background-color: transparent;
 		color: white;
-
+	}
+	.panel:hover {
+		border-left: 4px solid white;
+	}
+	.panel:visited {
+		border-left: 4px solid white;
 	}
 	.panel-heading {
-		background-color: rgba(0,172,230,.2);
-		border: 1px solid rgba(0,172,230,.7);
+		background-color: rgba(0,110,170,.5);
+		border: 1px solid rgba(0,110,170,.7);
 	}
 	.panel-group {
 		margin-bottom: 0px;
+	}
+	#pageLabel {
+		/*text-shadow: 1px 1px 2px rgba(70,70,70,.6);*/
+		text-shadow: 1px 1px 1px #00ACE6;
+		padding: 18px 15px 23px 15px;
+		/*color: #00ACE6;*/
+		display: inline-block;
+		margin-right: 5px;
+		background: rgba(90, 90, 90, 0.7);
+		/*background-color: red;*/
+	}
+	#pageSummary {
+		text-shadow: 1px 1px 2px rgba(70,70,70,.6);
+		padding: 23px 15px 0px 15px;
+		display: inline-block;
+		width: 80%;
+		height: 80px;
+		overflow: auto;
+		background: rgba(90, 90, 90, 0.7);
+		text-align: center;
+		font-size: 20px;
+		/*background-color: blue;*/
+	}
+	.pic {
+		width: 96px;
+	}
+	.isSelected {
+		border-left: 4px solid white;
 	}
 </style>
 
@@ -147,7 +193,7 @@
 				"#8881cc"
 			],
 			"startDuration": 2,
-			"backgroundAlpha": 0.68,
+			"backgroundAlpha": 0.0,
 			"backgroundColor": "#464646",
 			"color": "#FFFFFF",
 			"fontFamily": "Veranda",
@@ -225,28 +271,73 @@
 		}
 	);
 </script>
+<script>
+	$(document).ready(function(){
+	// Panel 1
+	$('.panel').click(function(){
+	   $('.isSelected').removeClass('isSelected');
+	   if ($(this).attr("aria-expanded") === 'false')
+	   	$(this).removeClass('isSelected');
+	   else
+	   	$(this).addClass('isSelected');
+	});
+});
+</script>
 
-<div style="background-color: rgba(200,200,200,.1); margin: ; padding: 40px 40px 70px 40px; ">
+<div style="background-color: rgba(200,200,200,.2); margin: ; padding: 40px 40px 70px 40px; ">
 	<!-- Navigation pane -->
 	<div align="" style="">
 		<%= render 'layouts/navigation' %>
 	</div>
 
+	<hr style="border-color: rgba(240,240,240,.4)">
+
 	<!-- Intro Title -->
-	<div class="intro" align="">
-		<h1 align="center">Let Me Show You What I've Got</h1>
+	<div class="intro">
+		<div id="pageLabel">
+			<h1 align="center" style="display: inline">About Me</h1>
+		</div>
+		<div id="pageSummary" class="pull-right">
+			 Below is a summary of my work experience and other background information. Feel free to contact me with any questions or comments!
+		</div>
 	</div>
 
 
 	<!-- Skills & Education -->
-	<div class="row">
+	<div class="row" style="margin-bottom: 15px">
 		<!-- Skill Chart -->
-		<div class="col-xs-4" id="chartdiv"></div>
+		<div class="col-xs-4">
+			<div id="skillBox">
+				<span style="font-size: 24px; text-shadow: 1px 1px 1px #00ACE6">Skills</span><br>
+				<table style="width: 100%; margin-left: 20px">
+					<tr>
+						<td><li>Leadership</li></td>
+						<td><li>Office</li></td>
+					</tr>
+					<tr>
+						<td><li>Basic Photoshop</li></td>
+						<td><li>Teamwork</li></td>
+					</tr>
+					<tr>
+						<td><li>Relational Databases</li></td>
+						<td><li>Interpersonal Communications</li></td>
+					</tr>
+					<tr>
+						<td><li>Linux</li></td>
+						<td><li>Web Development</li></td>
+					</tr>
+				</table><br>
+				<span style="font-size: 24px; text-shadow: 1px 1px 1px #00ACE6">Languages</span><br>
+				<div id="chartdiv"></div>
+				<div>
+				</div>
+			</div>
+		</div>
 		
 		<!-- Additional Skills & Education -->
 		<div class="col-xs-8 bodi">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			  	<div class="panel">
+			  	<!-- <div class="panel">
 			    	<div class="panel-heading" role="tab" id="headingOne">
 				      	<h4 class="panel-title">
 				        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -271,34 +362,178 @@
 							</table>
 				      	</div>
 				    </div>
-			  	</div>
+			  	</div> -->
 			  	<div class="panel">
 			    	<div class="panel-heading" role="tab" id="headingTwo">
-			      		<h4 class="panel-title">
-				        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			      			<h4 class="panel-title">
 					          Education <br><span class="panel-subTitle"><i>"Education is the most powerful weapon you can use to change the world."</i> -- Nelson Mandela</span>
-					        </a>
-				      </h4>
+				     		 </h4>
+				      	</a>
 				    </div>
 			    	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 			      		<div class="panel-body">
-							<h2 align="center" class="entryTitle">Purdue University</h2>
-							<div class="entry" align="left">
-								I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude, but are not limited to: web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
+			      			<div class="media">
+							  <div class="media-left">
+							    <a href="#">
+							      <img class="media-object pic" src="/images/purdue.png" alt="Purdue">
+							    </a>
+							  </div>
+							  <div class="media-body">
+							    <h4 class="media-heading">Purdue University</h4>
+							    I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude, but are not limited to: web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
+							  </div>
 							</div>
-							<h2 align="center" class="entryTitle">Online Classes</h2>
-							<div class="entry" align="left">
-								I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. I have also used CodeAcademy.com to further my comfort with Javascript.
+							<div class="media">
+							  <div class="media-left">
+							    <a href="#">
+							      <img class="media-object pic" src="/images/udemy.png" alt="Udemy">
+							    </a>
+							  </div>
+							  <div class="media-body">
+							    <h4 class="media-heading">Online Classes</h4>
+							   	I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. I have also used CodeAcademy.com to further my comfort with Javascript.
+							  </div>
 							</div>
 			      		</div>
 			    	</div>
 			  	</div>
+			  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingThree">
+			      	<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			      		<h4 class="panel-title">
+			          		NCAA Information Services  -  Techpoint Xtern Program <br>
+			          		<span class="panel-subTitle"><i>Full-Stack Developer | Software Tester</i></span>
+			          		<span class="panel-subTitle" style="padding-left: 30px"><i>June 2016 - August 2016</i></span>
+			      		</h4>
+			      	</a>
+		    	</div>
+			    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+			      	<div class="panel-body">
+			      		<div class="media">
+						  <div class="media-left">
+						    <a href="http://www.ncaa.org/">
+						      <img class="media-object pic" src="/images/ncaa.png" alt="NCAA">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    I will be working for the NCAA's Information Services department this summer as a full-stack developer as part of the Xtern Program through TechPoint. I will also be learning Selenium and writing test scripts for some of the 80+ applications the IS department supports.
+						  </div>
+						</div>
+			      	</div>
+			    </div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingFour">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+		      			<h4 class="panel-title">
+				          RSA, The Security Division of EMC  -  Purdue Pathmaker Program<br>
+				          <span class="panel-subTitle"><i>Shift Manager | Senior Analyst</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>July 2014 - Present</i></span>
+			      		</h4>
+			      	</a>
+			    </div>
+		    	<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <img class="media-object pic" src="/images/rsa.png" alt="RSA">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						   	<ul>
+								<li>Responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.)</li>
+								<li>Taking prevention steps, terminating online frauds and performing computer forensic analysis.</li>
+								<li>Comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
+								<li>Communicating with customers to update on attack status</li>
+							</ul>
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingFive">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+		      			<h4 class="panel-title">
+				          Android Developer<br>
+				          <span class="panel-subTitle"><i>Arctis</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>May 2013 - Present</i></span>
+				    	</h4>
+				    </a>
+			    </div>
+		    	<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="http://play.google.com">
+						      <img class="media-object pic" src="/images/android.png" alt="Android">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    In my free time, I am slowly teaching myself how to develop Android applications. See <a class="mylink" href="/pages/projects">Projects</a> for examples.
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingSix">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+		      			<h4 class="panel-title">
+				          Meijer<br>
+				          <span class="panel-subTitle"><i>General Merchandise Clerk</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>May 2014 - August 2014</i></span>
+				        </h4>
+				    </a>
+			    </div>
+		    	<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <img class="media-object pic" src="/images/meijer.png" alt="Meijer">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						   	I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingSeven">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+		      			<h4 class="panel-title">
+				          Birk BoilerMaker Golf Complex & Coyoted Crossing Golf Course<br>
+				          <span class="panel-subTitle"><i>Cart Staff</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>April 2011 - August 2013</i></span>
+				    	</h4>    
+				    </a>
+			    </div>
+		    	<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <img class="media-object pic" src="/images/purdueGolf.png" alt="Golf">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						   	The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
 			</div> <!-- end skills & edu accordion -->
 		</div>
 	</div>
 
 	<!-- Job Descriptions -->
-	<div class="bod">
+	<!-- <div class="bod">
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		  	<div class="panel">
 		    	<div class="panel-heading" role="tab" id="headingThree">
@@ -393,8 +628,8 @@
 		      		</div>
 		    	</div>
 		  	</div>
-		</div> <!-- end job accordion -->
-	</div>
+		</div> <!-- end job accordion 
+	</div> -->
 
 
 	<!-- Footer -->
