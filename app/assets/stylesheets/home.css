@@ -1,0 +1,46 @@
+	.intro {
+		/*background: rgba(70, 70, 70, 0.7);*/
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    margin: 10px 0px 10px -12px;
+	    /*padding: 10px;*/
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
+	}
+	.bod {
+		background: rgba(90, 90, 90, 0.7);
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    margin: 10px 0px 5px -12px;
+	    padding: 10px 10px 0px 10px;
+	    /*text-shadow: 2px 2px 4px #00ACE6;*/
+	    text-shadow: 1px 1px 2px rgba(70,70,70,.6);
+	}
+	.foot {
+		float: right;
+		/*background: rgba(70, 70, 70, 0.7);*/
+	    /*box-shadow: 6px 6px 15px gray;*/
+	    width: 300px;
+	    margin: 0px 0px 0px 5px;
+	    padding: 0px 5px 0px 5px;
+	    text-shadow: 2px 2px 4px #00ACE6;	
+	}
+	#pageLabel {
+		/*text-shadow: 1px 1px 2px rgba(70,70,70,.6);*/
+		text-shadow: 1px 1px 1px #00ACE6;
+		padding: 18px 15px 23px 15px;
+		/*color: #00ACE6;*/
+		display: inline-block;
+		margin-right: 5px;
+		background: rgba(90, 90, 90, 0.7);
+		/*background-color: red;*/
+	}
+	#pageSummary {
+		text-shadow: 1px 1px 2px rgba(70,70,70,.6);
+		padding: 23px 15px 0px 15px;
+		display: inline-block;
+		width: 80%;
+		height: 80px;
+		overflow: auto;
+		background: rgba(90, 90, 90, 0.7);
+		text-align: center;
+		font-size: 25px;
+		/*background-color: blue;*/
+	}

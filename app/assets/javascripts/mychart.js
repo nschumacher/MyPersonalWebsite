@@ -1,4 +1,3 @@
-//this wasn't working ealier as an include script thing. I don't know what's wrong.
 AmCharts.makeChart("chartdiv",
 		{
 			"type": "radar",
@@ -20,7 +19,7 @@ AmCharts.makeChart("chartdiv",
 			],
 			"startDuration": 2,
 			"backgroundAlpha": 0.68,
-			"backgroundColor": "#464646",
+			"backgroundColor": "transparent",
 			"color": "#FFFFFF",
 			"fontFamily": "Veranda",
 			"fontSize": 15,
