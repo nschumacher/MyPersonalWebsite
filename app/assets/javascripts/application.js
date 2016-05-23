@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require mychart
+//= require customskillchart
 //= require_tree .

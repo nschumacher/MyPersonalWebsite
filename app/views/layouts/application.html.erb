@@ -18,80 +18,13 @@
 
  	<!-- Custom Font -->
  	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-    <%= yield :javascript_includes %>
+  
+  <%= yield :javascript_includes %>
+  
+  <%= stylesheet_link_tag "app", media: "all" %>
 
-
-  <style>
-    /* Scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 4px;  /* for vertical scrollbars */
-      height: 4px; /* for horizontal scrollbars */
-    }
-    ::-webkit-scrollbar-track {
-      /*background: rgba(158, 158, 158, 0.15);*/
-      background: rgba(0, 172, 230, 0.15);
-    }
-    ::-webkit-scrollbar-thumb {
-      /*background: rgba(158, 158, 158, 0.4);*/
-      background: rgba(0, 172, 230, 0.4);
-    }
-    /* End Scrollbar styling */
-
-    .tilt-out {
-      position: relative;
-      -webkit-perspective: 220px;
-      perspective: 220px;
-      height: 850px;
-    }
-    .tilt-in {
-      position: absolute;
-      top:1px;
-      right: 20px;
-      margin-top: 30px;
-      margin-right: 50px;
-      padding: 20px;
-      -webkit-transform: rotateY(-1deg);
-      transition: rotateY(-1deg);
-      max-height: 760px;
-      width: 95%;
-      overflow: hidden;
-    }
-    .content:before {
-      content: "";
-      position: fixed;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      
-      display: block;
-      background-image: url('/images/office.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-      
-      -webkit-filter: blur(6px);
-      -moz-filter: blur(6px);
-      -o-filter: blur(6px);
-      -ms-filter: blur(6px);
-      filter: blur(6px);
-    }
-
-    .content {
-      position: fixed;
-      left: 0;
-      right: 0;
-      z-index: 0;
-      color:white; 
-      font-family:Play;
-    }
-    body {
-      background-color: black;
-    }
-  </style>
- 
 </head>
-<%= yield :javascript_includes %>
+<%#= yield :javascript_includes %>
 
 <!-- background-color:#1C1C1C 
 	color:#00ACE6  blue 
