@@ -12,7 +12,7 @@
 }
 
 .nav-box {
-	background: rgba(70, 70, 70, 0.6);
+	background: rgba(50, 50, 50, 0.5);
 	display: inline-block;
 	min-width:85px;
 	text-align: center !important;
@@ -22,7 +22,7 @@
 	/*box-shadow: 2px 2px 10px gray;*/
 }
 .nav-box-last {
-	background: rgba(70, 70, 70, 0.6);
+	background: rgba(50, 50, 50, 0.5);
 	display: inline-block;
 	min-width:85px;
 	text-align: center !important;
@@ -31,7 +31,7 @@
 	/*box-shadow: 2px 2px 10px gray;*/
 }
 .nav-box-last:hover {
-	background: rgba(70, 70, 70, 0.9);
+	background: rgba(50, 50, 50, 0.9);
 	display: inline-block;
 	min-width:85px;
 	text-align: center !important;
@@ -41,7 +41,7 @@
 	/*box-shadow: 2px 2px 10px gray;*/
 }
 .nav-box:hover {
-	background: rgba(70, 70, 70, 0.9);
+	background: rgba(50, 50, 50, 0.9);
 	display: inline-block;
 	min-width:85px;
 	text-align: center !important;
@@ -52,7 +52,7 @@
 	/*font-size: 15px;*/
 }
 .nav-box-current {
-	background: rgba(70, 70, 70, 0.9);
+	background: rgba(50, 50, 50, 0.9);
 	display: inline-block;
 	min-width:85px;
 	text-align: center !important;
@@ -63,7 +63,7 @@
 	/*font-size: 15px;*/
 }
 .nav-box-current-last {
-	background: rgba(70, 70, 70, 0.9);
+	background: rgba(50, 50, 50, 0.9);
 	display: inline-block;
 	min-width:85px;
 	text-align: center !important;
@@ -74,7 +74,7 @@
 	/*font-size: 15px;*/
 }
 .name-box {
-	/*background: rgba(70, 70, 70, 0.6);*/
+	/*background: rgba(50, 50, 50, 0.6);*/
 	display: inline-block;
 	min-width:240px;
 	text-align: center !important;
@@ -89,7 +89,7 @@
 	/*box-shadow: 2px 2px 10px gray;*/
 }
 .name {
-	background: rgba(70, 70, 70, 0.6);
+	background: rgba(50, 50, 50, 0.5);
 	display: inline-block;
 	min-width:220px;
 	text-align: center !important;

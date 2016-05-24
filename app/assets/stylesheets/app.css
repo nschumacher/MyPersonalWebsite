@@ -13,7 +13,7 @@
     }
     /* End Scrollbar styling */
 
-    .tilt-out {
+/*    .tilt-out {
       position: relative;
       -webkit-perspective: 220px;
       perspective: 220px;
@@ -31,7 +31,7 @@
       max-height: 760px;
       width: 95%;
       overflow: hidden;
-    }
+    }*/
     .content:before {
       content: "";
       position: fixed;
