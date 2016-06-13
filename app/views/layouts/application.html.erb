@@ -10,44 +10,46 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
   <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
 
-
-
-  	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  	<script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script> 
-  	<%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  	<%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  	<%#= csrf_meta_tags %>-->
-
-
 	<link rel="shortcut icon" type="image/x-icon" href="/images/arctis-logo.png">
-  	<title>Nick Schumacher</title>
+  <title>Nick Schumacher</title>
   
   	<!-- Bootstrap partial -->
  	<%= render 'layouts/bootstrapStuff' %>
 
  	<!-- Custom Font -->
  	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-    <%= yield :javascript_includes %>
+  
+  <%= yield :javascript_includes %>
+  
+  <%= stylesheet_link_tag "app", media: "all" %>
+
 </head>
-<%= yield :javascript_includes %>
+<%#= yield :javascript_includes %>
 
 <!-- background-color:#1C1C1C 
 	color:#00ACE6  blue 
+  background-image:url('/images/wood_background.jpg')
+  style="background-image:url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg'); background-size: cover; color:white; font-family:Play"
 -->
 
-<body style="background-image:url('/images/wood_background.jpg'); color:white; font-family:Play">
-
-	<!-- My Header -->
-<div align="center">
-	<%= render 'layouts/myHeader' %>
-</div>
-
-<div align="center">
-	<%= yield %>
-</div>
-
-	<!-- My Footer -->
-	<%= render 'layouts/myFooter' %>
-
+<body> 
+  <div class="content">
+    <div class="container-fluid" style="margin-right: 1%; margin-left: 1%; width: 98%">
+      <div class="row">
+      
+        <!-- My picture -->
+    	  <div class="col-xs-2" style="border: 0px solid #007375; margin-top: 50px">
+          <img src="/images/mypictureplaceholder.png" style="width: 300px">
+        </div>
+        
+        <!-- My angled body content -->
+        <div class="col-xs-10" >
+          <div>
+              <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

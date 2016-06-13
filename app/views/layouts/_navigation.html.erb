@@ -1,0 +1,126 @@
+<%= stylesheet_link_tag "navigation", media: "all" %>
+<div class="" >
+    <div class="" align="right">
+        <div class="row" style="margin-top: 15px; font-size: 15px">
+        	
+
+        	<div class="name-box col-xs-8 col-sm-7 col-md-6 col-lg-5" align="" style="display: ">
+					<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
+						<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px; margin-top: -10px">
+						<div class="name">Nick Schumacher</div>
+					</a>
+			</div>
+
+			<div class="col-xs-4 col-sm-5 col-md-6 col-lg-7" style="overflow: auto;padding-right: -999px">
+			<div style="float: left; margin-right: -999px; white-space: ;">
+	        <% if current_page?(pages_home_path) || current_page?('/') %>
+	        	<div style="display: inline-block; margin-right: 20px">
+	        	<a href="/pages/home" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+		        	<div class="nav-box-current" align="center">
+		            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>Home
+		          	</div>
+	          	</a>
+	          	</div>
+	        <% else %>
+	        	
+	        	<a href="/pages/home" class="link">
+		          	<div class="nav-box" align="center">
+		            	Home
+		          	</div>
+	          	</a>
+	          	
+	        <% end %>
+	        <% if current_page?(pages_about_path) %>
+	        	
+	        	<a href="/pages/about" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+		          	<div class="nav-box-current" align="center">
+		            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>About
+		          	</div>
+		        </a>
+		        
+	        <% else %>
+	        	
+	        	<a href="/pages/about" class="link">
+		          	<div class="nav-box" align="center">
+		            	About
+		          	</div>
+		        </a>
+		        
+	        <% end %>
+	        <% if current_page?(pages_inDevelopment_path) %>
+	        	
+			    <a href="/pages/inDevelopment" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+			        <div class="nav-box-current" align="center">
+			        	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
+			            In Development
+			        </div>
+			    </a>
+			    
+	        <% else %>
+	        	
+	        	<a href="/pages/inDevelopment" class="link">
+		          	<div class="nav-box" align="center">
+		           		In Development
+		          	</div>
+		        </a>
+		        
+	        <% end %>
+	        <% if current_page?(pages_projects_path) %>
+	        	
+	        	<a href="/pages/projects" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+		          	<div class="nav-box-current" align="center">
+		            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
+		            	Projects
+		          	</div>
+		        </a>
+		        
+	        <% else %>
+	        	
+	        	<a href="/pages/projects" class="link">
+		          	<div class="nav-box" align="center">
+		            	Projects
+		          	</div>
+		        </a>
+		        
+	        <% end %>
+	        <% if current_page?(good_to_knows_path) %>
+	        	
+		        <a href="/good_to_knows/" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+		          	<div class="nav-box-current" align="center">
+		            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
+		            	The Vault
+		          	</div>
+		        </a>
+		        
+	        <% else %>
+	        	
+	        	<a href="/good_to_knows/" class="link">
+		          	<div class="nav-box" align="center">
+		            	The Vault
+		          	</div>
+		        </a>
+		        
+	        <% end %>
+	        <% if current_page?('/contacts/new') %>
+	        	
+		        <a href="/contacts/new" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+		          	<div class="nav-box-current-last" align="center">
+		            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
+		            	Contact
+		          	</div>
+		        </a>
+		        
+	        <% else %>
+	        	
+	        	<a href="/contacts/new" class="link">
+		          	<div class="nav-box-last" align="center">  
+		            	Contact
+		          	</div>
+		        </a>
+		        
+	        <% end %>
+	        </div>
+	        </div>
+	     </div>
+    </div>
+</div>

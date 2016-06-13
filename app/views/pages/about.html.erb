@@ -1,293 +1,241 @@
+<!-- amCharts javascript sources -->
+<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/radar.js"></script>
+<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/dark.js"></script>
+<%= stylesheet_link_tag "about", media: "all" %>
+<%= javascript_include_tag "mychart", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "customskillchart", "data-turbolinks-track" => true %>
 
-	<style>
-		.entry {
-			background-color: #1C1C1C;
-			box-shadow: 0px 0px 25px black; 
-			margin: 10px 0px 10px 0px; 
-			padding: 10px 10px 10px 10px; 
-			font-size: 85%;
-		}
-		h2{
-			color: #00ACE6;
-		}
-		.mylink:hover:visited{
-			color:#0095D8;
-			background-color: transparent;
-		}
-		.mylink:hover{
-			color:#0095D8;
-			background-color: transparent;
-			text-decoration: none;
-		}
-		.mylink:link{
-			color:#00ACE6;
-			margin-right: 0px;
-		}
-		.mylink:visited{
-			color:#00ACE6;
-			background-color: none;
-		}
-		td {
-			padding-right: 10px;
-		}
-		hr {
-			border-color: white;
-		}
-		.box {
-			border: 2px solid red;
-			width: 100px;
-		}
-	</style>
-	<script>
-$(document).ready(function(){
-	// Row 1
-	$(".detailsLeft1").hide();
-    $(".expandingBoxLeftRow1").click(
-    	function(){
-	        $(this).animate({width: '100%', height: '400px'}, 1000);
-	        $("#row1").animate({height:'400px'}, 1000);
-	        $(".detailsLeft1").delay(1000).show('500');
-    	},
-		function(){
-			$(this).animate({width: '15%', height: '50px'}, 1000);
-			$("#row1").animate({height:'50px'}, 1000);
-			$(".detailsLeft1").hide('slow');
-    	}
-	);
-	$(".detailsRight1").hide();
-    $(".expandingBoxRightRow1").hover(
-    	function(){
-	        $(this).animate({width: '75%', height: '400px'}, 1000);
-	        $("#row1").animate({height:'400px'}, 1000);
-	        $(".detailsRight1").delay(1000).show('500');
-    	},
-		function(){
-			$(this).animate({width: '15%', height: '50px'}, 1000);
-			$("#row1").animate({height:'50px'}, 1000);
-			$(".detailsRight1").hide('slow');
-    	}
-	);
-	//row 2
-});
-</script> 
 
-<div class="" align="left" style="border: 2px solid blue; padding: 40px">
-	<div id="row1" style="border: 2px solid red"> <!-- row 1 -->
-		<!-- BOX 1 -->
-		<div class="expandingBoxLeftRow1" style="display: inline-block; border: 2px solid yellow; width: 15%; height: 50px;">
-			<div align="center" style="background-color: black"><h3>Education</h3></div>
-			<div class="detailsLeft1 container-fluid" style="background-color: black; width: 100%">
-				<h3 style="text-shadow: 2px 2px 4px #00ACE6">Purdue University</h3>
-				<div style="margin: 5px 10px 8px 10px">
-					<hr style="margin:3px 0px 10px 0px">
-				</div>
-				<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 entry" align="left">
-					I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
-				</div>
-				<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 entry" align="center">
-					<img src="/images/purdue.png" style="width: 100%">
-				</div>
-				<br>
-				<h3>Online Courses</h3>
-				<div style="margin: 5px 10px 8px 10px">
-					<hr style="margin:3px 0px 10px 0px">
-				</div>
-				<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 entry" align="left">
-					I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. 
-				</div>
-				<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 entry" align="center">
-					<img src="/images/purdue.png" style="width: 100%"> <!-- THIS NEEDS TO BE CHANGED TO UDEMY LOGO and the EXPANSION NEEDS TO BE ADJUSTED -->
-				</div>
+<div id="tilt-out">
+<div id="tilt-in" style="borde: 2px inset rgba(200,200,200,.2); padding: 40px 40px 40px 40px; overflow-y: auto">
+	<!-- Navigation pane -->
+	<div align="" style="">
+		<%= render 'layouts/navigation' %>
+	</div>
+
+	<hr style="border-color: rgba(240,240,240,.4)">
+
+	<!-- Intro Title -->
+	<div class="intro row">
+		<div class="col-xs-12 col-md-4">
+			<div id="pageLabel">
+				<h1 align="center" style="margin-bottom: 10px;">About Me</h1>
 			</div>
 		</div>
-
-		<!-- BOX 2 -->
-		<div class="expandingBoxRightRow1" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
-			box 2 Skills
-			<div class="detailsRight1 container" style="background-color: black; width: 100%">
-				<h2>Skills:</h2>
-				<div style="margin: 5px 10px 8px 10px">
-					<hr style="margin:3px 0px 10px 0px">
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-					<table>
-						<tr>
-							<td>- Java </td>
-							<td>- C </td>
-							<td>- C++ </td>
-							<td>- HTML </td>
-							<td>- CSS </td>
-							<td>- Ruy on Rails </td>
-						</tr>
-						<tr>
-							<td>- Leadership </td>
-							<td>- Interpersonal Communications </td>
-							<td>- Office </td>
-							<td>- Basic Photoshop </td>
-							<td>- Teamwork </td>
-							<td>- Linux </td>
-						</tr>
-					</table>
-				</div>
+		<div class="col-xs-12 col-md-8">
+			<div id="pageSummary">
+				Below is a summary of my work experience and other background information. Feel free to contact me with any questions or comments!
 			</div>
-		</div>
-	</div><!-- row 1 -->
-
-	<div id="row2" style="border: 5px solid cyan; height: 50px"><!-- row 2 -->
-		<!-- BOX 3 -->
-		<div class="expandingBoxLeftRow2" style="display: inline; position: absolute; border: 2px solid orange; width: 15%; text-align: left; height: 50px;">
-			box 3 RSA Security
-		</div>
-		<!-- BOX 4 -->
-		<div class="expandingBoxRightRow2" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
-			box 4 Meijer
-		</div>
-	</div><!-- row 2 -->
-
-	<div id="row3" style="border: 5px solid purple; height: 50px"><!-- row 3 -->
-		<!-- BOX 5 -->
-		<div class="expandingBoxLeftRow3" style="display: inline; position: absolute; border: 2px solid orange; width: 15%; text-align: left; height: 50px;">
-			box 5 Android Developer
-		</div>
-		<!-- BOX 6 -->
-		<div class="expandingBoxRightRow3" style="display: inline-block; border: 2px solid orange; float: right; width: 15%; position:relative ;text-align: right; height: 50px;">
-			box 6 Cart Staff
-		</div>
-	</div><!-- row 3 -->
-</div><!-- blue box... -->
-
-<div class="container" align="center" style="margin:10px 15px 5px 15px; font-size: large">
-	<div class="row" style="margin-bottom:20px">
-		<h1 style="text-shadow: 2px 2px 4px #00ACE6">A Little About Me</h1>
-		<!--<div style="margin: 5px 10px 8px 10px">
-			<hr style="border-color: white; margin:3px 0px 10px 0px">
-		</div>-->
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="center">
-			I am a Computer Science major at Purdue University. My main focus is software engineering but I also have great interst in security. I like to keep myself busy with projects such as: building software to be used in RSA Security's Anti-Fraud Command Center, building Android applications with various purposes, contructing my own NFC ring for controller my phone, and many more. Check out my other endevors on my <a class="mylink" href="/pages/projects">Projects</a> page and my <a class="mylink" href="/pages/inDevelopment">In Development</a> page! Below is a summary of my work experience and other background information. Feel free to contact me with any questions or comments!
-			<br><br>
 		</div>
 	</div>
-	<div class="row" style="margin-bottom:20px">
-		<h2>Skills:</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
+
+	<!-- Skills & Education -->
+	<div class="row" style="margin-bottom: 15px; overflow: auto">
+		<!-- Skill Chart -->
+		<div class="col-xs-12 col-lg-4" style="margin-bottom: 10px">
+			<div id="skillBox">
+				<span style="font-size: 24px; text-shadow: 1px 1px 1px #00ACE6">Skills</span><br>
+				<table style="width: 100%; margin-left: 20px">
+					<tr>
+						<td><li>Leadership</li></td>
+						<td><li>Office</li></td>
+					</tr>
+					<tr>
+						<td><li>Basic Photoshop</li></td>
+						<td><li>Teamwork</li></td>
+					</tr>
+					<tr>
+						<td><li>Relational Databases</li></td>
+						<td><li>Interpersonal Communications</li></td>
+					</tr>
+					<tr>
+						<td><li>Linux</li></td>
+						<td><li>Web Development</li></td>
+					</tr>
+				</table><br>
+				<span style="font-size: 24px; text-shadow: 1px 1px 1px #00ACE6">Languages</span> <span style="margin-left: 5px;">(hover for confidence levels)</span><br>
+				<div id="chartdiv"></div>
+				<div>
+				</div>
 			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
+		</div>
 		
-			<table>
-				<tr>
-					<td>- Java </td>
-					<td>- C </td>
-					<td>- C++ </td>
-					<td>- HTML </td>
-					<td>- CSS </td>
-					<td>- Ruy on Rails </td>
-				</tr>
-				<tr>
-					<td>- Leadership </td>
-					<td>- Interpersonal Communications </td>
-					<td>- Office </td>
-					<td>- Basic Photoshop </td>
-					<td>- Teamwork </td>
-					<td>- Linux </td>
-				</tr>
-			</table>
-			
+		<!-- Additional Skills & Education -->
+		<div class="col-xs-12 col-lg-8 bodi">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel">
+			    	<div class="panel-heading" role="tab" id="headingTwo">
+			      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			      			<h4 class="panel-title">
+					          Education <br>
+					          <span class="panel-subTitle"><i>"Education is the most powerful weapon you can use to change the world."</i> -- Nelson Mandela</span>
+				     		</h4>
+				      	</a>
+				    </div>
+			    	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+			      		<div class="panel-body">
+			      			<div class="media">
+							  <div class="media-left">
+							    <a href="#">
+							      <img class="media-object pic" src="/images/purdue.png" alt="Purdue">
+							    </a>
+							  </div>
+							  <div class="media-body">
+							    <h4 class="media-heading">Purdue University</h4>
+							    I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude, but are not limited to: web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
+							  </div>
+							</div>
+							<div class="media">
+							  <div class="media-left">
+							    <a href="#">
+							      <img class="media-object pic" src="/images/udemy.png" alt="Udemy">
+							    </a>
+							  </div>
+							  <div class="media-body">
+							    <h4 class="media-heading">Online Classes</h4>
+							   	I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. I have also used CodeAcademy.com to further my comfort with Javascript.
+							  </div>
+							</div>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingThree">
+			      	<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			      		<h4 class="panel-title">
+			          		NCAA Information Services  -  Techpoint Xtern Program <br>
+			          		<span class="panel-subTitle"><i>Full-Stack Developer | Software Tester</i></span>
+			          		<span class="panel-subTitle" style="padding-left: 30px"><i>June 2016 - August 2016</i></span>
+			      		</h4>
+			      	</a>
+		    	</div>
+			    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+			      	<div class="panel-body">
+			      		<div class="media">
+						  <div class="media-left">
+						    <a href="http://www.ncaa.org/">
+						      <img class="media-object pic" src="/images/ncaa.png" alt="NCAA">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    I will be working for the NCAA's Information Services department this summer as a full-stack developer as part of the Xtern Program through TechPoint. I will also be learning Selenium and writing test scripts for some of the 80+ applications the IS department supports.
+						  </div>
+						</div>
+			      	</div>
+			    </div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingFour">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+		      			<h4 class="panel-title">
+				          RSA, The Security Division of EMC  -  Purdue Pathmaker Program<br>
+				          <span class="panel-subTitle"><i>Shift Manager | Senior Analyst</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>July 2014 - Present</i></span>
+			      		</h4>
+			      	</a>
+			    </div>
+		    	<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <img class="media-object pic" src="/images/rsa.png" alt="RSA">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						   	<ul>
+								<li>Responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.)</li>
+								<li>Taking prevention steps, terminating online frauds and performing computer forensic analysis.</li>
+								<li>Comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
+								<li>Communicating with customers to update on attack status</li>
+							</ul>
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingFive">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+		      			<h4 class="panel-title">
+				          Android Developer<br>
+				          <span class="panel-subTitle"><i>Arctis</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>May 2013 - Present</i></span>
+				    	</h4>
+				    </a>
+			    </div>
+		    	<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="http://play.google.com">
+						      <img class="media-object pic" src="/images/android.png" alt="Android">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						    In my free time, I am slowly teaching myself how to develop Android applications. See <a class="mylink" href="/pages/projects">Projects</a> for examples.
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingSix">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+		      			<h4 class="panel-title">
+				          Meijer<br>
+				          <span class="panel-subTitle"><i>General Merchandise Clerk</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>May 2014 - August 2014</i></span>
+				        </h4>
+				    </a>
+			    </div>
+		    	<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <img class="media-object pic" src="/images/meijer.png" alt="Meijer">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						   	I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+		  	<div class="panel">
+		    	<div class="panel-heading" role="tab" id="headingSeven">
+		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+		      			<h4 class="panel-title">
+				          Birk BoilerMaker Golf Complex & Coyoted Crossing Golf Course<br>
+				          <span class="panel-subTitle"><i>Cart Staff</i></span>
+				          <span class="panel-subTitle" style="padding-left: 30px"><i>April 2011 - August 2013</i></span>
+				    	</h4>    
+				    </a>
+			    </div>
+		    	<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+		      		<div class="panel-body">
+		      			<div class="media">
+						  <div class="media-left">
+						    <a href="#">
+						      <img class="media-object pic" src="/images/purdueGolf.png" alt="Golf">
+						    </a>
+						  </div>
+						  <div class="media-body">
+						   	The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
+						  </div>
+						</div>
+		      		</div>
+		    	</div>
+		  	</div>
+			</div> <!-- end skills & edu accordion -->
 		</div>
 	</div>
-
-	<!-- Work Divider -->
-	<div class="row" style="margin-bottom:20px; margin-top: 50px">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
-			Work Experience
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
+	
+	<!-- Footer -->
+	<div class="foot" align="right">
+		<%= render 'layouts/myFooter' %>
 	</div>
-
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>RSA, The Security Division of EMC2</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
-			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			Shift Manager | Senior Anti-Fraud Analyst
-			<ul>
-				<li>Responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.)</li>
-				<li>Taking prevention steps, terminating online frauds and performing computer forensic analysis.</li>
-				<li>Comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
-				<li>Communicating with customers to update on attack status</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Android Developer</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
-			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			In my free time, I am slowly teaching myself how to develop Android applications. See <a class="mylink" href="/pages/projects">Projects</a> for examples.
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Meijer</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
-			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			General Merchandise Clerk<br>
-			I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Cart Staff</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
-			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			Coyote Crossing Golf Course and Birk Boilermaker Golf Complex<br>
-			The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
-		</div>
-	</div>
-
-	<!-- Education Divider -->
-	<div class="row" style="margin-bottom:20px; margin-top: 50px">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
-			Education
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Purdue University</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
-			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new related to Computer Science. My interests inlcude web development, Android application development, computer security, and scripting. I enjoy attending Hack-a-thons and challenging myself to develop something new in a weekend.
-		</div>
-	</div>
-
-	<div class="row" style="margin-bottom:20px">
-		<h2>Online Courses</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="margin:3px 0px 10px 0px">
-			</div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="left">
-			I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. 
-		</div>
-	</div>
+</div>
 </div>

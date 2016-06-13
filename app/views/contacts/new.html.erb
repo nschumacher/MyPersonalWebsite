@@ -1,42 +1,46 @@
-<style>
-  label {
-    text-align: left;
-    color: #00ACE6;
-    display: block;
-    font-size: 16px;
-  }
+<%= stylesheet_link_tag "contact", media: "all" %>
+<div id="tilt-out">
+<div id="tilt-in" style="borde: 2px solid rgba(200,200,200,.2); padding: 40px 40px 30px 40px; overflow-y: auto">
+  <!-- Navigation pane -->
+  <div align="" style="">
+    <%= render 'layouts/navigation' %>
+  </div>
 
-  input {
-    width: 300px;
-    margin-bottom: 15px;
-    color: black;
-  }
+  <hr style="border-color: rgba(240,240,240,.4)">
 
-   textarea {
-    width: 500px;
-    height: 100px;
-    color: black;
-  }
+  <!-- Intro Title -->
+  <div class="intro row">
+    <div class="col-xs-12 col-md-3">
+      <div id="pageLabel">
+        <h1 align="center" style="margin-bottom: 15px;">Contact</h1>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-9">
+      <div id="pageSummary">
+        Send me a message and I will get back to you as soon as I can!
+      </div>
+    </div>
+  </div>
 
-  .btn {
-    width: 175px;
-  }
-</style>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2">&nbsp</div>
-    <div class="col-sm-8" align="left" style="">
-      
-      <h1 align="center" style="text-shadow: 2px 2px 4px #00ACE6">Send Me a Message!</h1>
-      <div align="center" style="font-size: 15px">I will get back to you as soon as I can.</div>
+  <div class="row" style="margin-bottom: 10px;">
+    <div class="col-sm-12 col-md-4">
+      <div style="background: rgba(50, 50, 50, 0.5); margin-bottom: 10px; padding: 10px">
+        Personal Email:<br> 
+          <span style="margin-left: 15px">nick.schumacher07@gmail.com</span><br>
+        Work Email:<br>
+          <span style="margin-left: 15px">nicholas.schumacher@emc.com<span><br>
+          <span style="margin-left: 15px">nicholas.schumacher@rsa.com</span><br>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8" align="left" style="background: rgba(50, 50, 50, 0.5); padding: 15px">
 
       <%= simple_form_for @contact, :html => {:class => 'form-horizontal'} do |f| %>
-        <div style="width: 300px">
+        <div>
           <%= f.input :name , :required => true %>
           
           <%= f.input :email, :required => true %>
-          <%= f.input :message, :as => :text, :required => true, style:'width: 500px' %>
+          <%= f.input :message, :as => :text, :required => true %>
           
           <div class= "hidden">
             <%= f.input :nickname, :hint => 'Leave this field blank!' %>
@@ -48,6 +52,9 @@
         </div>
       <% end %>
     </div>
-    <div class="col-sm-2">&nbsp</div>
   </div>
+  <div class="foot" align="right">
+      <%= render 'layouts/myFooter' %>
+  </div>
+</div>
 </div>

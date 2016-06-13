@@ -1,79 +1,42 @@
-<style>
-.mylink:hover:visited{
-	color:#0095D8;
-	background-color: none;
-}
-.mylink:hover{
-	color:#757575;
-	background-color: none;
-	text-decoration: none;
-}
-.mylink:link{
-	color:#757575;
-	margin-right: 0px;
-}
-.mylink:visited{
-	color:#757575;
-	background-color: none;
-}
-</style>
+<%= stylesheet_link_tag "home", media: "all" %>
 
-<!--
-IDEA 2
-<div class="container-fluid">
-	<div class="row" style="background-color: #1C1C1C; margin: 0px 5% 10px 5%; box-shadow: 3px 3px 8px #9C9C9C; padding-top: 15px">
-		
-		<!--
-
-		IDEA 1
-
-
-		<!-- My name and intro paragraph
-		<div class="col-md-7" style="background-color: #1C1C1C">
-			<h1 style="font-size: 450%; color: white; text-shadow: 0px 4px 6px black">
-				Nicholas<br>
-				Alexander<br>
-				Schumacher<br>
-			</h1>
-			<p style="font-size: 105%;">
-				I am a Computer Science major at Purdue University. My main focus is software engineering but I also have great interst in security. I like to keep myself busy with projects such as: building software to be used in <span style="color:#BA0000">RSA Security's Anti-Fraud Command Center</span>, building <span style="color:#00AD37">Android</span>applications with various purposes, contructing my own NFC ring for controller my phone, and many more. Check out my other endevors on my <a class="mylink" href="/pages/projects">Projects</a> page and my <a class="mylink" href="/pages/inDevelopment">In Development</a> page and feel free to contact me with any questions or comments!
-			</p>
+<div id="tilt-out">
+	<div id="tilt-in" style="borde: 2px inset rgba(200,200,200,.2); padding: 40px 40px 40px 40px; overflow-y:auto">
+		<!-- Navigation pane -->
+		<div align="" style="">
+			<%= render 'layouts/navigation' %>
 		</div>
 
-		<!-- My picture 
-		<div class="col-md-5" align="right">
-			<img src="/images/mypic.jpg" style="width: 280px">
+		<hr style="border-color: rgba(240,240,240,.4)">
+
+		<!-- Intro Title -->
+		<div class="intro row">
+			<div class="col-xs-12 col-md-3">
+				<div id="pageLabel">
+					<h1 align="center" style="margin-bottom: 10px;">Home</h1>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-9">
+				<div id="pageSummary">
+					Nicholas A. Schumacher
+				</div>
+			</div>
 		</div>
 
-		^^IDEA 1 ENDS HERE^^
 
-		<!-- My picture 
-		<div class="col-md-12 col-lg-12" align="center">
-			<img src="/images/mypic.jpg" style="width: 200px">
-		</div>
-
-		<!-- Intro Statement 
-		<div class="col-md-12" style="background-color: #1C1C1C; margin-bottom: 20px; padding-bottom: 75px" align="center">
+		<!-- Intro Statement -->
+		<div class="bod" align="center">
 			<h2 style="font-size: 150%">
-				Whether it's building an Android application, a website, or something entirely new, I am always up for a new challenge! Check out my current projects and send me an email if you have questions or an new challenge for me!
+				I am a Computer Science major at Purdue University. My main focus is software engineering but I also have great interst in security. I like to keep myself busy with projects such as: building software to be used in RSA Security's Anti-Fraud Command Center, building Android applications with various purposes, contructing my own NFC ring for controlling my phone, and many more. <br><br>
+				Whether it's building an Android application, a website, or something entirely new, I am always up for a new challenge! <br><br>
+
+				Check out my current projects and send me an email if you have questions<br>
+				or an new challenges for me!
 			</h2>
 		</div>
-	</div>
-</div>-->
 
-<div class="container" align="center">
-	<!-- My picture --> 
-	<div class="" align="center">
-		<img src="/images/mypic.jpg" style="width: 200px">
-	</div>
-
-	<!-- Intro Statement -->
-	<div class="" style="margin-bottom: 20px; padding-bottom: 75px; text-shadow: 2px 2px 4px #00ACE6" align="center">
-		<h2 style="font-size: 150%">
-			Whether it's building an Android application, a website, or something entirely new, I am always up for a new challenge! <br><br>
-
-			Check out my current projects and send me an email if you have questions<br>
-			or an new challenge for me!
-		</h2>
+		<div class="foot" align="right">
+			<%= render 'layouts/myFooter' %>
+		</div>
 	</div>
 </div>

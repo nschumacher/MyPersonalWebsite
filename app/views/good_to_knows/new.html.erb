@@ -1,5 +1,95 @@
-<h1>New Entry to My Brain</h1>
+<style>
+  .intro {
+      /*margin: 10px 0px 25px -12px;*/
+  }
+  #pageLabel {
+    text-shadow: 1px 1px 1px #00ACE6;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 10px;
+    /*display: inline-block;*/
+    /*margin-right: 5px;*/
+    background: rgba(50, 50, 50, 0.5);
+  }
+  #pageSummary {
+    text-shadow: 1px 1px 2px rgba(70,70,70,.6);
+    /*padding: 23px 15px 0px 15px;*/
+    padding: 25px;
+    margin-bottom: 10px;
+    /*display: inline-block;*/
+    /*width: 80%;*/
+    /*height: 80px;*/
+    overflow: auto;
+    background-color: rgba(50, 50, 50, 0.5);
+    /*background-color: rgba(0,110,170,.5);*/
+    text-align: center;
+    font-size: 18px;
+  }
+  .entry {
+    /*background-color: rgba(0,110,170,.5);*/
+    background-color: rgba(50, 50, 50, 0.5);
+    /*box-shadow: 0px 0px 25px black;*/
+    padding: 5px;
+    /*margin: 10px;*/
+    color: white;
+    /*opacity: .90;*/
+  }
+  .foot {
+  float: right;
+  /*background: rgba(70, 70, 70, 0.7);*/
+    /*box-shadow: 6px 6px 15px gray;*/
+    width: 300px;
+    margin: 10px 0px 0px 5px;
+    padding: 0px 5px 0px 5px;
+    text-shadow: 2px 2px 4px #00ACE6; 
+}
+  #tilt-out {
+  position: relative;
+  -webkit-perspective: 220px;
+  perspective: 220px;
+  height: 850px;
+  }
+  #tilt-in {
+    position: absolute;
+    top:1px;
+    right: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
+    padding: 20px;
+    -webkit-transform: rotateY(-2deg);
+    transition: rotateY(-2deg);
+    max-height: 760px;
+    width: 95%;
+    overflow: hidden;
+  }
+</style>
+
+<div id="tilt-out">
+<div id="tilt-in">
+<!-- Navigation pane -->
+    <div align="" style="">
+      <%= render 'layouts/navigation' %>
+    </div>
+    <hr style="border-color: rgba(240,240,240,.4)">
+    <!-- Intro Title -->
+    <div class="intro row">
+      <div class="col-xs-12 col-md-3">
+        <div id="pageLabel">
+          <h1 align="center" style="margin-bottom: 10px;">New Entry</h1>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-9">
+        <div id="pageSummary">&nbsp<!-- 
+          The Vault, is a knowledgebase of good-to-knows and how to's that I have compiled as I have gained experience through my Computer Science undergraduate education, while at work, and while developing my side projects. Having a personlized knowledgebase makes searching for specific solutions easier. -->
+        </div>
+      </div>
+    </div>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', good_to_knows_path, style: "color: white" %>
+
+<div class="foot" align="right">
+  <%= render 'layouts/myFooter' %>
+</div>
+</div>
+</div>
