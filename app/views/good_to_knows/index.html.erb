@@ -60,6 +60,15 @@
   text-align: center;
   font-size: 18px;
 }
+.foot {
+  float: right;
+  /*background: rgba(70, 70, 70, 0.7);*/
+    /*box-shadow: 6px 6px 15px gray;*/
+    width: 300px;
+    margin: 0px 0px 0px 5px;
+    padding: 0px 5px 0px 5px;
+    text-shadow: 2px 2px 4px #00ACE6; 
+}
 </style>
 
 <div id="tilt-out">
@@ -99,7 +108,7 @@
       <div class="entry" align="left" style="padding: 8px">
         <h4 align="center" style="color: #00ACE6; text-shadow: 1px 1px 1px #black;"><%=good_to_know.title %></h4>
         <div style="border: 1px solid black; background-color: rgba(50, 50, 50, 0.5); padding: 10px">
-          <div data-good_to_know="<%= good_to_know.content %>" id="my_content_<%= counter %>" style="height: 175px; overflow:auto">
+          <div data-good_to_know="<%= good_to_know.content %>" id="my_content_<%= counter %>" style="height: 175px; overflow:hidden;">
           </div>
         </div>
         <div style="padding:8px">
