@@ -55,7 +55,7 @@ hr {
     overflow: auto;
 }
 .bodi {
-    padding: 0px 10px 5px 10px;
+    padding: 0px 10px 5px 20px;
     /*max-height: 590px;*/
     overflow: auto;
 }
@@ -166,5 +166,5 @@ hr {
   overflow: hidden;
 }
 .skillAccordion {
-	margin-right: 10px;
+	margin-right: 5px;
 }
