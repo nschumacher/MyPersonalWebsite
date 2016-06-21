@@ -10,7 +10,16 @@ class GoodToKnowsController < ApplicationController
   # GET /good_to_knows/1
   # GET /good_to_knows/1.json
   def show
+    @good_to_know = GoodToKnow.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @good_to_know }
+      format.js
+    end
   end
+
+
 
   # GET /good_to_knows/new
   def new

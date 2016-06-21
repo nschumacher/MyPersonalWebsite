@@ -4,11 +4,13 @@
     /*box-shadow: 0px 0px 25px black;*/
     padding: 5px;
     margin: 10px;
+    margin-left: 5px;
     color: white;
+    box-shadow: 4px 2px 10px rgba(0,0,0,.6);
     /*opacity: .90;*/
   }
   .entry:hover {
-    box-shadow: 0px 0px 15px #00ACE6;
+    /*box-shadow: 0px 0px 15px #00ACE6;*/
     /*opacity: .95;*/
   }
 
@@ -58,15 +60,21 @@
   background-color: rgba(50, 50, 50, 0.5);
   /*background-color: rgba(0,110,170,.5);*/
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   box-shadow: 4px 2px 10px rgba(0,0,0,.6);
 }
-.foot {
-  /*float: right;*/
-  /*background: rgba(70, 70, 70, 0.7);*/
-    /*box-shadow: 6px 6px 15px gray;*/
-/*    width: 300px;
-    margin: 0px 0px 0px 5px;
-    padding: 0px 5px 0px 5px;
-    text-shadow: 2px 2px 4px #00ACE6; */
+#vaultList {
+  padding-left: 0px;
+  max-height: 330px;
+  overflow-y: auto;
+}
+.entryLinks:link {
+  color: white;
+}
+.entryLinks:visited {
+  color: white;
+}
+.entryLinks:hover {
+  color: white;
+  text-decoration: none
 }
