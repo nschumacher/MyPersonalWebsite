@@ -6,8 +6,9 @@
     <%= render 'layouts/navigation' %>
   </div>
 
-  <hr style="border-color: rgba(240,240,240,.4)">
+  <hr style="border-color: rgba(240,240,240,.4); box-shadow: 4px 2px 10px rgba(0,0,0,.6); margin-top: 0px">
 
+<div style="max-height: 510px; overflow-y:auto; overflow-x: hidden; margin-bottom: 5px; padding-right: 10px;">
   <!-- Intro Title -->
   <div class="intro row">
     <div class="col-xs-12 col-md-3">
@@ -23,17 +24,18 @@
   </div>
 
 
-  <div class="row" style="margin-bottom: 10px;">
+  <div class="row" style="margin-bottom: 10px; padding: 0px 15px;">
     <div class="col-sm-12 col-md-4">
-      <div style="background: rgba(50, 50, 50, 0.5); margin-bottom: 10px; padding: 10px">
+      <div style="background: rgba(50, 50, 50, 0.5); margin-bottom: 10px; padding: 10px; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
         Personal Email:<br> 
           <span style="margin-left: 15px">nick.schumacher07@gmail.com</span><br>
         Work Email:<br>
-          <span style="margin-left: 15px">nicholas.schumacher@emc.com<span><br>
+          <span style="margin-left: 15px">nschumacher@ncaa.org</span><br>
+          <span style="margin-left: 15px">nicholas.schumacher@emc.com</span><br>
           <span style="margin-left: 15px">nicholas.schumacher@rsa.com</span><br>
       </div>
     </div>
-    <div class="col-sm-12 col-md-8" align="left" style="background: rgba(50, 50, 50, 0.5); padding: 15px">
+    <div class="col-sm-12 col-md-8" align="left" style="background: rgba(50, 50, 50, 0.5); padding: 15px; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
 
       <%= simple_form_for @contact, :html => {:class => 'form-horizontal'} do |f| %>
         <div>
@@ -53,6 +55,8 @@
       <% end %>
     </div>
   </div>
+</div>
+<hr style="border-color: rgba(240,240,240,.4); box-shadow: 4px 2px 10px rgba(0,0,0,.6); margin-bottom: 10px; margin-top: 0px">
   <div class="foot" align="right">
       <%= render 'layouts/myFooter' %>
   </div>
