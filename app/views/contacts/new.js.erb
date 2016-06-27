@@ -1,3 +1,6 @@
+$('.nav-box').css("border-top", "4px solid rgba(255, 255, 255, 0.9)");
+$('.link').css("color", "white");
+$('.link').css("text-shadow", "none");
 $('.navbar-collapse').collapse("hide");
 $("#collapseBody").animate({"height" : "0"}, 250);
 $('#collapseBody').promise().done(function(){
@@ -5,3 +8,5 @@ $('#collapseBody').promise().done(function(){
     $("#collapseBody").animate({"height" : "500"}, 700);
     $("#collapseBody").html("<%= escape_javascript(render partial: 'new', locals: { :remote => true } ) %>");
 });
+$('#contact').css("border-top", "4px solid #00ACE6");
+$('#contact_link').css("text-shadow", "2px 2px 6px #00ACE6");
