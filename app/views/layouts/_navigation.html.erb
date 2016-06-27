@@ -28,17 +28,23 @@ $(document).ready(function () {
          <ul class="nav navbar-nav navbar-right">
 	     	<li>
 	     		<% if current_page?(pages_home_path) || current_page?('/') %>
-		        	<a href="/" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+		        	<!-- <a href="/" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
 			        	<div class="nav-box-current" align="center">
 			            	Home
 			          	</div>
-		          	</a>
+		          	</a> -->
+                <div class="nav-box" align="center">
+                  <%= link_to 'Home', pages_return_home_path, :remote => true, :class => 'link', :style => "color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+                </div>
 	        	<% else %>
-		        	<a href="/" class="link">
+		        	<!-- <a href="/" class="link">
 			          	<div class="nav-box" align="center">
 			            	Home
 			          	</div>
-		          	</a>
+		          	</a> -->
+                <div class="nav-box" align="center">
+                  <%= link_to 'Home', root_path, :remote => true, :class => 'link' %>
+                </div>
 	        	<% end %>
 	     	</li>
 	     	<li>

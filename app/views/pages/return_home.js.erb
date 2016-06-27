@@ -2,6 +2,6 @@ $('.navbar-collapse').collapse("hide");
 $("#collapseBody").animate({"height" : "0"}, 250);
 $('#collapseBody').promise().done(function(){
     document.getElementById('collapseBody').innerHTML = "";
-    $("#collapseBody").animate({"height" : "500"}, 700);
-    $("#collapseBody").html("<%= escape_javascript(render partial: 'projects', locals: { :remote => true } ) %>");
+    $("#collapseBody").animate({"height" : "450"}, 700);
+    $("#collapseBody").html("<%= escape_javascript(render partial: 'home', locals: { :remote => true } ) %>");
 });
