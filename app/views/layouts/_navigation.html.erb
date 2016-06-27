@@ -27,14 +27,14 @@ $(document).ready(function () {
       <div class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
 	     	<li>
-	     		<% if current_page?(pages_home_path) || current_page?('/pages/test') %>
-		        	<a href="/pages/home" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
+	     		<% if current_page?(pages_home_path) || current_page?('/') %>
+		        	<a href="/" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
 			        	<div class="nav-box-current" align="center">
 			            	Home
 			          	</div>
 		          	</a>
 	        	<% else %>
-		        	<a href="/pages/home" class="link">
+		        	<a href="/" class="link">
 			          	<div class="nav-box" align="center">
 			            	Home
 			          	</div>
@@ -43,21 +43,23 @@ $(document).ready(function () {
 	     	</li>
 	     	<li>
 	     		<% if current_page?(pages_about_path) %>
-	        	
+
 		        	<a href="/pages/about" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
 			          	<div class="nav-box-current" align="center">
 			            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> -->About
 			          	</div>
 			        </a>
-		        
+
 	        	<% else %>
-	        	
-		        	<a href="/pages/about" class="link">
+
+		        	<!-- <a href="/pages/about" class="link">
 			          	<div class="nav-box" align="center">
 			            	About
 			          	</div>
-			        </a>
-		        
+			        </a> -->
+              <div class="nav-box" align="center">
+                <%= link_to 'About', pages_about_path, :remote => true, :class => 'link' %>
+              </div>
 	        	<% end %>
 	     	</li>
 	     	<li>
@@ -69,11 +71,14 @@ $(document).ready(function () {
 				        </div>
 				    </a>
 		        <% else %>
-		        	<a href="/pages/inDevelopment" class="link">
+		        	<!-- <a href="/pages/inDevelopment" class="link">
 			          	<div class="nav-box" align="center">
 			           		In Development
 			          	</div>
-			        </a>
+			        </a> -->
+              <div class="nav-box" align="center">
+                <%= link_to 'In Development', pages_inDevelopment_path, :remote => true, :class => 'link' %>
+              </div>
 		        <% end %>
 	     	</li>
 	     	<li>
@@ -85,11 +90,14 @@ $(document).ready(function () {
 			          	</div>
 			        </a>
 		        <% else %>
-		        	<a href="/pages/projects" class="link">
+		        	<!-- <a href="/pages/projects" class="link">
 			          	<div class="nav-box" align="center">
 			            	Projects
 			          	</div>
-			        </a>
+			        </a> -->
+              <div class="nav-box" align="center">
+                <%= link_to 'Projects', pages_projects_path, :remote => true, :class => 'link' %>
+              </div>
 		        <% end %>
 	     	</li>
 	     	<li>
@@ -101,11 +109,14 @@ $(document).ready(function () {
 			          	</div>
 			        </a>
 		        <% else %>
-		        	<a href="/good_to_knows/" class="link">
+		        	<!-- <a href="/good_to_knows/" class="link">
 			          	<div class="nav-box" align="center">
 			            	The Vault
 			          	</div>
-			        </a>
+			        </a> -->
+              <div class="nav-box" align="center">
+                <%= link_to 'The Vault', good_to_knows_path, :remote => true, :class => 'link' %>
+              </div>
 		        <% end %>
 	     	</li>
 	     	<li>
@@ -117,11 +128,14 @@ $(document).ready(function () {
 			          	</div>
 			        </a>
 		        <% else %>
-		        	<a href="/contacts/new" class="link">
-			          	<div class="nav-box-last" align="center">  
+		        	<!-- <a href="/contacts/new" class="link">
+			          	<div class="nav-box-last" align="center">
 			            	Contact
 			          	</div>
-			        </a>
+			        </a> -->
+              <div class="nav-box" align="center">
+                <%= link_to 'Contact', new_contact_path, :remote => true, :class => 'link' %>
+              </div>
 		        <% end %>
 	     	</li>
          </ul>

@@ -1,6 +1,11 @@
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.js
+    end
   end
 
   def create

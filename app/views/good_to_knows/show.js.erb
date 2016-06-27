@@ -1,2 +1,6 @@
-document.getElementById('vaultEntry').innerHTML = "";
-$('#vaultEntry').append("<%= escape_javascript(render(:partial => 'show', :locals => {:remote => true})) %>");
+$('#vaultEntry').slideUp("slow");
+$('#vaultEntry').promise().done(function(){
+  document.getElementById('vaultEntry').innerHTML = "";
+  $('#vaultEntry').append("<%= escape_javascript(render(:partial => 'show', :locals => {:remote => true})) %>");
+  $('#vaultEntry').slideDown("slow");
+});
