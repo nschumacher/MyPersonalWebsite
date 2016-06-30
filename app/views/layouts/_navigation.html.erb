@@ -27,102 +27,34 @@ $(document).ready(function () {
       <div class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
 	     	<li>
-	     		<% if current_page?(pages_home_path) || current_page?('/pages/test') %>
-		        	<a href="/pages/home" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			        	<div class="nav-box-current" align="center">
-			            	Home
-			          	</div>
-		          	</a>
-	        	<% else %>
-		        	<a href="/pages/home" class="link">
-			          	<div class="nav-box" align="center">
-			            	Home
-			          	</div>
-		          	</a>
-	        	<% end %>
+          <div class="nav-box" id="home" align="center">
+              <%= link_to 'Home', pages_return_home_path, :remote => true, :id => 'return_home_link', :class => 'link', :style => "color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
+          </div>
 	     	</li>
 	     	<li>
-	     		<% if current_page?(pages_about_path) %>
-	        	
-		        	<a href="/pages/about" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current" align="center">
-			            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> -->About
-			          	</div>
-			        </a>
-		        
-	        	<% else %>
-	        	
-		        	<a href="/pages/about" class="link">
-			          	<div class="nav-box" align="center">
-			            	About
-			          	</div>
-			        </a>
-		        
-	        	<% end %>
+          <div class="nav-box" id="about" align="center">
+            <%= link_to 'About', pages_about_path, :remote => true, :id => 'about_link', :class => 'link' %>
+          </div>
 	     	</li>
 	     	<li>
-	     		<% if current_page?(pages_inDevelopment_path) %>
-				    <a href="/pages/inDevelopment" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-				        <div class="nav-box-current" align="center">
-				        	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> -->
-				            In Development
-				        </div>
-				    </a>
-		        <% else %>
-		        	<a href="/pages/inDevelopment" class="link">
-			          	<div class="nav-box" align="center">
-			           		In Development
-			          	</div>
-			        </a>
-		        <% end %>
+          <div class="nav-box" id="in_development" align="center">
+            <%= link_to 'In Development', pages_inDevelopment_path, :remote => true, :id => 'in_development_link', :class => 'link' %>
+          </div>
 	     	</li>
 	     	<li>
-	     		<% if current_page?(pages_projects_path) %>
-		        	<a href="/pages/projects" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current" align="center">
-			            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> -->
-			            	Projects
-			          	</div>
-			        </a>
-		        <% else %>
-		        	<a href="/pages/projects" class="link">
-			          	<div class="nav-box" align="center">
-			            	Projects
-			          	</div>
-			        </a>
-		        <% end %>
+          <div class="nav-box" id="projects" align="center">
+            <%= link_to 'Projects', pages_projects_path, :remote => true, :id => 'in_development_link', :class => 'link' %>
+          </div>
 	     	</li>
 	     	<li>
-	     		<% if current_page?(good_to_knows_path) %>
-			        <a href="/good_to_knows/" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current" align="center">
-			            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> -->
-			            	The Vault
-			          	</div>
-			        </a>
-		        <% else %>
-		        	<a href="/good_to_knows/" class="link">
-			          	<div class="nav-box" align="center">
-			            	The Vault
-			          	</div>
-			        </a>
-		        <% end %>
+          <div class="nav-box" id="vault" align="center">
+            <%= link_to 'The Vault', good_to_knows_path, :remote => true, :id => 'vault_link', :class => 'link' %>
+          </div>
 	     	</li>
 	     	<li>
-	     		<% if current_page?('/contacts/new') %>
-			        <a href="/contacts/new" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current-last" align="center">
-			            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> -->
-			            	Contact
-			          	</div>
-			        </a>
-		        <% else %>
-		        	<a href="/contacts/new" class="link">
-			          	<div class="nav-box-last" align="center">  
-			            	Contact
-			          	</div>
-			        </a>
-		        <% end %>
+            <div class="nav-box" id="contact" align="center">
+              <%= link_to 'Contact', new_contact_path, :remote => true, :id => 'contact_link', :class => 'link' %>
+            </div>
 	     	</li>
          </ul>
 

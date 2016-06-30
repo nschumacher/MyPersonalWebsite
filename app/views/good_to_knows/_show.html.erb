@@ -17,7 +17,7 @@
     position: absolute;
     top:1px;
     right: 20px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     margin-right: 50px;
     padding: 20px;
     -webkit-transform: rotateY(-2deg);
@@ -68,7 +68,7 @@
     width: 300px;
     margin: 10px 0px 0px 5px;
     padding: 0px 5px 0px 5px;
-    text-shadow: 2px 2px 4px #00ACE6; 
+    text-shadow: 2px 2px 4px #00ACE6;
 }
 </style>
 <script>
@@ -82,7 +82,7 @@ var content = "";
 </script>
 <p id="notice"><%= notice %></p>
 
-<!-- 
+<!--
 <div id="tilt-ou"> -->
 <div id="tilt-i">
     <!-- Navigation pane -->
@@ -103,10 +103,10 @@ var content = "";
         </div>
       </div>
     </div> -->
-    
+
 	<div class="entry" align="left" style="padding: 8px">
-		<div align="right" style="height: 5px">	
-			<%= link_to 'Back', good_to_knows_path, :class => "thislink", style:"color: #00ACE6" %> 
+		<div align="right" style="height: 5px">
+			<%= link_to 'Back', good_to_knows_path, :class => "thislink", style:"color: #00ACE6" %>
 		</div>
 	  <h4 align="center" style="color: #00ACE6">
 	  		<%=@good_to_know.title %>
@@ -121,7 +121,7 @@ var content = "";
 	      	</div>
 	  </div>
 	  <div align="right">
-	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#00ACE6", :class => "thislink" %> | 
+	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#00ACE6", :class => "thislink" %> |
 			<%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, style:"color:#00ACE6", :class => "thislink" %>
 	  </div>
   </div>

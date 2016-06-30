@@ -5,6 +5,12 @@ class GoodToKnowsController < ApplicationController
   # GET /good_to_knows.json
   def index
     @good_to_knows = GoodToKnow.all
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @good_to_know }
+      format.js
+    end
   end
 
   # GET /good_to_knows/1
