@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   #mount Ckeditor::Engine => '/ckeditor'
-  resources :good_to_knows
+  resources :good_to_knows do
+    collection do
+      get 'search'
+    end
+  end
   get 'pages/home'
   get 'pages/return_home'
 

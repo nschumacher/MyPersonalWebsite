@@ -25,15 +25,38 @@ class GoodToKnowsController < ApplicationController
     end
   end
 
+  def search
+    if params[:search].present?
+      @good_to_knows = GoodToKnow.search(params[:search])
+    else
+      @good_to_knows = GoodToKnow.all
+    end
 
+    respond_to do |format|
+      format.json { render json: @good_to_know }
+      format.js
+    end
+  end
 
   # GET /good_to_knows/new
   def new
     @good_to_know = GoodToKnow.new
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @good_to_know }
+      format.js
+    end
   end
 
   # GET /good_to_knows/1/edit
   def edit
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @good_to_know }
+      format.js
+    end
   end
 
   # POST /good_to_knows
@@ -43,8 +66,9 @@ class GoodToKnowsController < ApplicationController
 
     respond_to do |format|
       if @good_to_know.save
-        format.html { redirect_to @good_to_know, notice: 'Entry was successfully created.' }
+        format.html { redirect_to pages_home_path, notice: 'Entry was successfully created.' }
         format.json { render :show, status: :created, location: @good_to_know }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @good_to_know.errors, status: :unprocessable_entity }
@@ -57,8 +81,9 @@ class GoodToKnowsController < ApplicationController
   def update
     respond_to do |format|
       if @good_to_know.update(good_to_know_params)
-        format.html { redirect_to @good_to_know, notice: 'Entry was successfully updated.' }
+        format.html { redirect_to pages_home_path, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @good_to_know }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @good_to_know.errors, status: :unprocessable_entity }

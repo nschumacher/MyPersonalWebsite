@@ -1,0 +1,51 @@
+<%= stylesheet_link_tag "vaultIndex", media: "all" %>
+
+<div class="intro row">
+  <div class="col-xs-12 col-md-3">
+    <div id="pageLabel">
+      <h1 align="center" style="margin-bottom: 10px;">The Vault</h1>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-9">
+    <div id="pageSummary">
+      The Vault, is a knowledgebase of good-to-knows and how to's that I have compiled as I have gained experience through my Computer Science undergraduate education, while at work, and while developing my side projects. Having a personlized knowledgebase makes searching for specific solutions easier.
+    </div>
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<div id="searchbox">
+  <%= form_tag search_good_to_knows_path, method: :get, :remote => true, id: "mysearch" do %>
+    <%= text_field_tag :search, params[:search], class: "", :placeholder => 'Search the Vault' %>
+  <% end %>
+</div>
+
+<div align="right" style="margin-right: 10px;; float: right; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
+  <div style="background-color: #00ACE6; width: 175px; padding: 5px; color white;" align="center"><a href="/good_to_knows/new" class="datlink" style="text-decoration: none; color: white">New Entry for My Brain</a></div>
+</div>
+
+<div class="col-xs-4" id="vaultList" style="borde: 2px solid red">
+  <% counter = 0 %>
+  <% @good_to_knows.each do |good_to_know| %>
+    <div class="entryContainer">
+        <div class="entry" align="left" style="padding: 8px">
+          <%= link_to good_to_know.title, good_to_know_path(good_to_know.id), :remote => true, :class => 'entryLinks' %>
+
+        </div>
+    </div>
+    <script>
+      var content = "";
+
+          my_content = document.getElementById("my_content_<%= counter %>").getAttribute("data-good_to_know");
+          if(my_content != "" && my_content != null) {
+            document.getElementById("my_content_<%= counter %>").innerHTML = my_content;
+          }
+
+    </script>
+    <% counter = counter +1 %>
+  <% end %>
+</div>
+<div class="col-xs-8" id="vaultEntry" style="borde: 2px solid blue">
+  &nbsp
+</div>

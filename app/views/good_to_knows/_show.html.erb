@@ -80,7 +80,6 @@ var content = "";
     }
   });
 </script>
-<p id="notice"><%= notice %></p>
 
 <!--
 <div id="tilt-ou"> -->
@@ -105,9 +104,6 @@ var content = "";
     </div> -->
 
 	<div class="entry" align="left" style="padding: 8px">
-		<div align="right" style="height: 5px">
-			<%= link_to 'Back', good_to_knows_path, :class => "thislink", style:"color: #00ACE6" %>
-		</div>
 	  <h4 align="center" style="color: #00ACE6">
 	  		<%=@good_to_know.title %>
 	  </h4>
@@ -121,7 +117,7 @@ var content = "";
 	      	</div>
 	  </div>
 	  <div align="right">
-	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#00ACE6", :class => "thislink" %> |
+	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#00ACE6", :class => "thislink" , :remote => true %> |
 			<%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, style:"color:#00ACE6", :class => "thislink" %>
 	  </div>
   </div>

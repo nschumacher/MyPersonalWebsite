@@ -15,6 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
-//= require mychart
 //= require customskillchart
+//= require mychart
 //= require_tree .

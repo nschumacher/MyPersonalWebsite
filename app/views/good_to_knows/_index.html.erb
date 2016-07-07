@@ -24,11 +24,18 @@
         </div>
       </div>
 
-      <p id="notice"><%= notice %></p>
 
-      <div align="right" style="margin-right: 10px;">
-        <div style="background-color: #00ACE6; width: 175px; padding: 5px; color white;" align="center"><a href="/good_to_knows/new" class="datlink" style="text-decoration: none; color: white">New Entry for My Brain</a></div>
+      <div id="searchbox">
+        <%= form_tag search_good_to_knows_path, method: :get, :remote => true, id: "mysearch" do %>
+          <%= text_field_tag :search, params[:search], class: "", :placeholder => 'Search the Vault' %>
+        <% end %>
       </div>
+
+      <div align="right" style="margin-right: 10px; float: right; box-shadow: 4px 2px 10px rgba(0,0,0,.6); margin-top: 10px">
+        <%= link_to "New Entry", new_good_to_know_path, :remote => true, :style => "background-color: #00ACE6; width: 175px; padding: 5px 15px; text-decoration: none; color: white;" %>
+        <!-- <div style="background-color: #00ACE6; width: 175px; padding: 5px; color white;" align="center"><a href="/good_to_knows/new" class="datlink" style="text-decoration: none; color: white">New Entry for My Brain</a></div> -->
+      </div>
+      <div style="height: 1px; margin-bottom: 10px"></div>
 
       <div class="col-xs-4" id="vaultList" style="borde: 2px solid red">
         <% counter = 0 %>
