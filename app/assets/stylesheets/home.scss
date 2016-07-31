@@ -15,10 +15,34 @@
 }
 .foot {
 	float: right;
-  width: 300px;
+  width: 400px;
   margin: 0px 0px 0px 5px;
   padding: 0px 5px 0px 5px;
   text-shadow: 2px 2px 4px $primary_blue;
+	#logout:link {
+		color: white;
+		text-decoration: none;
+		background: transparent;
+		margin-right: 10px;
+	}
+	#logout {
+		color: white;
+		margin-right: 10px;
+		text-decoration: none;
+		background: transparent;
+	}
+	#sign_in:link {
+		color: white;
+		text-decoration: none;
+		background: transparent;
+		margin-right: 10px;
+	}
+	#sign_in {
+		color: white;
+		margin-right: 10px;
+		text-decoration: none;
+		background: transparent;
+	}
 }
 #home_content {
 	max-height: 455px;
