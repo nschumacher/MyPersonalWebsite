@@ -1,0 +1,31 @@
+@import 'color_palette';
+@import 'perspective';
+@import 'label_and_summary';
+
+label {
+  text-align: left;
+  color: $primary_blue;
+  display: block;
+  font-size: 16px;
+  text-shadow: $primary_text_shadow;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  color: black;
+}
+
+ textarea {
+  width: 100%;
+  height: 100px;
+  color: black;
+}
+.btn {
+  width: 175px;
+}
+
+#emails {
+  padding-left: 0px;
+  text-shadow: $primary_text_shadow;
+}

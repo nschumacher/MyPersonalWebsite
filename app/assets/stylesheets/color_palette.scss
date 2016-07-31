@@ -1,0 +1,10 @@
+// Colors
+$white_background: rgba(80,80,80, 0.4);
+$primary_blue: #00ACE6;
+$primary_blue_1: #0095D8;
+$primary_box_shadow_color: rgba(0,0,0,.4);
+$primary_text_shadow_color: rgba(70,70,70,.7);
+
+// Standards using the colors
+$primary_box_shadow: 4px 2px 10px $primary_box_shadow_color;
+$primary_text_shadow: 1px 1px 2px $primary_text_shadow_color;

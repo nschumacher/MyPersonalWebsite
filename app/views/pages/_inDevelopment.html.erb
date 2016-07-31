@@ -1,195 +1,250 @@
 <%= stylesheet_link_tag "indev", media: "all" %>
 
-
-	<!-- Intro Title -->
-	<div class="intro row">
-		<div class="col-sm-12 col-md-4">
-			<div id="pageLabel">
-				<h2 align="center" style="margin-bottom: 10px;">In Development</h2>
-			</div>
-		</div>
-		<div class="col-sm-12 col-md-8">
-			<div id="pageSummary">
-				The projects listed below are what I dedicate a healthy chunk of my free time to. They are larger projects with many stages and require a great amount of work. Figuring out how to implement them as well as performing the actual implementation takes a plethora of hours. Brief descriptions are listed below however, you can send me an email if you wish to know more!
-			</div>
+<!-- Intro Title -->
+<div class="intro row">
+	<div class="col-sm-12 col-md-4">
+		<div id="pageLabel">
+			<h2 align="center" style="margin-bottom: 10px;">In Development</h2>
 		</div>
 	</div>
+	<div class="col-sm-12 col-md-8">
+		<div id="pageSummary">
+			The projects listed below are what I a portion of my free time to. They are larger projects with many stages and require a great amount of work. Figuring out how to implement them
+			 as well as performing the actual implementation takes a plethora of hours. Brief descriptions are listed below however, you can send me an email if you wish to know more!
+		</div>
+	</div>
+</div>
 
+<div style="background-color: rgba(0,110,170,.4); padding: 10px; margin-bottom: 15px; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
 
-	<div style="background-color: rgba(0,110,170,.4); padding: 10px; margin-bottom: 15px; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="background-color: rgba(50,50,50,.0); padding-left: 2px; border-radius: 2px;">
+		<li role="presentation" class="active">
+			<a href="#dash" aria-controls="dash" role="tab" data-toggle="tab" style="background-color: transparent;">
+				<img src="/images/dash_logo_md.png" style="height:60px;">
+			</a>
+		</li>
+		<li role="presentation" class="active">
+    	<a href="#arctis" aria-controls="arctis" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/arctis-words.png" style="height:60px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#centurion" aria-controls="centurion" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/centurion_1.png" style="height:60px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#kari" aria-controls="kari" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/kari_logo.png" style="height:60px;">
+    	</a>
+    </li>
+  </ul>
 
-	  <!-- Nav tabs -->
-	  <ul class="nav nav-tabs" role="tablist" style="background-color: rgba(50,50,50,.0); padding-left: 2px; border-radius: 2px;">
-	    <li role="presentation" class="active">
-	    	<a href="#arctis" aria-controls="arctis" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/arctis-words.png" style="width:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#centurion" aria-controls="centurion" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/centurion_1.png" style="width:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#kari" aria-controls="kari" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/kari_logo.png" style="width:70px;">
-	    	</a>
-	    </li>
-	  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+		<!-- Dash -->
+		<div role="tabpanel" class="tab-pane fade in active" id="dash">
+			<div class="row" style="padding: 5px 15px">
+				<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+				Dash will be a SCRUM documentation and project management system.<br>
+				It will focus on the documentation trying to streamline the process to make it as simple and painless as possible.
+			</div>
+			<div class="col-xs-12 col-md-7">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<!-- <ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol> -->
 
-	  <!-- Tab panes -->
-	  <div class="tab-content">
-	  		<!-- Arctis -->
-		    <div role="tabpanel" class="tab-pane fade in active" id="arctis">
-		    	<div class="row" style="padding: 5px 15px">
-		    		<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-						Arctis is my Android developer name. Any and all Android applications I create can be found on the Google Play Store by searching Arctis.<br>
-						Current projects include an asthetic skin pack to make your device look and feel more futuristic, several games, and a couple utility applications.
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active" align="center">
+								<img src="/images/dash_logo_md.png" alt="kari logo" style="height: 200px">
+								<div class="carousel-caption">
+									<!-- Kari -->
+								</div>
+							</div>
+							<!-- <div class="item" align="center">
+								<img src="/images/arctis-logo.png" alt="picture 2" style="height: 200px">
+								<div class="carousel-caption">
+									Picture 2
+								</div>
+							</div>
+							<div class="item" align="center">
+								<img src="..." alt="picture 3" style="width: 200px">
+								<div class="carousel-caption">
+									Picture 3
+								</div>
+							</div> -->
+						</div>
+
+						<!-- Controls -->
+						<!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>-->
 					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <!-- <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							  </ol> -->
+				</div>
+			</div>
+		</div>
+			<!-- Arctis -->
+	    <div role="tabpanel" class="tab-pane fade in" id="arctis">
+	    	<div class="row" style="padding: 5px 15px">
+	    		<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+					Arctis is my Android developer name. Any and all Android applications I create can be found on the Google Play Store by searching Arctis.<br>
+					Current projects include an asthetic skin pack to make your device look and feel more futuristic, several games, and a couple utility applications.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						  </ol> -->
 
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/arctis-words.png" alt="kari logo" style="height: 200px">
-							      <div class="carousel-caption">
-							        <!-- Kari -->
-							      </div>
-							    </div>
-							    <!-- <div class="item" align="center">
-							      <img src="/images/arctis-logo.png" alt="picture 2" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="width: 200px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div> -->
-							  </div>
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/arctis-words.png" alt="kari logo" style="height: 200px">
+						      <div class="carousel-caption">
+						        <!-- Kari -->
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="/images/arctis-logo.png" alt="picture 2" style="height: 200px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="width: 200px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
 
-							  <!-- Controls -->
-							  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>-->
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>-->
 						</div>
 					</div>
 				</div>
-		    </div>
-		    <!-- Centurion -->
-		    <div role="tabpanel" class="tab-pane fade" id="centurion">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-						Centurion is a full suite of applications designed to optimize the office workflow of an office. This project is still in the works. The details are currently classified however, information <i>may</i> be released upon request.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							 <!--  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
-							  </ol> -->
+	    </div>
+	    <!-- Centurion -->
+	    <div role="tabpanel" class="tab-pane fade" id="centurion">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+					Centurion is a full suite of applications designed to optimize the office workflow of an office. This project is still in the works. The details are currently classified however, information <i>may</i> be released upon request.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						 <!--  <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+						  </ol> -->
 
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/centurion_1.png" alt="Centurion logo" style="height: 200px">
-							      <div class="carousel-caption">
-							        <!-- Centurion -->
-							      </div>
-							    </div>
-							   <!--  <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div> -->
-							  </div>
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/centurion_1.png" alt="Centurion logo" style="height: 200px">
+						      <div class="carousel-caption">
+						        <!-- Centurion -->
+						      </div>
+						    </div>
+						   <!--  <div class="item" align="center">
+						      <img src="..." alt="picture 2" style="height: 200px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="height: 200px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
 
-							  <!-- Controls -->
-							  <!-- <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a> -->
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a> -->
 						</div>
 					</div>
 				</div>
-		    </div>
-		    <!-- Kari -->
-		    <div role="tabpanel" class="tab-pane fade" id="kari">
-			    <div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-						Knowledgeable Auto-Responsive Interface, or KARI for short, is the the brain behind the smart evironment I am currently developing. KARI will allow control over everything from lighting and temperature control to the settings in your car and just about everything in between.<br><br>
-						She is still in the early stages of development.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <!-- <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
-							  </ol> -->
+	    </div>
+	    <!-- Kari -->
+	    <div role="tabpanel" class="tab-pane fade" id="kari">
+		    <div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+					Knowledgeable Auto-Responsive Interface, or KARI for short, is the the brain behind the smart evironment I am currently developing. KARI will allow control over everything from lighting and temperature control to the settings in your car and just about everything in between.<br><br>
+					She is still in the early stages of development.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <!-- <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
+					  </ol> -->
 
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/kari_logo.png" alt="Centurion logo" style="height: 200px">
-							      <div class="carousel-caption">
-							        <!-- Centurion -->
-							      </div>
-							    </div>
-							   <!--  <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div> -->
-							  </div>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+					    <div class="item active" align="center">
+					      <img src="/images/kari_logo.png" alt="Centurion logo" style="height: 200px">
+					      <div class="carousel-caption">
+					        <!-- Centurion -->
+					      </div>
+					    </div>
+					   <!--  <div class="item" align="center">
+					      <img src="..." alt="picture 2" style="height: 200px">
+					      <div class="carousel-caption">
+					        Picture 2
+					      </div>
+					    </div>
+					    <div class="item" align="center">
+					      <img src="..." alt="picture 3" style="height: 200px">
+					      <div class="carousel-caption">
+					        Picture 3
+					      </div>
+					    </div> -->
+					  </div>
 
-							  <!-- Controls -->
-							  <!-- <a class="left carousel-control" href="#carousel-example-generic3" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a> -->
-						</div>
+					  <!-- Controls -->
+					  <!-- <a class="left carousel-control" href="#carousel-example-generic3" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a> -->
 					</div>
 				</div>
-		    </div>
-	  </div>
-	  </div>
+			</div>
+    </div>
+	</div>
+</div>

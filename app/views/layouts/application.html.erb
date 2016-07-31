@@ -35,13 +35,6 @@
   <%= stylesheet_link_tag "app", media: "all" %>
 
 </head>
-<%#= yield :javascript_includes %>
-
-<!-- background-color:#1C1C1C
-	color:#00ACE6  blue
-  background-image:url('/images/wood_background.jpg')
-  style="background-image:url('http://img.archiexpo.com/images_ae/photo-g/52868-2174243.jpg'); background-size: cover; color:white; font-family:Play"
--->
 
 <body>
   <div class="content">
@@ -49,12 +42,12 @@
       <div class="row">
 
         <!-- My picture -->
-    	  <div class="col-xs-2" style="border: 0px solid #007375; margin-top: 50px">
-          <img src="/images/mypictureplaceholder.png" style="width: 300px">
+    	  <div class="col-xs-0 col-sm-2" style="border: 0px solid #007375; margin-top: 50px">
+          <img id="my_picture" src="/images/mypictureplaceholder.png" style="width: 300px">
         </div>
 
         <!-- My angled body content -->
-        <div class="col-xs-10" >
+        <div class="col-xs-12 col-sm-10" >
           <div>
               <%= yield %>
           </div>

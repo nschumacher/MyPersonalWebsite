@@ -1,752 +1,539 @@
 <%= stylesheet_link_tag "projects", media: "all" %>
 
-	<!-- Intro Title -->
-	<div class="intro row">
-		<div class="col-sm-12 col-md-4">
-			<div id="pageLabel">
-				<h1 align="center" style="margin-bottom: 10px;">Projects</h1>
-			</div>
-		</div>
-		<div class="col-sm-12 col-md-8">
-			<div id="pageSummary">
-				The projects listed below were either completed as part of my course work during my undergraduate studies at Purdue University or as side projects. Brief descriptions are listed below however, you can send me an email if you wish to know more!
-			</div>
+<!-- Intro Title -->
+<div class="intro row">
+	<div class="col-sm-12 col-md-4">
+		<div id="pageLabel">
+			<h1 align="center" style="margin-bottom: 10px;">Projects</h1>
 		</div>
 	</div>
-
-
-	<div style="background-color: rgba(0,110,170,.4); padding: 10px; margin-bottom: 15px; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
-
-	  <!-- Nav tabs -->
-	  <ul class="nav nav-tabs" role="tablist" style="background-color: rgba(50,50,50,.0); padding-left: 2px; border-radius: 2px;">
-	    <li role="presentation" class="active">
-	    	<a href="#website" aria-controls="website" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/railslogo.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#apptitutor" aria-controls="apptitutor" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/apptitutor.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#ratemyclasses" aria-controls="ratemyclasses" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/purduedark.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#linuxshell" aria-controls="linuxshell" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/linux_shell_1.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#patternmatcher" aria-controls="patternmatcher" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/tree.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#wolfram" aria-controls="wolfram" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/logo-wolfram-alpha.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#futuretechui" aria-controls="futuretechui" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/newsymbol512.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#speakcast" aria-controls="speakcast" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/boilermake.png" style="height:70px;">
-	    	</a>
-	    </li>
-	    <li role="presentation">
-	    	<a href="#safewalk" aria-controls="safewalk" role="tab" data-toggle="tab" style="background-color: transparent;">
-	    		<img src="/images/purdue.png" style="height:70px;">
-	    	</a>
-	    </li>
-	  </ul>
-
-	  <!-- Tab panes -->
-	  <div class="tab-content">
-	  		<!-- Website -->
-		    <div role="tabpanel" class="tab-pane fade in active" id="website">
-		    	<div class="row" style="padding: 5px 15px">
-		    		<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px;">
-		    			<h3 align="center">My Personal Website and the Vault</h3>
-						Although technically always in development, this website functions as intended and further development comes after development on my other projects. It is built on Ruby on Rails using Bootstrap to assist with styling. The Vault is my searchable database of helpful knowledge I have compiled and continue to add to based on my experiences in the technical field. Feel free to peruse the Vault!
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/railslogo.png" alt="rails logo" style="height: 250px">
-							      <div class="carousel-caption" style="text-shadow: 1px 1px black">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="/images/arctis-logo.png" alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="width: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- Apptitutor -->
-		    <div role="tabpanel" class="tab-pane fade" id="apptitutor">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">Apptitutor</h3>
-			    		I worked on a team of 5 to create a web application for matching students up with tutors at Purdue University. Below is a more detailed summary.<br><br>
-						While going to school full time, classes can get tough and some students require additional tutoring. Purdue University does not offer a system dedicated to students finding tutors and tutors offering their services for specific classes. While bulletin boards with flyers offering tutoring services exist throughout almost every building, many students ignore or do not notice these postings. The solution? ApptiTutor! Built on Ruby on Rails, this web application makes it easy for students to find and communicate with tutors that fit their specific needs!
-						<p align="center" style="font-size: 17px; margin-top: 5px;">
-							<a class="sitelink" href="http://apptitutor.herokuapp.com/">Click here to visit the site!</a>
-						</p>
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/apptitutor.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- Rate My Classes -->
-		    <div role="tabpanel" class="tab-pane fade" id="ratemyclasses">
-			    <div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">Rate My Classes</h3>
-			    		I worked on a team of 5 to create a web application for reviewing classes at Purdue University. Below is a more detailed summary.<br><br>
-						With the thousands of classes available on Purdue University's campus, it is sometimes difficult to decide which ones to take and who to choose as one's professor. Students often ask their firends who have already taken the classes how difficult it was, what the professor is like, and if they recommend taking it. However, it is impossible to have a friend who has taken every class on campus. Our solution is a centralized place for students to anonymously write a review for any class available. Our product is a web application built on Ruby on Rails and designed for Purdue students to make assessments on what courses to take bosed off of ratings from other students.
-						<p align="center" style="font-size: 17px; margin-top: 5px;">
-							<a class="sitelink" href="http://ratemyclasses.herokuapp.com/">Click here to visit the site!</a>
-						</p>
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/purduedark.png" alt="purduedark logo" style="height: 200px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 200px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic3" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- Linux Shell -->
-		    <div role="tabpanel" class="tab-pane fade" id="linuxshell">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">Linux Shell</h3>
-			    		In one of my Computer Science courses, we were tasked with building a Linux shell. The languages used in its construction are: Lex, Yacc, and C. The shell performs similarly to a Linux terminal minus a few features however, it can handle complex grammer including pipes and I/O redirections.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic4" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic4" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic4" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic4" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/linux_shell_1.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic4" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic4" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- Pattern Matcher -->
-		    <div role="tabpanel" class="tab-pane fade" id="patternmatcher">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">Pattern Matcher</h3>
-			    		As part of an assignment, I constructed a program to find specific patterns in Java Trees. The program was constructed using Java and can match both branching and non branching patterns.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic5" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic5" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic5" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic5" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/tree.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic5" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic5" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- Wolfram -->
-		    <div role="tabpanel" class="tab-pane fade" id="wolfram">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">WolfRam Aplha Expanded and Simplified Notation Look-A-Like</h3>
-			    		As part of an assignment, I constructed a program similar to WolfRamAplha's "expanded notation." Built using Java code, this program takes complicated polynomials, expands them out, and simplifies them to the simplest form.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic6" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic6" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic6" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic6" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/logo-wolfram-alpha.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic6" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic6" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- FutureTech UI -->
-		    <div role="tabpanel" class="tab-pane fade" id="futuretechui">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">FutureTech UI</h3>
-			    		Are you tired of your Android phone looking like everyone else's? Do you wish your phone looked cooler? Have you seen the Iron Man movies and wished you were Tony Stark or you that you had your own J.A.R.V.I.S. AI? If you answered yes to any of the above, then this app if just what you need. Inspired by Stark technology, the FutureTech UI will give you that futuristic look and with minimal setup! This application includes a set of skins to be used with UCCW to enhance your phone's user experience.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic7" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic7" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic7" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic7" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/newsymbol512.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic7" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic7" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- SpeakCast -->
-		    <div role="tabpanel" class="tab-pane fade" id="speakcast">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">Speakcast</h3>
-			    		SpeakCast was an idea I came up with as the one of the first phases of a smart environment powered by Android. This Android app would speak aloud a weather forcast as well as display it onscreen after your morning alarm went off. Currently, the app can speak aloud the forcast and display it. Future work on this application will tie it to an alarm and improve the aethetics.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic8" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic8" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic8" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic8" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/boilermake.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic8" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic8" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <!-- Safewalk -->
-		    <div role="tabpanel" class="tab-pane fade" id="safewalk">
-		    	<div class="row" style="padding: 5px 15px">
-			    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
-			    		<h3 align="center">Purdue Safe Walk</h3>
-			    		As part of an assignment, I constructed a clone for Purdue University's SafeWalk program. This was built in Java using a client-server architecture. Students could put in a request to be escorted by a volunteer during any hour of the night. Students were assigned a volunteer on a first-come-first-served basis.
-					</div>
-					<div class="col-xs-12 col-md-7">
-						<div id="carousel-example-generic9" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#carousel-example-generic9" data-slide-to="0" class="active"></li>
-							    <li data-target="#carousel-example-generic9" data-slide-to="1"></li>
-							    <li data-target="#carousel-example-generic9" data-slide-to="2"></li>
-							  </ol>
-
-							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active" align="center">
-							      <img src="/images/newsymbol512.png" alt="apptitutor logo" style="height: 250px">
-							      <div class="carousel-caption">
-							        &nbsp
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 2" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 2
-							      </div>
-							    </div>
-							    <div class="item" align="center">
-							      <img src="..." alt="picture 3" style="height: 250px">
-							      <div class="carousel-caption">
-							        Picture 3
-							      </div>
-							    </div>
-							  </div>
-
-							  <!-- Controls -->
-							  <a class="left carousel-control" href="#carousel-example-generic9" role="button" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right carousel-control" href="#carousel-example-generic9" role="button" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
-						</div>
-					</div>
-				</div>
-		    </div>
-
-</div>
-	  </div>
-
-
-
-
-
-<!-- _____________________________________Pre-Division UI below________________________________________-->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-	<!-- Established works..previous works...etc pick a better name...Projects achieved.. --
-		<h1 style="text-shadow: 2px 2px 4px #00ACE6">Projects</h1><br>
-		<!--<div style="margin: 5px 10px 8px 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-		</div>--
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 entry" align="center">
+	<div class="col-sm-12 col-md-8">
+		<div id="pageSummary">
 			The projects listed below were either completed as part of my course work during my undergraduate studies at Purdue University or as side projects. Brief descriptions are listed below however, you can send me an email if you wish to know more!
 		</div>
-	</div> -->
-
-	<!-- Completed Projects -->
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/apptitutor.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>This Website and My Brain</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				Although technically always in development, this website functions as intended and further development comes after development on my other projects. It is built on Ruby on Rails using Bootstrap to assist with styling. My Brain is my searchable database of helpful knowledge I have compiled and continue to add to based on my experiences in the technical field. Feel free to peruse My Brain!
-			</p>
-			<br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/apptitutor.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>ApptiTutor</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				While going to school full time, classes can get tough and some students require additional tutoring. Purdue University does not offer a system dedicated to students finding tutors and tutors offering their services for specific classes. While bulletin boards with flyers offering tutoring services exist throughout almost every building, many students ignore or do not notice these postings. The solution? ApptiTutor! Built on Ruby on Rails, this web application makes it easy for students to find and communicate with tutors that fit their specific needs!
-			</p>
-			<p align="center" style="font-size: 80%">
-				<a class="link" href="http://apptitutor.herokuapp.com/">Click here to visit the site!</a>
-			</p>
-			<br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/linux_shell_1.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>Linux Shell</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				In one of my Computer Science courses, we were tasked with building a Linux shell. The languages used in its construction are: Lex, Yacc, and C. The shell performs similarly to a Linux terminal minus a few features however, it can handle complex grammer including pipes and I/O redirections.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/tree.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>Pattern Matcher</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				As part of an assignment, I constructed a program to find specific patterns in Java Trees. The program was constructed using Java and can match both branching and non branching patterns.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/logo-wolfram-alpha.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>WolfRam Aplha Expanded and Simplified Notation Look-A-Like</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				As part of an assignment, I constructed a program similar to WolfRamAplha's "expanded notation." Built using Java code, this program takes complicated polynomials, expands them out, and simplifies them to the simplest form.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/newsymbol512.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>FutureTech UI</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				Are you tired of your Android phone looking like everyone else's? Do you wish your phone looked cooler? Have you seen the Iron Man movies and wished you were Tony Stark or you that you had your own J.A.R.V.I.S. AI? If you answered yes to any of the above, then this app if just what you need. Inspired by Stark technology, the FutureTech UI will give you that futuristic look and with minimal setup! This application includes a set of skins to be used with UCCW to enhance your phone's user experience.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/boilermake.png" style="width:100%; margin-top:25%;">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>SpeakCast</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				SpeakCast was an idea I came up with as the one of the first phases of a smart environment powered by Android. This Android app would speak aloud a weather forcast as well as display it onscreen after your morning alarm went off. Currently, the app can speak aloud the forcast and display it. Future work on this application will tie it to an alarm and improve the aethetics.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/purdue.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>Purdue Safe Walk</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				As part of an assignment, I constructed a clone for Purdue University's SafeWalk program. This was built in Java using a client-server architecture. Students could put in a request to be escorted by a volunteer during any hour of the night. Students were assigned a volunteer on a first-come-first-served basis.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-
-
-	<!-- _____________________________-Currently in Dev Divider-_____________________________ -->
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="font-size: 100%">
-			Currently In Development
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 10px">
-			<hr style="border-color: #00ACE6; margin:3px 0px 8px 0px">
-		</div>
-	</div> -->
-
-	<!-- Projects in Dev -->
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/arctis-words.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>Arctis</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				Arctis is my Android developer name. Any and all Android applications I create can be found on the Google Play Store by searching Arctis.<br><br>
-				Current projects include an asthetic skin pack to make your device look and feel more futuristic, several games, and a couple utility applications.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
-	<!-- <div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/centurion_1.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>Centurion</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
-			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				Centurion is a full suite of applications designed to optimize the office workflow of an office. This project is still in the works. The details are currently classified however, information <i>may</i> be released upon request.
-			</p>
-			<br><br>
-		</div>
 	</div>
-	<div class="row" style="margin-bottom:20px">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left" style="">
-			<img src="/images/kari_logo.png" style="width:100%; margin-right:0px">
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 entry" align="center">
-			<h2>K.A.R.I.</h2>
-			<div style="margin: 5px 10px 8px 10px">
-				<hr style="border-color: #00ACE6; margin:3px 0px 10px 0px">
+</div>
+
+
+<div style="background-color: rgba(0,110,170,.4); padding: 10px; margin-bottom: 15px; box-shadow: 4px 2px 10px rgba(0,0,0,.6);">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="background-color: rgba(50,50,50,.0); padding-left: 2px; border-radius: 2px;">
+    <li role="presentation" class="active">
+    	<a href="#website" aria-controls="website" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/railslogo.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#apptitutor" aria-controls="apptitutor" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/apptitutor.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#ratemyclasses" aria-controls="ratemyclasses" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/purduedark.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#linuxshell" aria-controls="linuxshell" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/linux_shell_1.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#patternmatcher" aria-controls="patternmatcher" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/tree.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#wolfram" aria-controls="wolfram" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/logo-wolfram-alpha.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#futuretechui" aria-controls="futuretechui" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/newsymbol512.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#speakcast" aria-controls="speakcast" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/boilermake.png" style="height:70px;">
+    	</a>
+    </li>
+    <li role="presentation">
+    	<a href="#safewalk" aria-controls="safewalk" role="tab" data-toggle="tab" style="background-color: transparent;">
+    		<img src="/images/purdue.png" style="height:70px;">
+    	</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  		<!-- Website -->
+	    <div role="tabpanel" class="tab-pane fade in active" id="website">
+	    	<div class="row" style="padding: 5px 15px">
+	    		<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px;">
+	    			<h3 align="center">My Personal Website and the Vault</h3>
+					Although technically always in development, this website functions as intended and further development comes after development on my other projects. It is built on Ruby on Rails using Bootstrap to assist with styling. The Vault is my searchable database of helpful knowledge I have compiled and continue to add to based on my experiences in the technical field. Feel free to peruse the Vault!
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						  </ol> -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/railslogo.png" alt="rails logo" style="height: 250px">
+						      <div class="carousel-caption" style="text-shadow: 1px 1px black">
+						        &nbsp
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="/images/arctis-logo.png" alt="picture 2" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="width: 250px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
+
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a> -->
+					</div>
+				</div>
 			</div>
-			<p align="left" style="color:white; font-size: 80%; padding: 0px 10px 0px 10px">
-				Knowledgeable Auto-Responsive Interface, or KARI for short, is the the brain behind the smart evironment I am currently developing. KARI will allow control over everything from lighting to temperature control to the settings in your car and just about everything in between.<br><br>
-				She is still in the early stages of development.
-			</p>
-			<br><br>
-		</div>
-	</div> -->
+	    </div>
+	    <!-- Apptitutor -->
+	    <div role="tabpanel" class="tab-pane fade" id="apptitutor">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">Apptitutor</h3>
+		    		I worked on a team of 5 to create a web application for matching students up with tutors at Purdue University. Below is a more detailed summary.<br><br>
+					While going to school full time, classes can get tough and some students require additional tutoring. Purdue University does not offer a system dedicated to students finding tutors and tutors offering their services for specific classes. While bulletin boards with flyers offering tutoring services exist throughout almost every building, many students ignore or do not notice these postings. The solution? ApptiTutor! Built on Ruby on Rails, this web application makes it easy for students to find and communicate with tutors that fit their specific needs!
+					<p align="center" style="font-size: 17px; margin-top: 5px;">
+						<a class="sitelink" href="http://apptitutor.herokuapp.com/">Click here to visit the site!</a>
+					</p>
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/apptitutor_screenshot_1.png" alt="apptitutor logo" style="height: 300px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="/images/apptitutor_screenshot_2.png" alt="picture 2" style="height: 300px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="/images/apptitutor_screenshot_3.png" alt="picture 3" style="height: 300px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div>
+						  </div>
+
+						  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- Rate My Classes -->
+	    <div role="tabpanel" class="tab-pane fade" id="ratemyclasses">
+		    <div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">Rate My Classes</h3>
+		    		I worked on a team of 5 to create a web application for reviewing classes at Purdue University. Below is a more detailed summary.<br><br>
+					With the thousands of classes available on Purdue University's campus, it is sometimes difficult to decide which ones to take and who to choose as one's professor. Students often ask their firends who have already taken the classes how difficult it was, what the professor is like, and if they recommend taking it. However, it is impossible to have a friend who has taken every class on campus. Our solution is a centralized place for students to anonymously write a review for any class available. Our product is a web application built on Ruby on Rails and designed for Purdue students to make assessments on what courses to take bosed off of ratings from other students.
+					<p align="center" style="font-size: 17px; margin-top: 5px;">
+						<a class="sitelink" href="http://ratemyclasses.herokuapp.com/">Click here to visit the site!</a>
+					</p>
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/rmc_screenshot_1.png" alt="purduedark logo" style="height: 300px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="/images/rmc_screenshot_2.png" alt="picture 2" style="height: 300px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="/images/rmc_screenshot_3.png" alt="picture 3" style="height: 300px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div>
+						  </div>
+
+						  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel-example-generic3" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- Linux Shell -->
+	    <div role="tabpanel" class="tab-pane fade" id="linuxshell">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">Linux Shell</h3>
+		    		In one of my Computer Science courses, we were tasked with building a Linux shell. The languages used in its construction are: Lex, Yacc, and C. The shell performs similarly to a Linux terminal minus a few features however, it can handle complex grammer including pipes and I/O redirections.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic4" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic4" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic4" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic4" data-slide-to="2"></li>
+						  </ol> -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/linux_shell_1.png" alt="apptitutor logo" style="height: 250px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="..." alt="picture 2" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
+
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic4" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic4" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a> -->
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- Pattern Matcher -->
+	    <div role="tabpanel" class="tab-pane fade" id="patternmatcher">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">Pattern Matcher</h3>
+		    		As part of an assignment, I constructed a program to find specific patterns in Java Trees. The program was constructed using Java and can match both branching and non branching patterns.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic5" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic5" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic5" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic5" data-slide-to="2"></li>
+						  </ol> -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/tree.png" alt="apptitutor logo" style="height: 250px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="..." alt="picture 2" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
+
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic5" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic5" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a> -->
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- Wolfram -->
+	    <div role="tabpanel" class="tab-pane fade" id="wolfram">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">WolfRam Aplha Expanded and Simplified Notation Look-A-Like</h3>
+		    		As part of an assignment, I constructed a program similar to WolfRamAplha's "expanded notation." Built using Java code, this program takes complicated polynomials, expands them out, and simplifies them to the simplest form.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic6" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic6" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic6" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic6" data-slide-to="2"></li>
+						  </ol> -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/logo-wolfram-alpha.png" alt="apptitutor logo" style="height: 250px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="..." alt="picture 2" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
+
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic6" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic6" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a> -->
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- FutureTech UI -->
+	    <div role="tabpanel" class="tab-pane fade" id="futuretechui">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">FutureTech UI</h3>
+		    		Are you tired of your Android phone looking like everyone else's? Do you wish your phone looked cooler? Have you seen the Iron Man movies and wished you were Tony Stark or you that you had your own J.A.R.V.I.S. AI? If you answered yes to any of the above, then this app if just what you need. Inspired by Stark technology, the FutureTech UI will give you that futuristic look and with minimal setup! This application includes a set of skins to be used with UCCW to enhance your phone's user experience.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic7" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic7" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic7" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic7" data-slide-to="2"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/futuretech_screenshot_1.png" alt="apptitutor logo" style="height: 300px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="/images/futuretech_screenshot_2.png" alt="picture 2" style="height: 300px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="/images/futuretech_screenshot_3.png" alt="picture 3" style="height: 300px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div>
+						  </div>
+
+						  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel-example-generic7" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic7" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- SpeakCast -->
+	    <div role="tabpanel" class="tab-pane fade" id="speakcast">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">Speakcast</h3>
+		    		SpeakCast was an idea I came up with as the one of the first phases of a smart environment powered by Android. This Android app would speak aloud a weather forcast as well as display it onscreen after your morning alarm went off. Currently, the app can speak aloud the forcast and display it. Future work on this application will tie it to an alarm and improve the aethetics.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic8" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic8" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic8" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic8" data-slide-to="2"></li>
+						  </ol> -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/boilermake.png" alt="apptitutor logo" style="height: 250px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="..." alt="picture 2" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
+
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic8" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic8" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a> -->
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!-- Safewalk -->
+	    <div role="tabpanel" class="tab-pane fade" id="safewalk">
+	    	<div class="row" style="padding: 5px 15px">
+		    	<div class="col-xs-12 col-md-5 projDescript" align="left" style="color:white; font-size: 18px; padding: 0px 10px 0px 10px">
+		    		<h3 align="center">Purdue Safe Walk</h3>
+		    		As part of an assignment, I constructed a clone for Purdue University's SafeWalk program. This was built in Java using a client-server architecture. Students could put in a request to be escorted by a volunteer during any hour of the night. Students were assigned a volunteer on a first-come-first-served basis.
+				</div>
+				<div class="col-xs-12 col-md-7">
+					<div id="carousel-example-generic9" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <!-- <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic9" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic9" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic9" data-slide-to="2"></li>
+						  </ol> -->
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active" align="center">
+						      <img src="/images/purdue.png" alt="apptitutor logo" style="height: 250px">
+						      <div class="carousel-caption">
+						        &nbsp
+						      </div>
+						    </div>
+						    <!-- <div class="item" align="center">
+						      <img src="..." alt="picture 2" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 2
+						      </div>
+						    </div>
+						    <div class="item" align="center">
+						      <img src="..." alt="picture 3" style="height: 250px">
+						      <div class="carousel-caption">
+						        Picture 3
+						      </div>
+						    </div> -->
+						  </div>
+
+						  <!-- Controls -->
+						  <!-- <a class="left carousel-control" href="#carousel-example-generic9" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic9" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>-->
+					</div>
+				</div>
+			</div>
+    </div>
+	</div>
+</div>

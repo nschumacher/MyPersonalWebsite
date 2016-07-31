@@ -1,0 +1,70 @@
+@import 'color_palette';
+@import 'perspective';
+@import 'label_and_summary';
+
+::-webkit-input-placeholder { /* Chrome */
+  color: white;
+  padding-left: 5px;
+  text-shadow: 1px 1px 2px rgba(70,70,70,.6);
+  opacity: .7;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+  padding-left: 5px;
+  opacity: .7;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+  padding-left: 5px;
+  opacity: .7;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: white;
+  padding-left: 5px;
+  opacity: .7;
+}
+
+.entry {
+  background-color: $white_background;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 5px;
+  color: white;
+  box-shadow: $primary_box_shadow;
+}
+.datlink:hover {
+  background-color: transparent;
+}
+#vaultList {
+  padding-left: 0px;
+  max-height: 330px;
+  overflow-y: auto;
+}
+.entryLinks:link {
+  color: white;
+}
+.entryLinks:visited {
+  color: white;
+}
+.entryLinks:hover {
+  color: white;
+  text-decoration: none
+}
+#mysearch {
+  // float: left;
+  width: 90%;
+  margin-left: 15px;
+}
+input#search {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #00ACE6;
+  width: 100%;
+}
+#searchbox {
+  background-color: $white_background;
+  box-shadow: $primary_box_shadow;
+  padding: 10px;
+  display: inline-block;
+  width: 50%;
+}

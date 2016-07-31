@@ -1,66 +1,55 @@
-   /* Scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 4px;  /* for vertical scrollbars */
-      height: 4px; /* for horizontal scrollbars */
-    }
-    ::-webkit-scrollbar-track {
-      /*background: rgba(158, 158, 158, 0.15);*/
-      background: rgba(0, 172, 230, 0.15);
-    }
-    ::-webkit-scrollbar-thumb {
-      /*background: rgba(158, 158, 158, 0.4);*/
-      background: rgba(0, 172, 230, 0.4);
-    }
-    /* End Scrollbar styling */
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;  /* for vertical scrollbars */
+  height: 4px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 172, 230, 0.15);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 172, 230, 0.4);
+}
+/* End Scrollbar styling */
 
-/*    .tilt-out {
-      position: relative;
-      -webkit-perspective: 220px;
-      perspective: 220px;
-      height: 850px;
-    }
-    .tilt-in {
-      position: absolute;
-      top:1px;
-      right: 20px;
-      margin-top: 30px;
-      margin-right: 50px;
-      padding: 20px;
-      -webkit-transform: rotateY(-1deg);
-      transition: rotateY(-1deg);
-      max-height: 760px;
-      width: 95%;
-      overflow: hidden;
-    }*/
-    .content:before {
-      content: "";
-      position: fixed;
-      left: 0;
-      right: 0;
-      z-index: -1;
+.content:before {
+  content: "";
+  position: fixed;
+  left: -20px;
+  right: 0;
+  top: -150px;
+  z-index: -1;
 
-      display: block;
-      background-image: url('/images/office.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
+  display: block;
+  background-image: url('/images/office.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 105%;
+  height: 115%;
 
-      -webkit-filter: blur(16px);
-      -moz-filter: blur(16px);
-      -o-filter: blur(16px);
-      -ms-filter: blur(16px);
-      filter: blur(16px);
-    }
+  -webkit-filter: blur(16px);
+  -moz-filter: blur(16px);
+  -o-filter: blur(16px);
+  -ms-filter: blur(16px);
+  filter: blur(16px);
+}
 
-    .content {
-      position: fixed;
-      left: 0;
-      right: 0;
-      z-index: 0;
-      color:white;
-      font-family:Play;
-    }
-    body {
-      background-color: black;
-    }
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
+  z-index: 0;
+  color:white;
+  font-family: Play;
+}
+body {
+  background-color: black;
+}
+
+
+@media(max-width:770px) {
+  #my_picture {
+    visibility: hidden;
+    display: none;
+  }
+}

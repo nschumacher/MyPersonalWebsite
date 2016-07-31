@@ -1,0 +1,129 @@
+@import 'color_palette';
+@import 'perspective';
+@import 'label_and_summary';
+
+a:link {
+	text-decoration: none;
+}
+.Title:hover {
+	color: white;
+}
+.Title:link {
+	color: white;
+}
+.mylink:hover:visited{
+	color: $primary_blue_1;
+	background-color: transparent;
+}
+.mylink:hover{
+	color: $primary_blue_1;
+	background-color: transparent;
+	text-decoration: none;
+}
+.mylink:link{
+	color: $primary_blue;
+	margin-right: 0px;
+	text-decoration: none;
+}
+.mylink:visited{
+	color: $primary_blue;
+	background-color: none;
+}
+td {
+	padding-right: 10px;
+}
+hr {
+	border-color: white;
+}
+.bodi {
+    padding: 0px 10px 5px 20px;
+    overflow: auto;
+}
+.foot {
+	float: right;
+    width: 300px;
+    margin: 0px 0px 0px 5px;
+    padding: 0px 5px 0px 5px;
+}
+#chartdiv {
+	height: 230px;
+	font-size: 15px;
+	margin-left: -12px;
+	text-shadow: $primary_text_shadow;
+}
+#skillBox {
+	background: $white_background;
+	text-shadow: $primary_text_shadow;
+	margin-right: 5px;
+	padding: 10px;
+	box-shadow: $primary_box_shadow;
+}
+.panel-body {
+	color: white;
+	text-shadow: $primary_text_shadow;;
+	border: 1px solid rgba(0,110,170,.7);
+	background-color: rgba(0,110,170,.5);
+	font-size: 16px;
+	box-shadow: $primary_box_shadow;
+}
+.panel-title {
+	font-size: 20px;
+}
+.panel-subTitle {
+	color: white;
+	text-shadow: $primary_text_shadow;
+	margin-left: 15px;
+	font-size: 15px;
+}
+.panel {
+	background-color: transparent;
+	color: white;
+}
+.panel:hover {
+	border-left: 4px solid white;
+}
+.panel:visited {
+	border-left: 4px solid white;
+}
+.panel-heading {
+	background-color: rgba(0,110,170,.5);
+	border: 1px solid rgba(0,110,170,.7);
+	box-shadow: $primary_box_shadow;
+}
+.panel-group {
+	margin-bottom: 0px;
+}
+.pic {
+	width: 96px;
+}
+.isSelected {
+	border-left: 4px solid white;
+}
+.skillAccordion {
+	margin-right: 5px;
+}
+.media-body {
+	ul {
+		padding-left: 20px;
+	}
+}
+@media(max-width:767px) {
+	#test {
+		max-height: 200px;
+	}
+}
+@media only screen and (min-width:768px) and (max-width: 900px) {
+	#test {
+		max-height: 300px;
+	}
+}
+@media only screen and (min-width:901px)  and (max-width: 1100px) {
+	#test {
+		max-height: 310px;
+	}
+}
+@media(min-width:1101px) {
+	#test {
+		max-height: 400px;
+	}
+}
