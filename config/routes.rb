@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  #mount Ckeditor::Engine => '/ckeditor'
+  devise_for :users
   resources :good_to_knows do
     collection do
       get 'search'

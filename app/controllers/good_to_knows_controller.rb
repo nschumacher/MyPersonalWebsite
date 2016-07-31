@@ -1,5 +1,6 @@
 class GoodToKnowsController < ApplicationController
   before_action :set_good_to_know, only: [:show, :edit, :update, :destroy]
+  before_action :check_auth, only: [:new, :edit, :update, :destroy]
 
   # GET /good_to_knows
   # GET /good_to_knows.json
@@ -105,6 +106,15 @@ class GoodToKnowsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_good_to_know
       @good_to_know = GoodToKnow.find(params[:id])
+    end
+
+    # only allow me to add, edit, and delete things
+    def check_auth
+      if user_signed_in?
+        return true
+      else
+        redirect_to good_to_knows_path, alert: 'Sorry! You\'re not me!'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,4 +1,9 @@
 <div align="center" style="display: inline">
+	<% if user_signed_in? %>
+		<%= link_to('Logout', destroy_user_session_path, :method => :get, id: 'logout') %>
+	<% else %>
+		<%= link_to('Sign In', new_user_session_path, :method => :get, id: 'sign_in') %>
+	<% end %>
 	<a href="https://www.facebook.com/nick.schumacher.357" style="margin-right: 10px">
 		<img src="/images/facebook-icon.png" style="width: 30px">
 	</a>
