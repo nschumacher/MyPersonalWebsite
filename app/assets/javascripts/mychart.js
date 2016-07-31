@@ -29,7 +29,7 @@ AmCharts.makeChart("chartdiv",
 				"animationPlayed": true,
 				"balloonText": "[[value]]% confident in [[skills]]",
 				"bullet": "round",
-				"bulletSize": 9,
+				"bulletSize": 8,
 				"id": "AmGraph-1",
 				"lineAlpha": 1,
 				"lineThickness": 2,
@@ -65,20 +65,28 @@ AmCharts.makeChart("chartdiv",
 				"confidence": "95"
 			},
 			{
-				"skills": "CSS",
+				"skills": "CSS/SASS",
 				"confidence": "95"
-			},
-			{
-				"skills": "Javascript",
-				"confidence": "45"
 			},
 			{
 				"skills": "Ruby on Rails",
 				"confidence": "80"
 			},
 			{
+				"skills": "Pascal",
+				"confidence": "30"
+			},
+			{
+				"skills": "Ruby",
+				"confidence": "80"
+			},
+			{
 				"skills": "Java",
 				"confidence": "85"
+			},
+			{
+				"skills": "Javascript",
+				"confidence": "55"
 			},
 			{
 				"skills": "C",

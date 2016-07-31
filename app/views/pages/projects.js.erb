@@ -1,11 +1,11 @@
-$('.nav-box').css("border-top", "4px solid rgba(255, 255, 255, 0.9)");
+$('.nav-box').css("border-top", "4px solid transparent");
 $('.link').css("color", "white");
 $('.link').css("text-shadow", "none");
 $('.navbar-collapse').collapse("hide");
 $("#collapseBody").animate({"height" : "0"}, 250);
 $('#collapseBody').promise().done(function(){
     document.getElementById('collapseBody').innerHTML = "";
-    $("#collapseBody").animate({"height" : "500"}, 700);
+    $("#collapseBody").animate({"height" : "570"}, 700);
     $("#collapseBody").html("<%= escape_javascript(render partial: 'projects', locals: { :remote => true } ) %>");
 });
 $('#projects').css("border-top", "4px solid #00ACE6");

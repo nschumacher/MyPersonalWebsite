@@ -2,3 +2,5 @@
 tmp
 *.log
 Procfile
+.DS_Store
+log/development.log

@@ -1,0 +1,30 @@
+@import 'color_palette';
+@import 'perspective';
+@import 'label_and_summary';
+
+h2{
+	color: $primary_blue;
+}
+.sitelink {
+	background-color: rgba(0,0,0,.6);
+	padding: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.sitelink:link {
+	background-color: rgba(0,0,0,.6);
+	padding: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.projectTab {
+	background-color: rgba(0,110,170,.4);
+}
+.tab-pane {
+	border-bottom: 1px solid white;
+	font-size: 18px;
+}
+.projDescrip {
+	max-height: 250px;
+	overflow-y: auto;
+}
