@@ -3,16 +3,53 @@
 @import 'label_and_summary';
 
 .bod {
-	background-color: $white_background;
+	background-color: rgba($base_color_alt_2, .5);
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 10px;
   text-shadow: $primary_text_shadow;
   box-shadow: $primary_box_shadow;
 
 	h2 {
-		font-size: 150%;
+		font-size: 1.2em;
+	}
+	@media(max-width:1195px) {
+		#interests_pic {
+			display: none;
+		}
+		#pic_box {
+			margin-top: 5px;
+		}
 	}
 }
+
+#pic_box {
+	margin-top: 5px;
+}
+#home_content {
+	max-height: 455px;
+	overflow-y:auto;
+	overflow-x: hidden;
+	margin-bottom: 10px;
+	font-size: .8em;
+	padding: 10px;
+}
+#collapseBody {
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-right:15px;
+	height: 450px;
+}
+#zoom_warning {
+	font-size: 20px;
+	color: $primary_blue;
+}
+#interests_pic {
+	width: 200px;
+}
+
+// Footer
 .foot {
 	float: right;
   width: 400px;
@@ -43,25 +80,4 @@
 		text-decoration: none;
 		background: transparent;
 	}
-}
-#home_content {
-	max-height: 455px;
-	overflow-y:auto;
-	overflow-x: hidden;
-	margin-bottom: 10px;
-}
-#collapseBody {
-	overflow-y: auto;
-	overflow-x: hidden;
-	margin-bottom: 10px;
-	padding-top: 10px;
-	padding-right:15px;
-	height: 450px;
-}
-#zoom_warning {
-	font-size: 20px;
-	color: $primary_blue;
-}
-#interests_pic {
-	width: 250px;
 }

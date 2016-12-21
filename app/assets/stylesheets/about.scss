@@ -46,7 +46,7 @@ hr {
 	text-shadow: $primary_text_shadow;
 }
 #skillBox {
-	background: $white_background;
+	background: rgba($base_color_alt_2, .5);
 	text-shadow: $primary_text_shadow;
 	margin-right: 5px;
 	padding: 10px;
