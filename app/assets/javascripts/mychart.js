@@ -22,7 +22,7 @@ AmCharts.makeChart("chartdiv",
 		"backgroundColor": "transparent",
 		"color": "#FFFFFF",
 		"fontFamily": "Veranda",
-		"fontSize": 15,
+		"fontSize": 10,
 		"theme": "dark",
 		"graphs": [
 			{

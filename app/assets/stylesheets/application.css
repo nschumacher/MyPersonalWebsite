@@ -13,11 +13,5 @@
  *= require_tree .
  *= require_self
  */
-//= require home
-//= require about
-//= require contact
-//= require navigation
-//= require app
-//= require indev
-//= require projects
-//= require vaultIndex
+
+//= require testing

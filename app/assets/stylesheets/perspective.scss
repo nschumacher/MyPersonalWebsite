@@ -1,10 +1,11 @@
 #tilt-out {
-  position: relative;
-  -webkit-perspective: 220px;
-  perspective: 220px;
-  height: 850px;
+  // position: relative;
+  // -webkit-perspective: 220px;
+  // perspective: 220px;
+  // height: 850px;
+  margin-top: 20px;
 }
-#tilt-in {
+tilt-in {
   position: absolute;
   top: 55px;
   right: 20px;
@@ -29,7 +30,7 @@
     visibility: hidden;
     display: none;
   }
-  #tilt-in {
+  tilt-in {
     -webkit-transform: rotateY(0deg);
     transition: rotateY(0deg);
     top: 0px;

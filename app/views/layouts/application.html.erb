@@ -17,8 +17,8 @@
 
 
 
-<!-- from acs -->
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" type="text/javascript"></script>
+  <!-- from acs -->
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" type="text/javascript"></script>
 
 
 	<link rel="shortcut icon" type="image/x-icon" href="/images/arctis-logo.png">
@@ -37,23 +37,12 @@
 </head>
 
 <body>
-  <div class="content">
-    <div class="container-fluid" style="margin-right: 1%; margin-left: 1%; width: 98%">
+    <div class="container content">
       <div class="row">
-
-        <!-- My picture -->
-    	  <div class="col-xs-0 col-sm-2" style="border: 0px solid #007375; margin-top: 50px">
-          <img id="my_picture" src="/images/mypictureplaceholder.png" style="width: 300px">
-        </div>
-
-        <!-- My angled body content -->
-        <div class="col-xs-12 col-sm-10" >
-          <div>
-              <%= yield %>
-          </div>
+        <div class="col-xs-12" >
+          <%= yield %>
         </div>
       </div>
-    </div>
   </div>
 </body>
 </html>

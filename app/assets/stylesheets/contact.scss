@@ -29,3 +29,7 @@ input {
   padding-left: 0px;
   text-shadow: $primary_text_shadow;
 }
+#email_box {
+  box-shadow: $primary_box_shadow;
+  padding: 20px;
+}

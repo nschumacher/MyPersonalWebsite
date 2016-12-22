@@ -8,49 +8,21 @@ var content = "";
   });
 </script>
 
-<!--
-<div id="tilt-ou"> -->
-<div>
-    <!-- Navigation pane -->
- <!--    <div align="" style="">
-      <%#= render 'layouts/navigation' %>
-    </div>
-    <hr style="border-color: rgba(240,240,240,.4)"> -->
-<!-- Intro Title -->
-   <!--  <div class="intro row">
-      <div class="col-xs-12 col-md-3">
-        <div id="pageLabel">
-          <h1 align="center" style="margin-bottom: 10px;">The Vault</h1>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-9">
-        <div id="pageSummary">
-          The Vault, is a knowledgebase of good-to-knows and how to's that I have compiled as I have gained experience through my Computer Science undergraduate education, while at work, and while developing my side projects. Having a personlized knowledgebase makes searching for specific solutions easier.
-        </div>
-      </div>
-    </div> -->
-
-	<div class="entry" align="left" style="padding: 8px">
-	  <h4 align="center" style="color: #00ACE6">
+	<div class="vaultEntry" align="left" style="padding: 8px">
+	  <h4 align="center" style="color: #85B5BE">
 	  		<%=@good_to_know.title %>
 	  </h4>
 	  <div style="borde: 2px solid black; background-color: rgba(50, 50, 50, 0.5); padding: 10px">
 	    	<div data-good_to_know="<%= @good_to_know.content %>" id="my_content"></div>
 	  </div>
 	  <div style="padding:8px">
-	      	<div style="color: #00ACE6">Tags:</div>
+	      	<div style="color: #85B5BE">Tags:</div>
 	      	<div style="padding-left: 5px">
 	        	<%= @good_to_know.tags %>
 	      	</div>
 	  </div>
 	  <div align="right">
-	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#00ACE6", :class => "thislink" , :remote => true %> |
-			<%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, style:"color:#00ACE6", :class => "thislink" %>
+	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#85B5BE", :class => "thislink" , :remote => true %> |
+			<%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, style:"color:#85B5BE", :class => "thislink" %>
 	  </div>
   </div>
-
-    <!-- <div class="foot" align="right">
-      <%= render 'layouts/myFooter' %>
-    </div> -->
-</div>
-<!-- </div> -->

@@ -1,0 +1,60 @@
+@import "color_palette";
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;  /* for vertical scrollbars */
+  height: 4px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track {
+  background: rgba($primary_color_alt_2, 0.15);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba($primary_color_alt_2, 0.4);
+}
+/* End Scrollbar styling */
+
+.content:before {
+  content: "";
+  position: fixed;
+  left: -20px;
+  right: 0;
+  top: -100px;
+  z-index: -1;
+
+  display: block;
+  // background-image: url('/images/office.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 105%;
+  height: 115%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+  background: $base_color; /* For browsers that do not support gradients */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(top, black,  $primary_color, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, black,  $primary_color, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, black,  $primary_color, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, black,  $primary_color, black); /* Standard syntax (must be last) */
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
+  z-index: 0;
+  color:white;
+  font-family: Play;
+  // margin-right: 1%;
+  // margin-left: 1%;
+  // width: 98%;
+}
+body {
+  background-color: $base_color;
+}

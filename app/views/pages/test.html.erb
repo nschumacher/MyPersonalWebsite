@@ -1,342 +1,291 @@
-<%= stylesheet_link_tag "navigation", media: "all" %>
+<%= stylesheet_link_tag "testing", media: "all" %>
+<head>
+	<%= render 'layouts/bootstrapStuff' %>
+</head>
 
-<!-- <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'> -->
-<style>
-	.navbar{
-	  margin-bottom: 0px;
-	  background: transparent;
-	  font-family: 'Josefin Sans', sans-serif;
-	}
-    body {
-	    padding: 50px 0px;
-	}
-	@media(max-width:935px) {
-	    .navbar .navbar-form {
-	        width: 185px;
-	        padding-left:0;
-	        padding-right:0;
-	    }
-	}
-	@media(min-width:936px) {
-	    .navbar .navbar-form {
-	        width: 250px;
-	    }
-	}
-	.navbar .navbar-form {
-	  overflow-y: auto;
-	    padding-top: 0;
-	    padding-bottom: 0;
-	    margin-right: 0;
-	    margin-left: 0;
-	}
-	.navbar-inverse {
-		border: none;
-	}
-	.nav li a {
-	    position: relative;
-	    display: block;
-	    padding: 10px 0px;
-	}
-	@media (max-width: 1120px) {
-	    .navbar-header {
-	        float: none;
-	    }
-	    .navbar-toggle {
-	        display: block;
-	    }
-	    .navbar-collapse {
-	        border-top: 1px solid transparent;
-	        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-	    }
-	    .navbar-collapse.collapse {
-	        display: none!important;
-	    }
-	    .navbar-nav {
-	        float: none!important;
-	        margin: 7.5px -15px;
-	    }
-	    .navbar-nav>li {
-	        float: none;
-	    }
-	    .navbar-nav>li>a {
-	        padding-top: 10px;
-	        padding-bottom: 10px;
-	    }
-	    .navbar-text {
-	        float: none;
-	        margin: 15px 0;
-	    }
-	    /* since 3.1.0 */
-	    .navbar-collapse.collapse.in { 
-	        display: block!important;
-	    }
-	    .collapsing {
-	        overflow: hidden!important;
-	    }
-	}
-</style>
-
-<script>
-$(document).ready(function () {
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
-
-
-
-<div class="navbar navbar-inverse">
-   <div class="container-fluid">
-      <div class="navbar-header">
-         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         </button>
-
-         <a class="navbar-brand pull-left hidden-xs" href="/" style="color: white">
-         	<img src="/images/arctis-logo.png" style="width:30px; margin-top: -3px; margin-right: 8px" class="pull-left">
-         	<div class="name" style="display:inline">Nick Schumacher</div>
-         </a>
-         <a class="navbar-brand pull-left visible-xs" href="/" style="color: white">
-         	<img src="/images/arctis-logo.png" style="width:30px; margin-top: -3px; margin-right: 8px" class="pull-left">
-         </a>
-      </div>
-
-      <div class="navbar-collapse collapse">
-         <ul class="nav navbar-nav navbar-right">
-	     	<li>
-	     		<% if current_page?(pages_home_path) || current_page?('/pages/test') %>
-		        	<a href="/pages/home" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			        	<div class="nav-box-current" align="center">
-			            	Home
-			          	</div>
-		          	</a>
-	        	<% else %>
-		        	<a href="/pages/home" class="link">
-			          	<div class="nav-box" align="center">
-			            	Home
-			          	</div>
-		          	</a>
-	        	<% end %>
-	     	</li>
-	     	<li>
-	     		<% if current_page?(pages_about_path) %>
-	        	
-		        	<a href="/pages/about" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current" align="center">
-			            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>About
-			          	</div>
-			        </a>
-		        
-	        	<% else %>
-	        	
-		        	<a href="/pages/about" class="link">
-			          	<div class="nav-box" align="center">
-			            	About
-			          	</div>
-			        </a>
-		        
-	        	<% end %>
-	     	</li>
-	     	<li>
-	     		<% if current_page?(pages_inDevelopment_path) %>
-				    <a href="/pages/inDevelopment" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-				        <div class="nav-box-current" align="center">
-				        	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
-				            In Development
-				        </div>
-				    </a>
-		        <% else %>
-		        	<a href="/pages/inDevelopment" class="link">
-			          	<div class="nav-box" align="center">
-			           		In Development
-			          	</div>
-			        </a>
-		        <% end %>
-	     	</li>
-	     	<li>
-	     		<% if current_page?(pages_projects_path) %>
-		        	<a href="/pages/projects" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current" align="center">
-			            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
-			            	Projects
-			          	</div>
-			        </a>
-		        <% else %>
-		        	<a href="/pages/projects" class="link">
-			          	<div class="nav-box" align="center">
-			            	Projects
-			          	</div>
-			        </a>
-		        <% end %>
-	     	</li>
-	     	<li>
-	     		<% if current_page?(good_to_knows_path) %>
-			        <a href="/good_to_knows/" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current" align="center">
-			            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
-			            	Database
-			          	</div>
-			        </a>
-		        <% else %>
-		        	<a href="/good_to_knows/" class="link">
-			          	<div class="nav-box" align="center">
-			            	Database
-			          	</div>
-			        </a>
-		        <% end %>
-	     	</li>
-	     	<li>
-	     		<% if current_page?('/contacts/new') %>
-			        <a href="/contacts/new" style="color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" class="link">
-			          	<div class="nav-box-current-last" align="center">
-			            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
-			            	Contact
-			          	</div>
-			        </a>
-		        <% else %>
-		        	<a href="/contacts/new" class="link">
-			          	<div class="nav-box-last" align="center">  
-			            	Contact
-			          	</div>
-			        </a>
-		        <% end %>
-	     	</li>
-         </ul>
-
-      </div>
-      <!--/.navbar-collapse -->
-   </div>
-</div>
-
-
-
-
-
-
-<!--<%= stylesheet_link_tag "navigation", media: "all" %>
-<div class="" >
-    <div class="" align="right">
-        <div class="row" style="margin-top: 15px; font-size: 15px">
-        	
-
-        	<div class="name-box col-xs-8 col-sm-7 col-md-6 col-lg-5" align="" style="display: ">
-					<a href="/pages/home" style="color: white; text-decoration: none; background-color: transparent">
-						<img src="/images/arctis-logo.png" style="width:45px; margin-right:10px; margin-top: -10px">
-						<div class="name">Nick Schumacher</div>
-					</a>
-			</div>
-
-			<div class="col-xs-4 col-sm-5 col-md-6 col-lg-7" style="overflow: auto;padding-right: -999px">
-			<div style="float: left; margin-right: -999px; white-space: ;">
-	        <% if current_page?(pages_home_path) || current_page?('/') %>
-	        	<div style="display: inline-block; margin-right: 20px">
-	        	<a href="/pages/home" style="color: white; text-shadow: 1px 1px 6px #00ACE6; font-style: italic" class="link">
-		        	<div class="nav-box-current" align="center">
-		            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> Home
-		          	</div>
-	          	</a>
-	          	</div>
-	        <% else %>
-	        	
-	        	<a href="/pages/home" class="link">
-		          	<div class="nav-box" align="center">
-		            	Home
-		          	</div>
-	          	</a>
-	          	
-	        <% end %>
-	        <% if current_page?(pages_about_path) %>
-	        	
-	        	<a href="/pages/about" style="color: white; text-shadow: 1px 1px 6px #00ACE6; font-style: italic" class="link">
-		          	<div class="nav-box-current" align="center">
-		            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> About
-		          	</div>
-		        </a>
-		        
-	        <% else %>
-	        	
-	        	<a href="/pages/about" class="link">
-		          	<div class="nav-box" align="center">
-		            	About
-		          	</div>
-		        </a>
-		        
-	        <% end %>
-	        <% if current_page?(pages_inDevelopment_path) %>
-	        	
-			    <a href="/pages/inDevelopment" style="color: white; text-shadow: 1px 1px 6px #00ACE6; font-style: italic" class="link">
-			        <div class="nav-box-current" align="center">
-			        	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> 
-			            In Development
-			        </div>
-			    </a>
-			    
-	        <% else %>
-	        	
-	        	<a href="/pages/inDevelopment" class="link">
-		          	<div class="nav-box" align="center">
-		           		In Development
-		          	</div>
-		        </a>
-		        
-	        <% end %>
-	        <% if current_page?(pages_projects_path) %>
-	        	
-	        	<a href="/pages/projects" style="color: white; text-shadow: 1px 1px 6px #00ACE6; font-style: italic" class="link">
-		          	<div class="nav-box-current" align="center">
-		            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> 
-		            	Projects
-		          	</div>
-		        </a>
-		        
-	        <% else %>
-	        	
-	        	<a href="/pages/projects" class="link">
-		          	<div class="nav-box" align="center">
-		            	Projects
-		          	</div>
-		        </a>
-		        
-	        <% end %>
-	        <% if current_page?(good_to_knows_path) %>
-	        	
-		        <a href="/good_to_knows/" style="color: white; text-shadow: 1px 1px 6px #00ACE6; font-style: italic" class="link">
-		          	<div class="nav-box-current" align="center">
-		            	<!-- <div style="height: 3px; background-color: #00ACE6">&nbsp</div> 
-		            	The Vault
-		          	</div>
-		        </a>
-		        
-	        <% else %>
-	        	
-	        	<a href="/good_to_knows/" class="link">
-		          	<div class="nav-box" align="center">
-		            	The Vault
-		          	</div>
-		        </a>
-		        
-	        <% end %>
-	        <% if current_page?('/contacts/new') %>
-	        	
-		        <a href="/contacts/new" style="color: white; text-shadow: 1px 1px 6px #00ACE6; font-style: italic" class="link">
-		          	<div class="nav-box-current-last" align="center">
-		            	<div style="height: 3px; background-color: #00ACE6">&nbsp</div>
-		            	Contact
-		          	</div>
-		        </a>
-		        
-	        <% else %>
-	        	
-	        	<a href="/contacts/new" class="link">
-		          	<div class="nav-box-last" align="center">  
-		            	Contact
-		          	</div>
-		        </a>
-		        
-	        <% end %>
-	        </div>
-	        </div>
-	     </div>
+<section class="hero">
+  <div class="content">
+    <div class="header">
+      <h1>Simple Responsive Portfolio</h1>
     </div>
-</div> -->
+  </div>
+</section>
+<section class="about-myself">
+  <div class="content">
+    <h2>Hi !</h2>
+    <p>I'm <span>name</span>.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dicta. Veniam pariatur minima voluptas culpa rem. Suscipit veritatis vel non neque alias, molestiae id incidunt natus ipsum vero, quod aut qui sequi quis laudantium <span>architecto exercitationem</span> recusandae eius. Incidunt velit quasi debitis, commodi vero optio nesciunt perspiciatis quidem quos accusantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius harum minima, ipsum animi. Provident quae hic, perspiciatis accusamus quaerat iure <span>tenetur</span> explicabo dicta quos aspernatur quis, delectus itaque vel.</p>
+  </div>
+</section>
+<section class="experience">
+  <div class="content">
+    <h1>Experience</h1>
+    <ul>
+      <li>
+        <div class="experience-content hidden">
+          <h2>Company</h2>
+          <div class="experience-time">Jan - Jun 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis praesentium itaque veniam dolorum cupiditate asperiores optio beatae, qui perferendis ipsam odit modi nemo natus corrupti neque quos distinctio facilis?</p>
+        </div>
+      </li>
+      <li>
+        <div class="experience-content hidden">
+          <h2>Company</h2>
+          <div class="experience-time">Jul - Dec 2015</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quas, reiciendis quis sequi voluptatem consectetur adipisci accusamus hic vel vero ea ad iure! Natus, ipsum, enim aspernatur fugit voluptatibus similique?</p>
+        </div>
+      </li>
+      <li>
+        <div class="experience-content hidden">
+          <h2>Company</h2>
+          <div class="experience-time">Mar - Jun 2015</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quas, reiciendis quis sequi voluptatem consectetur adipisci accusamus hic vel vero ea ad iure! Natus, ipsum, enim aspernatur fugit voluptatibus similique?</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="skills">
+  <div class="content">
+    <div class="development-wrapper">
+      <h2 class="development-title">Development</h2>
+      <ul class="skills-bar-container">
+        <li>
+          <div class="progressbar-title">
+            <h3>HTML5</h3>
+            <span class="percent" id="html-pourcent"></span>
+          </div>
+          <div class="bar-container" data-percent="95">
+            <span class="progressbar" id="progress-html"></span>
+          </div>
+        </li>
+        <li>
+          <div class="progressbar-title">
+            <h3>CSS / SASS</h3>
+            <span class="percent" id="css-pourcent"></span>
+          </div>
+          <div class="bar-container" data-percent="85">
+            <span class="progressbar" id="progress-css"></span>
+          </div>
+        </li>
+        <li>
+          <div class="progressbar-title">
+            <h3>JavaScript / jQuery</h3>
+            <span class="percent" id="javascript-pourcent"></span>
+          </div>
+          <div class="bar-container" data-percent="80">
+            <span class="progressbar" id="progress-javascript"></span>
+          </div>
+        </li>
+        <li>
+          <div class="progressbar-title">
+            <h3>PHP</h3>
+            <span class="percent" id="php-pourcent"></span>
+          </div>
+          <div class="bar-container" data-percent="65">
+            <span class="progressbar" id="progress-php"></span>
+          </div>
+        </li>
+        <li>
+          <div class="progressbar-title">
+            <h3>AngularJS</h3>
+            <span class="percent" id="angular-pourcent"></span>
+          </div>
+          <div class="bar-container" data-percent="70">
+            <span class="progressbar" id="progress-angular"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="tools-knowledge-wrapper">
+      <div class="tools-wrapper">
+        <h2 class="title">Tools</h2>
+        <ul class="tools">
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Photoshop
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Adobe Illustrator
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Sublime text
+          </li>
+        </ul>
+      </div>
+      <div class="knowledge-wrapper">
+        <h2 class="title">Knowledge</h2>
+        <ul class="knowledge">
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Wireframing
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Responsive design
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            ...
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</section>
+<section class="resume">
+  <div class="content">
+    <a href="#" target"_blank">
+      <div class="btn-resume">
+        <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+        <span>Download my resume<span>
+      </div>
+    </a>
+  </div>
+</section>
+<section class="portfolio">
+  <div class="content">
+
+    <h1>Some works</h1>
+
+    <div class="projects">
+
+      <div class="project">
+        <div class="project-image">
+          <img src="https://hd.unsplash.com/38/IbJK5etSN6dH6jAF4U0U_DSC_0280-1.jpg" alt=""/>
+        </div>
+        <div class="project-title">
+          <h2>Project #1</h2>
+        </div>
+        <div class="project-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi asperiores odio libero, molestiae at suscipit totam sequi, delectus temporibus. Provident itaque illum animi cupiditate quaerat! Id inventore, excepturi sequi totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iure ex repudiandae, enim maxime.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-image">
+          <img src="https://hd.unsplash.com/photo-1453928582365-b6ad33cbcf64" alt=""/>
+        </div>
+        <div class="project-title">
+          <h2>Project #2</h2>
+        </div>
+        <div class="project-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni consequatur dolores distinctio quod accusamus voluptatum obcaecati animi expedita rem odio explicabo veritatis voluptas ducimus voluptate earum laborum, qui maiores doloremque deserunt sapiente corporis et culpa, nihil fuga. Sit nemo maxime itaque maiores iure, similique ratione veritatis quidem nulla explicabo.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-image">
+          <img src="https://hd.unsplash.com/uploads/14125120591540eb48427/c1c4b1aa" alt=""/>
+        </div>
+        <div class="project-title">
+          <h2>Project #3</h2>
+        </div>
+        <div class="project-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi asperiores odio libero, molestiae at suscipit totam sequi, delectus temporibus. Provident itaque illum animi cupiditate quaerat! Id inventore, excepturi sequi totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iure ex repudiandae, enim maxime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact">
+  <div class="content">
+    <ul class="socials">
+      <li class="social">
+        <a href="#" target="_blank" class="email">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="social">
+        <a href="#" target="_blank" class="twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="social">
+        <a href="#" target="_blank" class="linkedin">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="social">
+        <a href="#" target="_blank" class="codepen">
+          <i class="fa fa-codepen" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</section>
+<section class="footer">
+  <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by Arnaud</p>
+</section>
+<script>
+// Main variables
+  var $aboutTitle = $('.about-myself .content h2');
+  var $developmentWrapper = $('.development-wrapper');
+  var developmentIsVisible = false;
+
+
+/* ####### HERO SECTION ####### */
+
+$('.hero .content .header').delay(500).animate({
+  'opacity':'1',
+  'top': '50%'
+},1000);
+
+
+$(window).scroll( function(){
+
+  var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+  /* ##### ABOUT MYSELF SECTION #### */
+  if( bottom_of_window > ($aboutTitle.offset().top + $aboutTitle.outerHeight())){
+    $('.about-myself .content h2').addClass('aboutTitleVisible');
+  }
+/* ##### EXPERIENCE SECTION #### */
+
+    // Check the location of each element hidden */
+    $('.experience .content .hidden').each( function(i){
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+
+        /* If the object is completely visible in the window, fadeIn it */
+        if( bottom_of_window > bottom_of_object ){
+
+          $(this).animate({
+            'opacity':'1',
+            'margin-left': '0'
+          },600);
+        }
+    });
+
+/*###### SKILLS SECTION ######*/
+
+  var middle_of_developmentWrapper = $developmentWrapper.offset().top + $developmentWrapper.outerHeight()/2;
+
+  if((bottom_of_window > middle_of_developmentWrapper)&& (developmentIsVisible == false)){
+
+    $('.skills-bar-container li').each( function(){
+
+      var $barContainer = $(this).find('.bar-container');
+      var dataPercent = parseInt($barContainer.data('percent'));
+      var elem = $(this).find('.progressbar');
+      var percent = $(this).find('.percent');
+      var width = 0;
+
+      var id = setInterval(frame, 15);
+
+      function frame() {
+        if (width >= dataPercent) {
+            clearInterval(id);
+        } else {
+          width++;
+          elem.css("width", width+"%");
+          percent.html(width+" %");
+        }
+      }
+    });
+    developmentIsVisible = true;
+  }
+}); // -- End window scroll --
+</script>

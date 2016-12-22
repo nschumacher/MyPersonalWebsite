@@ -1,10 +1,35 @@
 // Colors
 $white_background: rgba(80,80,80, 0.4);
-$primary_blue: #00ACE6;
-$primary_blue_1: #0095D8;
-$primary_box_shadow_color: rgba(0,0,0,.4);
+$primary_blue: #2A6C78; //#00ACE6;
+$primary_blue_1: #2A6C78;
+$primary_box_shadow_color: rgba(0,0,0,.8);
 $primary_text_shadow_color: rgba(70,70,70,.7);
 
 // Standards using the colors
-$primary_box_shadow: 4px 2px 10px $primary_box_shadow_color;
+$primary_box_shadow: 6px 6px 10px $primary_box_shadow_color;
 $primary_text_shadow: 1px 1px 2px $primary_text_shadow_color;
+
+// Color Pallet
+$base_color: #232323;
+$base_color_alt_1: #383838;
+$base_color_alt_2: #545454;
+$base_color_alt_3: #727272;
+$base_color_alt_4: #A8A8A8;
+
+$primary_color: #023F4A;
+$primary_color_alt_1: #115865;
+$primary_color_alt_2: #2A6C78;
+$primary_color_alt_3: #478793;
+$primary_color_alt_4: #85B5BE;
+
+$secondary_color: #253001;
+$secondary_color_alt_1: #435600;
+$secondary_color_alt_2: #6D8D00;
+$secondary_color_alt_3: #8EB700;
+$secondary_color_alt_4: #B8ED00;
+
+$accent_color: #6C0008;
+$accent_color_alt_1: #8E000A;
+$accent_color_alt_2: #AC000D;
+$accent_color_alt_3: #C6000F;
+$accent_color_alt_4: #CF000F;
