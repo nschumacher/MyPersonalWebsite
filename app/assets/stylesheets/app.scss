@@ -6,10 +6,10 @@
   height: 4px; /* for horizontal scrollbars */
 }
 ::-webkit-scrollbar-track {
-  background: rgba(0, 172, 230, 0.15);
+  background: rgba($primary_color_alt_2, 0.15);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 172, 230, 0.4);
+  background: rgba($primary_color_alt_2, 0.4);
 }
 /* End Scrollbar styling */
 

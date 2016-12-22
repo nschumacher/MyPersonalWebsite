@@ -51,12 +51,15 @@ hr {
 	margin-right: 5px;
 	padding: 10px;
 	box-shadow: $primary_box_shadow;
+	li {
+		font-size: .8em;
+	}
 }
 .panel-body {
 	color: white;
-	text-shadow: $primary_text_shadow;;
-	border: 1px solid rgba(0,110,170,.7);
-	background-color: rgba(0,110,170,.5);
+	text-shadow: $primary_text_shadow;
+	border: 1px solid rgba($primary_color_alt_2, .7); //rgba(0,110,170,.7);
+	background-color: rgba($primary_color_alt_2, .5);//rgba(0,110,170,.5);
 	font-size: 16px;
 	box-shadow: $primary_box_shadow;
 }
@@ -80,8 +83,8 @@ hr {
 	border-left: 4px solid white;
 }
 .panel-heading {
-	background-color: rgba(0,110,170,.5);
-	border: 1px solid rgba(0,110,170,.7);
+	background-color: rgba($primary_color_alt_2, .5); //rgba(0,110,170,.5);
+	border: 1px solid rgba($primary_color_alt_2, .7);//rgba(0,110,170,.7);
 	box-shadow: $primary_box_shadow;
 }
 .panel-group {
@@ -100,6 +103,19 @@ hr {
 	ul {
 		padding-left: 20px;
 	}
+}
+#pageLabel {
+  text-shadow: 1px 1px 5px $primary_color_alt_3;
+  padding: 10px 0px 5px 0px;
+  margin-bottom: 10px;
+  background-color: rgba($base_color_alt_2, .5);
+  box-shadow: $primary_box_shadow;
+
+  h1 {
+    margin: 0px;
+    font-size: 1.4em;
+    padding: 0px;
+  }
 }
 @media(max-width:767px) {
 	#test {

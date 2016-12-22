@@ -11,6 +11,7 @@
 
 	h2 {
 		font-size: 1.2em;
+		margin-top: 20px;
 	}
 	@media(max-width:1195px) {
 		#interests_pic {
@@ -18,6 +19,9 @@
 		}
 		#pic_box {
 			margin-top: 5px;
+		}
+		h2 {
+			margin-top: 0px;
 		}
 	}
 }
@@ -55,7 +59,7 @@
   width: 400px;
   margin: 0px 0px 0px 5px;
   padding: 0px 5px 0px 5px;
-  text-shadow: 2px 2px 4px $primary_blue;
+  text-shadow: 2px 2px 4px $primary_color_alt_2;
 	#logout:link {
 		color: white;
 		text-decoration: none;
