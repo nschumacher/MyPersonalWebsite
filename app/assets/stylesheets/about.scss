@@ -1,7 +1,6 @@
 @import 'color_palette';
 @import 'perspective';
 @import 'label_and_summary';
-
 a:link {
 	text-decoration: none;
 }
@@ -35,9 +34,40 @@ td {
 hr {
 	border-color: white;
 }
-.bodi {
-    padding: 0px 10px 5px 20px;
-    overflow: auto;
+.my-accordion-container {
+  // padding: 0px 10px 5px 20px;
+}
+$accordion-background:rgba($base_color_alt_2, .5) !important;
+$accordion-content-background:rgba($base_color_alt_2, .5) !important;
+$accordion-content-border: none;
+$accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
+.accordion-content {
+	background: transparent;
+	border: none;
+}
+.accordion-title {
+	border: none;
+	border-bottom: 1px solid $primary_blue_1;
+	  padding: .5rem 2rem;
+	.Title {
+		text-shadow: $primary_text_shadow;
+	}
+}
+.accordion-item {
+	font-family: 'Share Tech', sans-serif !important;
+	background: rgba($base_color_alt_2, .5) !important;
+	a:hover {
+		background: rgba($base_color_alt_2, .6) !important;
+	}
+	a:visited {
+		background: rgba($base_color_alt_2, .6) !important;
+	}
+}
+.accordion {
+	font-family: 'Share Tech', sans-serif !important;
+	background: transparent;
+	border:none;
+	box-shadow: 6px 6px 10px $primary_box_shadow_color;
 }
 #chartdiv {
 	height: 230px;
@@ -53,15 +83,22 @@ hr {
 	box-shadow: $primary_box_shadow;
 	li {
 		font-size: .8em;
+		span {
+			position: relative;
+			left: -15px;
+		}
 	}
 }
+.media-object-section{
+	min-width: 125px;
+}
+// THIS ONE
 .panel-body {
 	color: white;
 	text-shadow: $primary_text_shadow;
-	border: 1px solid rgba($primary_color_alt_2, .7); //rgba(0,110,170,.7);
-	background-color: rgba($primary_color_alt_2, .5);//rgba(0,110,170,.5);
+	border: 1px solid rgba($primary_color_alt_2, .7);
+	padding: 10px;
 	font-size: 16px;
-	box-shadow: $primary_box_shadow;
 }
 .panel-title {
 	font-size: 20px;
@@ -117,23 +154,23 @@ hr {
     padding: 0px;
   }
 }
-@media(max-width:767px) {
-	#test {
-		max-height: 200px;
-	}
-}
-@media only screen and (min-width:768px) and (max-width: 900px) {
-	#test {
-		max-height: 300px;
-	}
-}
-@media only screen and (min-width:901px)  and (max-width: 1100px) {
-	#test {
-		max-height: 310px;
-	}
-}
-@media(min-width:1101px) {
-	#test {
-		max-height: 400px;
-	}
-}
+// @media(max-width:767px) {
+// 	#test {
+// 		max-height: 200px;
+// 	}
+// }
+// @media only screen and (min-width:768px) and (max-width: 900px) {
+// 	#test {
+// 		max-height: 300px;
+// 	}
+// }
+// @media only screen and (min-width:901px)  and (max-width: 1100px) {
+// 	#test {
+// 		max-height: 310px;
+// 	}
+// }
+// @media(min-width:1101px) {
+// 	#test {
+// 		max-height: 400px;
+// 	}
+// }

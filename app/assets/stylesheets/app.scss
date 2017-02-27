@@ -13,7 +13,7 @@
 }
 /* End Scrollbar styling */
 
-.content:before {
+.conten:before {
   content: "";
   position: fixed;
   left: -20px;
@@ -43,7 +43,7 @@
   background: linear-gradient(to bottom, black,  $primary_color, black); /* Standard syntax (must be last) */
 }
 
-.content {
+.conten {
   position: fixed;
   left: 0;
   right: 0;
@@ -56,6 +56,4 @@
   // margin-left: 1%;
   // width: 98%;
 }
-body {
-  background-color: $base_color;
-}
+$body-font-family:'Share Tech', sans-serif;

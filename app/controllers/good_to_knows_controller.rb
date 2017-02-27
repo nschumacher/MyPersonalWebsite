@@ -83,7 +83,7 @@ class GoodToKnowsController < ApplicationController
   def update
     respond_to do |format|
       if @good_to_know.update(good_to_know_params)
-        format.html { redirect_to pages_home_path, notice: 'Entry was successfully updated.' }
+        format.html { redirect_to good_to_knows_path, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @good_to_know }
         format.js
       else
@@ -114,7 +114,7 @@ class GoodToKnowsController < ApplicationController
       if user_signed_in?
         return true
       else
-        redirect_to good_to_knows_path, alert: 'Sorry! You\'re not me!'
+        redirect_to good_to_knows_path, notice: 'Sorry! You\'re not me!'
       end
     end
 

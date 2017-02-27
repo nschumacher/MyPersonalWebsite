@@ -42,10 +42,13 @@ h2{
 	border-bottom: 1px solid white;
 	font-size: 18px;
 }
-.projDescript {
-	max-height: 250px;
-	overflow-y: auto;
-	color:white;
-	font-size: .8em;
-	padding: 0px 10px 0px 10px;
+.orbit-container {
+	border: 1px solid rgba($primary_color_alt_2, .7);
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.orbit-container:focus {
+  outline: none;
 }
