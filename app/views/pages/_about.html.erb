@@ -5,51 +5,37 @@
 <%= javascript_include_tag "mychart", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "customskillchart", "data-turbolinks-track" => true %>
 
-<!-- Intro Title -->
-<div class="intro row">
-	<div class="col-xs-12 col-md-4">
-		<div id="pageLabel">
-			<h1 align="center" style="margin-bottom: 10px;">About Me</h1>
-		</div>
-	</div>
-	<div class="col-xs-12 col-md-8">
-		<div id="pageSummary">
-			A summary of my work experience and other background information.
-		</div>
-	</div>
-</div>
-
 <!-- Skills & Education -->
 <div class="row" style="margin-bottom: 0px;">
 	<!-- Skill Chart -->
-	<div class="col-xs-12 col-lg-4" style="margin-bottom: 10px">
+	<div class="small-12 large-4 columns" style="margin-bottom: 10px">
 		<div id="skillBox">
 			<span style="font-size: 1.2em; text-shadow: 1px 1px 1px #00ACE6">Skills</span><br>
 			<table style="width: 100%; margin-left: 20px">
 				<tr>
-					<td><li>Leadership</li></td>
-					<td><li>SCRUM</li></td>
+					<td><li><span>Leadership</span></li></td>
+					<td><li><span>SCRUM</span></li></td>
 				</tr>
 				<tr>
-					<td><li>Oracle</li></td>
-					<td><li>Spring Boot</li></td>
+					<td><li><span>Oracle</span></li></td>
+					<td><li><span>Spring Boot</span></li></td>
 				</tr>
 				<tr>
-					<td><li>Relational Databases</li></td>
-					<td><li>Teamwork</li></td>
+					<td><li><span>Relational Databases</span></li></td>
+					<td><li><span>Teamwork</span></li></td>
 
 				</tr>
 				<tr>
-					<td><li>Linux</li></td>
-					<td><li>Agile</li></td>
+					<td><li><span>Linux</span></li></td>
+					<td><li><span>Agile</span></li></td>
 				</tr>
 				<tr>
-					<td><li>Web Development</li></td>
-					<td><li>Microsoft Office</li></td>
+					<td><li><span>Web Development</span></li></td>
+					<td><li><span>Microsoft Office</span></li></td>
 				</tr>
 				<tr>
-					<td><li>Interpersonal Communications</li></td>
-					<td><li>Basic Photoshop</li></td>
+					<td><li><span>Interpersonal Communications</span></li></td>
+					<td><li><span>Basic Photoshop</span></li></td>
 				</tr>
 			</table>
 			<span style="font-size: 1.2em; text-shadow: 1px 1px 1px #00ACE6">Languages</span> <span style="font-size: .8em; margin-left: 5px;">(hover for confidence levels)</span><br>
@@ -60,27 +46,24 @@
 	</div>
 
 	<!-- Additional Skills & Education -->
-	<div class="col-xs-12 col-lg-8 bodi">
-		<div class="panel-group skillAccordion" id="accordion" role="tablist" aria-multiselectable="true">
-				<!-- Education -->
-				<div class="panel">
-		    	<div class="panel-heading" role="tab" id="headingTwo">
-		      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-		      			<h4 class="panel-title">
-				          Education <br>
-				          <span class="panel-subTitle"><i>"Education is the most powerful weapon you can use to change the world."</i> -- Nelson Mandela</span>
-			     		</h4>
-			      	</a>
-			    </div>
-		    	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-		      		<div class="panel-body">
-		      			<div class="media">
-						  <div class="media-left">
-						    <a href="#">
-						      <img class="media-object pic" src="/images/purdue.png" alt="Purdue">
-						    </a>
-						  </div>
-						  <div class="media-body">
+	<div class="small-12 large-8 my-accordion-container">
+		<ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true" data-multi-expand="false">
+
+			<!-- Education -->
+			<li class="accordion-item">
+				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
+					<h4 class="panel-title">
+	          Education <br>
+	          <span class="panel-subTitle"><i>"Education is the most powerful weapon you can use to change the world."</i> -- Nelson Mandela</span>
+	     		</h4>
+      	</a>
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+					<div class="panel-body">
+      			<div class="media-object">
+					  	<div class="media-object-section">
+					      <img class="pic" src="/images/purdue.png" alt="Purdue">
+					  	</div>
+					  	<div class="media-object-section">
 								<h4 class="media-heading">Purdue University | BS in Computer Science | May 2017 </h4>
 						    I am a full time student at Purdue University studying Computer Science with a focus in Software Engineering. In my free time, I will try to teach myself something new
 								 related to Computer Science. My interests inlcude, but are not limited to: web development, Android application development, computer security, and scripting. I enjoy attending
@@ -88,191 +71,186 @@
 								 project I am working on. Another example being setting up a Raspberry Pi as a file server.
 						  </div>
 						</div>
-						<div class="media">
-						  <div class="media-left">
-						    <a href="#">
-						      <img class="media-object pic" src="/images/online.png" alt="Udemy">
+						<div class="media-object">
+					  	<div class="media-object-section">
+					      <img class="pic" src="/images/online.png" alt="Udemy">
+						  </div>
+					  	<div class="media-object-section">
+					    	<h4 class="media-heading">Online Classes</h4>
+					   		I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. I have also used CodeAcademy.com to further my comfort with Javascript.
+					  	</div>
+						</div>
+      		</div>
+	    	</div>
+	  	</li>
+
+			<!-- Genesys - Interactive Intelligence -->
+			<li class="accordion-item">
+				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
+					<h4 class="panel-title">
+          		Genesys - Interactive Intelligence<br>
+          		<span class="panel-subTitle"><i>Automation Engineer</i></span>
+          		<span class="panel-subTitle" style="float:right"><i>Oct 2016 - Present</i></span>
+      		</h4>
+      	</a>
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+					<div class="panel-body">
+	      		<div class="media-object">
+						  <div class="media-object-section">
+						    <a href="https://www.inin.com/">
+						      <img class="pic" src="/images/genesys_logo.png" alt="Genesys">
 						    </a>
 						  </div>
-						  <div class="media-body">
-						    <h4 class="media-heading">Online Classes</h4>
-						   	I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. I have also used CodeAcademy.com to further my comfort with Javascript.
+						  <div class="media-object-section">
+						    As a member of the Quality Management team, I work directly with a team of 4 other individuals to build automated
+								test suites to ensure functionality is maintained as development moves forward on Interactive's PureCloud product.
 						  </div>
 						</div>
-		      		</div>
-		    	</div>
-		  	</div>
-				<!-- Genesys - Interactive Intelligence -->
-				<div class="panel">
-	    	<div class="panel-heading" role="tab" id="headingEight">
-		      	<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-		      		<h4 class="panel-title">
-		          		Genesys - Interactive Intelligence<br>
-		          		<span class="panel-subTitle"><i>Automation Engineer</i></span>
-		          		<span class="panel-subTitle" style="float:right"><i>Oct 2016 - Present</i></span>
-		      		</h4>
-		      	</a>
-	    	</div>
-		    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-		      	<div class="panel-body">
-		      		<div class="media">
-					  <div class="media-left">
-					    <a href="https://www.inin.com/">
-					      <img class="media-object pic" src="/images/genesys_logo.png" alt="Genesys">
-					    </a>
-					  </div>
-					  <div class="media-body">
-					    As a member of the Quality Management team, I work directly with a team of 4 other individuals to build automated
-							test suites to ensure functionality is maintained as development moves forward on Interactive's PureCloud product.
-					  </div>
-					</div>
-		      	</div>
+	      	</div>
 		    </div>
-	  	</div>
-				<!-- NCAA -->
-		  	<div class="panel">
-	    	<div class="panel-heading" role="tab" id="headingThree">
-		      	<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-		      		<h4 class="panel-title">
-		          		NCAA Information Services  -  Techpoint Xtern Program <br>
-		          		<span class="panel-subTitle"><i>Full-Stack Developer | Software Tester</i></span>
-		          		<span class="panel-subTitle" style="float:right"><i>June 2016 - August 2016</i></span>
-		      		</h4>
-		      	</a>
-	    	</div>
-		    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-		      	<div class="panel-body">
-		      		<div class="media">
-					  <div class="media-left">
-					    <a href="http://www.ncaa.org/">
-					      <img class="media-object pic" src="/images/ncaa.png" alt="NCAA">
-					    </a>
-					  </div>
-					  <div class="media-body">
-					    I worked for the NCAA's Information Services department as a full-stack developer taking part in the Xtern Program through TechPoint. My first project was building a Ruby on Rails web
-							 application written in PL/SQL to house pdf document. My second project was to teach myself Selenium, write the procedures for how the NCAA will automate their web application testing,
-							 and give a presentation briefing the other developers on the basics of using Selenium. My final project was a Spring Boot web application to manage and generate internal reports for
-							 other departments in the NCAA. Oracle was used for data storage in both web applications.
-					  </div>
-					</div>
-		      	</div>
+	  	</li>
+
+			<!-- NCAA -->
+			<li class="accordion-item">
+				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
+					<h4 class="panel-title">
+          		NCAA Information Services  -  Techpoint Xtern Program <br>
+          		<span class="panel-subTitle"><i>Full-Stack Developer | Software Tester</i></span>
+          		<span class="panel-subTitle" style="float:right"><i>June 2016 - August 2016</i></span>
+      		</h4>
+      	</a>
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+					<div class="panel-body">
+	      		<div class="media-object">
+						  <div class="media-object-section">
+						    <a href="http://www.ncaa.org/">
+						      <img class="pic" src="/images/ncaa.png" alt="NCAA">
+						    </a>
+						  </div>
+						  <div class="media-object-section">
+						    I worked for the NCAA's Information Services department as a full-stack developer taking part in the Xtern Program through TechPoint. My first project was building a Ruby on Rails web
+								 application written in PL/SQL to house pdf document. My second project was to teach myself Selenium, write the procedures for how the NCAA will automate their web application testing,
+								 and give a presentation briefing the other developers on the basics of using Selenium. My final project was a Spring Boot web application to manage and generate internal reports for
+								 other departments in the NCAA. Oracle was used for data storage in both web applications.
+						  </div>
+						</div>
+		      </div>
 		    </div>
-	  	</div>
+	  	</li>
+
 			<!-- RSA -->
-	  	<div class="panel">
-	    	<div class="panel-heading" role="tab" id="headingFour">
-	      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-	      			<h4 class="panel-title">
-			          RSA, The Security Division of EMC  -  Purdue Pathmaker Program<br>
-			          <span class="panel-subTitle"><i>Shift Manager | Senior Analyst</i></span>
-			          <span class="panel-subTitle" style="float:right"><i>July 2014 - October 2016</i></span>
-		      		</h4>
-		      	</a>
-		    </div>
-	    	<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-	      		<div class="panel-body">
-	      			<div class="media">
-					  <div class="media-left">
-					    <a href="#">
-					      <img class="media-object pic" src="/images/rsa.png" alt="RSA">
-					    </a>
-					  </div>
-					  <div class="media-body">
-							I work in the Anti-Fraud Command Center(AFCC).<br/>
-							As a Senior Analyst:
-							<ul>
-								<li>I am responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.).</li>
-								<li>I take prevention steps, terminating online frauds, and performing computer forensic analysis.</li>
-								<li>I have comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
-							</ul>
-							As a Shift Manager:
-							<ul>
-								<li>I am the face of RSA and the AFCC communicating with customers to update on attack status and manage their preferences and procedures.</li>
-								<li>I am the leader of the office managing the workflow and optimizing the efficiency of the office in any way I can.</li>
-							</ul>
-					  </div>
-					</div>
-	      		</div>
+			<li class="accordion-item">
+				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
+					<h4 class="panel-title">
+	          RSA, The Security Division of EMC  -  Purdue Pathmaker Program<br>
+	          <span class="panel-subTitle"><i>Shift Manager | Senior Analyst</i></span>
+	          <span class="panel-subTitle" style="float:right"><i>July 2014 - October 2016</i></span>
+      		</h4>
+      	</a>
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+      		<div class="panel-body">
+      			<div class="media-object">
+					  	<div class="media-object-section">
+						    <a href="#">
+						      <img class="pic" src="/images/rsa.png" alt="RSA">
+						    </a>
+						  </div>
+					  	<div class="media-object-section">
+								I work in the Anti-Fraud Command Center(AFCC).<br/>
+								As a Senior Analyst:
+								<ul>
+									<li>I am responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.).</li>
+									<li>I take prevention steps, terminating online frauds, and performing computer forensic analysis.</li>
+									<li>I have comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
+								</ul>
+								As a Shift Manager:
+								<ul>
+									<li>I am the face of RSA and the AFCC communicating with customers to update on attack status and manage their preferences and procedures.</li>
+									<li>I am the leader of the office managing the workflow and optimizing the efficiency of the office in any way I can.</li>
+								</ul>
+						  </div>
+						</div>
+	      	</div>
 	    	</div>
-	  	</div>
+	  	</li>
+
 			<!-- Android Dev -->
-	  	<div class="panel">
-	    	<div class="panel-heading" role="tab" id="headingFive">
-	      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-	      			<h4 class="panel-title">
-			          Android Developer<br>
-			          <span class="panel-subTitle"><i>Arctis</i></span>
-			          <span class="panel-subTitle" style="float:right"><i>May 2013 - May 2014</i></span>
-			    	</h4>
-			    </a>
-		    </div>
-	    	<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-	      		<div class="panel-body">
-	      			<div class="media">
-					  <div class="media-left">
-					    <a href="http://play.google.com">
-					      <img class="media-object pic" src="/images/android.png" alt="Android">
-					    </a>
-					  </div>
-					  <div class="media-body">
-					    In my free time, I am slowly teaching myself how to develop Android applications. See <a class="mylink" href="/pages/projects">Projects</a> for examples.
-					  </div>
-					</div>
-	      		</div>
+			<li class="accordion-item">
+				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
+					<h4 class="panel-title">
+	          Android Developer<br>
+	          <span class="panel-subTitle"><i>Arctis</i></span>
+	          <span class="panel-subTitle" style="float:right"><i>May 2013 - May 2014</i></span>
+		    	</h4>
+		    </a>
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+					<div class="panel-body">
+      			<div class="media-object">
+					  	<div class="media-object-section">
+					    	<a href="http://play.google.com">
+					      	<img class="pic" src="/images/android.png" alt="Android">
+					    	</a>
+					  	</div>
+					  	<div class="media-object-section">
+					    	In my free time, I am slowly teaching myself how to develop Android applications. I have done some dev work in the past, but that was
+								a while back now.<!--See <a class="mylink" href="/pages/projects">Projects</a> for examples. -->
+					  	</div>
+						</div>
+	      	</div>
 	    	</div>
-	  	</div>
+	  	</li>
+
 			<!-- Meijer -->
-	  	<div class="panel">
-	    	<div class="panel-heading" role="tab" id="headingSix">
-	      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-	      			<h4 class="panel-title">
-			          Meijer<br>
-			          <span class="panel-subTitle"><i>General Merchandise Clerk</i></span>
-			          <span class="panel-subTitle" style="float:right"><i>May 2014 - August 2014</i></span>
-			        </h4>
-			    </a>
-		    </div>
-	    	<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-	      		<div class="panel-body">
-	      			<div class="media">
-					  <div class="media-left">
-					    <a href="#">
-					      <img class="media-object pic" src="/images/meijer.png" alt="Meijer">
-					    </a>
-					  </div>
-					  <div class="media-body">
-					   	I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
-					  </div>
-					</div>
-	      		</div>
+			<li class="accordion-item">
+				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
+					<h4 class="panel-title">
+	          Meijer<br>
+	          <span class="panel-subTitle"><i>General Merchandise Clerk</i></span>
+	          <span class="panel-subTitle" style="float:right"><i>May 2014 - August 2014</i></span>
+	        </h4>
+		    </a>
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+					<div class="panel-body">
+      			<div class="media-object">
+					  	<div class="media-object-section">
+						    <a href="#">
+						      <img class="pic" src="/images/meijer.png" alt="Meijer">
+						    </a>
+					  	</div>
+					  	<div class="media-object-section">
+					   		I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
+					  	</div>
+						</div>
+	      	</div>
 	    	</div>
-	  	</div>
+	  	</li>
+
 			<!-- Golf -->
-	  	<div class="panel">
-	    	<div class="panel-heading" role="tab" id="headingSeven">
-	      		<a class="collapsed Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+			<li class="accordion-item">
+						<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
 	      			<h4 class="panel-title">
 			          Birk BoilerMaker Golf Complex & Coyoted Crossing Golf Course<br>
 			          <span class="panel-subTitle"><i>Cart Staff</i></span>
 			          <span class="panel-subTitle" style="float:right"><i>April 2011 - August 2013</i></span>
 			    	</h4>
 			    </a>
-		    </div>
-	    	<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-	      		<div class="panel-body">
-	      			<div class="media">
-					  <div class="media-left">
+				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+						<div class="panel-body">
+	      			<div class="media-object">
+					  <div class="media-object-section">
 					    <a href="#">
-					      <img class="media-object pic" src="/images/purdueGolf.png" alt="Golf">
+					      <img class="pic" src="/images/purdueGolf.png" alt="Golf">
 					    </a>
 					  </div>
-					  <div class="media-body">
+					  <div class="media-object-section">
 					   	The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
 					  </div>
 					</div>
 	      		</div>
 	    	</div>
-	  	</div>
-		</div> <!-- end skills & edu accordion -->
+	  	</li>
+
+		</ul><!-- </div> end skills & edu accordion -->
 	</div>
 </div>
+<script src="https://cdn.jsdelivr.net/foundation/6.1.1/js/foundation.accordion.js"></script>

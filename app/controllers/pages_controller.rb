@@ -19,4 +19,12 @@ class PagesController < ApplicationController
 
   def inDevelopment
   end
+
+  def test
+    @good_to_knows = GoodToKnow.all
+  end
+
+  def simple_home
+    @good_to_knows = GoodToKnow.all
+  end
 end

@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require ckeditor/init
 //= require customskillchart
 //= require mychart
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

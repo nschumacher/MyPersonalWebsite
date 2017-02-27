@@ -1,0 +1,131 @@
+<%= stylesheet_link_tag "projects", media: "all" %>
+
+<!-- Intro Title -->
+<div class="orbit" role="region" aria-label="My Projects" data-orbit data-timer-delay="10000">
+  <ul class="orbit-container">
+    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+    <!-- Personal Site -->
+    <li class="is-active orbit-slide">
+      <div class="row align-middle">
+        <div class="small-12 large-7 columns" align="left">
+          <h3 align="center">My Personal Website and the Vault</h3>
+          Although technically always in development, this website functions as intended and
+          further development comes after development on my other projects. It is being developed
+          with Ruby on Rails using Foundation to assist with styling and Motion UI for animations.
+          The Vault is my searchable database of helpful knowledge I have compiled, and continue
+          to add to, based on my experiences in the technical field. Feel free to peruse the Vault!
+        </div>
+        <div class="small-12 large-5 columns" align="center">
+          <img src="/images/railslogo.png" alt="rails logo" style="height: 350px">
+        </div>
+      </div>
+    </li>
+
+    <!-- Centurion -->
+    <li class="orbit-slide">
+      <div class="row align-middle">
+        <div class="small-12 large-7 columns" align="left">
+          <h3 align="center">Centurion</h3>
+          Centurion is a fraud tracking and mitigation web based platform that clients can use with
+          their own security team in the fight against fraudulent content targeting their organization.
+          Currently in development, it's a Ruby on Rails web application that clients can purchase to run on their own servers
+          or have it hosted on ours. The application will be dynamic in the sense that it will automatically
+          respond to different screen sizes for use on the go if need be.
+        </div>
+        <div class="small-12 large-5 columns" align="center">
+          <img src="/images/centurion_1.png" alt="centurion logo" style="height: 350px">
+        </div>
+      </div>
+    </li>
+
+    <!-- RateMyClasses -->
+    <li class="orbit-slide">
+      <div class="row align-middle">
+        <div class="small-12 large-7 columns" align="left">
+          <h3 align="center">RateMyClasses</h3>
+          I worked on a team of 5 to create a web application for reviewing classes at Purdue University.
+          Below is a more detailed summary.<br><br>
+          With the thousands of classes available on Purdue University's campus, it is sometimes difficult
+          to decide which ones to take and who to choose as one's professor. Students often ask their
+          friends who have already taken the classes how difficult it was, what the professor is like,
+          and if they recommend taking it. However, it is impossible to have a friend who has taken every
+          class on campus. Our solution is a centralized place for students to anonymously write a review
+          for any class available. Our product is a web application built on Ruby on Rails and designed for
+          Purdue students to make assessments on what courses to take bosed off of ratings from other students.
+          <p align="center" style="font-size: 17px; margin-top: 5px;">
+            <a class="sitelink" href="http://ratemyclasses.herokuapp.com/">Click here to visit the site!</a>
+          </p>
+        </div>
+        <div class="small-12 large-5 columns" align="center">
+          <img src="/images/rmc_screenshot_1.png" alt="ratemyclasses" style="height: 275px">
+        </div>
+      </div>
+    </li>
+
+    <!-- Apptitutor -->
+    <li class="orbit-slide">
+      <div class="row align-middle">
+        <div class="small-12 large-7 columns" align="left">
+          <h3 align="center">Apptitutor</h3>
+          I worked on a team of 5 to create a web application for matching students
+          up with tutors at Purdue University. Below is a more detailed summary.<br><br>
+          While going to school full time, classes can get tough and some students require
+          additional tutoring. Purdue University does not offer a system dedicated to students
+          finding tutors and tutors offering their services for specific classes. While bulletin
+          boards with flyers offering tutoring services exist throughout almost every building,
+          many students ignore or do not notice these postings. The solution? ApptiTutor!
+          Built on Ruby on Rails, this web application makes it easy for students to find and communicate
+          with tutors that fit their specific needs!
+          <p align="center" style="font-size: 17px; margin-top: 5px;">
+            <a class="sitelink" href="http://apptitutor.herokuapp.com/">Click here to visit the site!</a>
+          </p>
+        </div>
+        <div class="small-12 large-5 columns" align="center">
+          <img src="/images/apptitutor_screenshot_1.png" alt="picture 2" style="height: 275px">
+        </div>
+      </div>
+    </li>
+
+    <!-- Linux Shell -->
+    <li class="orbit-slide">
+      <div class="row align-middle">
+        <div class="small-12 large-7 columns" align="left">
+          <h3 align="center">Linux Shell</h3>
+          In one of my Computer Science courses, we were tasked with building a Linux shell. The languages
+          used in its construction are: Lex, Yacc, and C. The shell performs similarly to a Linux terminal
+          minus a few features however, it can handle complex grammer including pipes and I/O redirections.
+        </div>
+        <div class="small-12 large-5 columns" align="center">
+          <img src="/images/linux_shell_1.png" alt="linux shell" style="height: 350px">
+        </div>
+      </div>
+    </li>
+
+    <!-- FutureTech UI -->
+    <li class="orbit-slide">
+      <div class="row align-middle">
+        <div class="small-12 large-7 columns" align="left">
+          <h3 align="center">FutureTech UI</h3>
+          Are you tired of your Android phone looking like everyone else's? Do you wish your phone looked cooler?
+          Have you seen the Iron Man movies and wished you were Tony Stark or you that you had your own J.A.R.V.I.S. AI?
+          If you answered yes to any of the above, then this app if just what you need. Inspired by Stark technology,
+          the FutureTech UI will give you that futuristic look and with minimal setup! This application includes a set of
+          skins to be used with UCCW to enhance your phone's user experience.
+        </div>
+        <div class="small-12 large-5 columns" align="center">
+          <img src="/images/futuretech_screenshot_1.png" alt="linux shell" style="height: 350px">
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <nav class="orbit-bullets">
+    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+    <button data-slide="4"><span class="show-for-sr">Fifth slide details.</span></button>
+    <button data-slide="5"><span class="show-for-sr">Sixth slide details.</span></button>
+  </nav>
+</div>

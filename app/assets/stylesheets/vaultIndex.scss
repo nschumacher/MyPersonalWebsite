@@ -23,14 +23,21 @@
   padding-left: 5px;
   opacity: .7;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px black;
+}
 .vaultEntry {
-  background-color: rgba($primary_color_alt_1, .5);
+  background-color: rgba($base_color_alt_2, .5) !important;
 }
 .entry {
   background-color: $white_background;
   padding: 5px;
   margin: 10px;
-  margin-left: 5px;
+  margin-left: 0px;
   color: white;
   box-shadow: $primary_box_shadow;
 }
@@ -39,7 +46,7 @@
 }
 #vaultList {
   padding-left: 0px;
-  max-height: 350px;
+  max-height: 600px;
   overflow-y: auto;
 }
 .entryLinks:link {
@@ -64,23 +71,27 @@ form#mysearch {
 input#search {
   background: transparent;
   border: none;
+  color: white;
   border-bottom: 1px solid $primary_color_alt_2;
   width: 80%;
+  outline: none;
+  box-shadow: 0px 0px 0px black;
 }
 #new_button {
   margin-right: 10px;
   float: right;
 }
 #new_button_link {
-  background-color: $primary_color_alt_2;
+  background-color: rgba($base_color_alt_2, .5) !important;
   width: 175px;
   padding: 5px 15px;
   text-decoration: none;
   color: white;
+  box-shadow: 1px 1px 4px black;
 }
 #new_button_link:hover {
   background-color: $primary_color_alt_3;
-  box-shadow: $primary_box_shadow_color;
+  box-shadow: $primary_box_shadow;
 }
 
 #searchbox {
