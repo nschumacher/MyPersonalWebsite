@@ -16,8 +16,11 @@
 //= require foundation
 //= require turbolinks
 //= require ckeditor/init
+//= require chart_radar
+//= require chart_dark_theme
 //= require customskillchart
 //= require mychart
+
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
