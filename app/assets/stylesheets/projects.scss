@@ -24,16 +24,26 @@ h2{
   }
 }
 .sitelink {
-	background-color: rgba(0,0,0,.6);
-	padding: 5px;
-	border-radius: 5px;
-	text-decoration: none;
+	// background-color: rgba(0,0,0,.6);
+	// padding: 5px;
+	// border-radius: 5px;
+	// text-decoration: none;
+	background-color: rgba($base_color_alt_2, .5) !important;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 1px 4px black;
 }
 .sitelink:link {
-	background-color: rgba(0,0,0,.6);
-	padding: 5px;
-	border-radius: 5px;
-	text-decoration: none;
+	// background-color: rgba(0,0,0,.6);
+	// padding: 5px;
+	// border-radius: 5px;
+	// text-decoration: none;
+	background-color: rgba($base_color_alt_2, .5) !important;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 1px 4px black;
 }
 .projectTab {
 	background-color: rgba(0,110,170,.4);
@@ -44,6 +54,8 @@ h2{
 }
 .orbit-container {
 	border: 1px solid rgba($primary_color_alt_2, .7);
+	margin-left: 20px;
+	margin-right: 20px;
 }
 input:focus,
 select:focus,
