@@ -1,9 +1,9 @@
 @import 'color_palette';
-$body-font-family:'Share Tech', sans-serif;
+$body-font-family:'Rajdhani', sans-serif;
 body {
-  font-family: 'Share Tech', sans-serif !important;
+  // font-family: 'Orbitron', sans-serif !important;
   h4{
-    font-family:'Share Tech', sans-serif;
+    font-family:'Orbitron', sans-serif;
   }
 }
 #connections {
@@ -37,23 +37,29 @@ body {
 }
 body {
   background: black;
+  font-family: 'Rajdhani', sans-serif;
 }
+
 section {
-  font-family: 'Share Tech', sans-serif;
+
+  font-family: 'Rajdhani', sans-serif !important;
   color: white;
   padding: 40px 0px;
   h1 {
     text-shadow: $primary_text_shadow;
     margin-bottom: 40px;
-    font-family: 'Share Tech', sans-serif;
+    font-family: 'Orbitron', sans-serif;
   }
   h3 {
     text-shadow: $primary_text_shadow;
     margin-bottom: 40px;
-    font-family: 'Share Tech', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+  }
+  h4 {
+    font-family: 'Rajdhani', sans-serif;
   }
   h6 {
-    font-family: 'Share Tech', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
   }
   background: $base_color; /* For browsers that do not support gradients */
   background-size: contain;

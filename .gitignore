@@ -4,3 +4,5 @@ tmp
 Procfile
 .DS_Store
 log/development.log
+
+log/

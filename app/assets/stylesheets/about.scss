@@ -53,6 +53,9 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 		text-shadow: $primary_text_shadow;
 	}
 }
+.accordion-title::before {
+	font-size: 1.8em;
+}
 .accordion-item {
 	font-family: 'Share Tech', sans-serif !important;
 	background: rgba($base_color_alt_2, .5) !important;
@@ -75,10 +78,11 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	margin-left: -12px;
 	text-shadow: $primary_text_shadow;
 }
-#skillBox {
+.skillBox {
 	background: rgba($base_color_alt_2, .5);
 	text-shadow: $primary_text_shadow;
 	margin-right: 5px;
+	margin-bottom: 10px;
 	padding: 10px;
 	box-shadow: $primary_box_shadow;
 	li {
@@ -108,6 +112,7 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	text-shadow: $primary_text_shadow;
 	margin-left: 15px;
 	font-size: 15px;
+	font-family: 'Rajdhani', sans-serif;
 }
 .panel {
 	background-color: transparent;
