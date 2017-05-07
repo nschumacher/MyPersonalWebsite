@@ -3,4 +3,5 @@ $('#vaultEntry').promise().done(function(){
   document.getElementById('vaultEntry').innerHTML = "";
   $('#vaultEntry').append("<%= escape_javascript(render(:partial => 'show', :locals => {:remote => true})) %>");
   $('#vaultEntry').fadeIn("slow");
+  // $('.vaultEntry').css('box-shadow','6px 6px 10px rgba(0,0,0,.8)');
 });

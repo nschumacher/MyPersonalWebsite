@@ -14,14 +14,21 @@
 <div class="row">
   <div style="height: 1px; margin-bottom: 10px"></div>
 
-  <div class="large-3 columns" id="vaultList">
+  <div class="large-6 columns" id="vaultList">
     <% counter = 0 %>
+    <div class="row">
     <% @good_to_knows.each do |good_to_know| %>
-      <div class="entryContainer">
-          <div class="entry" align="left" style="padding: 8px">
-            <%= link_to good_to_know.title, good_to_know_path(good_to_know.id), :remote => true, :class => 'entryLinks' %>
+
+          <div class="entry large-3 columns" align="center" style="padding: 8px">
+            <%= link_to good_to_know_path(good_to_know.id), :remote => true, :class=>'entry_content' do %>
+              <%= image_tag "/assets/file_folder.png", :class=>'entry_icon' %>
+              <div class="entry_title" align="center"><%=good_to_know.title%></div>
+            <% end %>
+            <%#= image_tag("/assets/blank_folder.png", :style=>'height: 50px;')%>
+            <!-- <%= link_to good_to_know.title, good_to_know_path(good_to_know.id), :remote => true, :class => 'entryLinks' %> -->
           </div>
-      </div>
+
+
       <script>
         var content = "";
         my_content = document.getElementById("my_content_<%= counter %>").getAttribute("data-good_to_know");
@@ -30,9 +37,15 @@
         }
       </script>
       <% counter = counter +1 %>
+
     <% end %>
+    </div>
   </div>
-  <div class="large-9 columns" id="vaultEntry">
+
+  <div class="large-6 columns" id="vaultEntry">
     &nbsp
   </div>
+
+  <% counter = 0 %>
+
 </row>
