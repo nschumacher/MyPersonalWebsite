@@ -156,3 +156,17 @@ input#search {
     padding: 0px;
   }
 }
+.pagination a, .pagination button {
+    display: inline;
+    color: $gray_alt_4 !important;
+}
+.pagination a:hover, .pagination button:hover {
+  background: transparent;
+  color: white !important;
+  border-bottom: 1px solid $primary_color_alt_2;
+}
+.pagination .current {
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid $primary_color_alt_2;
+}

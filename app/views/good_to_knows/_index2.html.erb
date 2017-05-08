@@ -1,4 +1,5 @@
- <%= stylesheet_link_tag "vaultIndex", media: "all" %>
+<%= stylesheet_link_tag "vaultIndex", media: "all" %>
+<%#= js_will_paginate @recipes %>
 
 <div class="row align-middle" style="margin-bottom: 15px;">
   <div class="large-8 columns">
@@ -39,6 +40,10 @@
       <% counter = counter +1 %>
 
     <% end %>
+    </div>
+    <%#= will_paginate @good_to_knows %>
+    <div style="float:right">
+      <%= js_will_paginate @good_to_knows %>
     </div>
   </div>
 

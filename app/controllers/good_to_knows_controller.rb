@@ -6,7 +6,8 @@ class GoodToKnowsController < ApplicationController
   # GET /good_to_knows
   # GET /good_to_knows.json
   def index
-    @good_to_knows = GoodToKnow.all
+    # @good_to_knows = GoodToKnow.all
+    @good_to_knows = GoodToKnow.paginate(:page => params[:page], :per_page => 16)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -29,9 +30,11 @@ class GoodToKnowsController < ApplicationController
 
   def search
     if params[:search].present?
+      puts "\n\nTEST 1\n\n"
       @good_to_knows = GoodToKnow.search(params[:search])
     else
-      @good_to_knows = GoodToKnow.all
+      puts "\n\nTEST 2\n\n"
+      @good_to_knows = GoodToKnow.paginate(:page => params[:page], :per_page => 16)
     end
 
     respond_to do |format|
