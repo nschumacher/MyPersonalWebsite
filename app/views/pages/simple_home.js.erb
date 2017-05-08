@@ -1,0 +1,6 @@
+$('#collapseBody').fadeOut("slow");
+$('#collapseBody').promise().done(function(){
+  document.getElementById('collapseBody').innerHTML = "";
+  $('#collapseBody').fadeIn("slow");
+  $('#collapseBody').append("<%= escape_javascript(render(:partial => 'simple_home', :locals => {:remote => true})) %>");
+});
