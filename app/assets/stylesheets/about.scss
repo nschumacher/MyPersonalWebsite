@@ -45,6 +45,9 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	background: transparent;
 	border: none;
 }
+.accordion-item a:focus {
+	background:rgba($base_color_alt_2, .5) !important;
+}
 .accordion-title {
 	border: none;
 	border-bottom: 1px solid $primary_blue_1;
