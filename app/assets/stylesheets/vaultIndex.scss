@@ -1,5 +1,4 @@
 @import 'color_palette';
-@import 'perspective';
 @import 'label_and_summary';
 
 ::-webkit-input-placeholder { /* Chrome */
@@ -130,7 +129,7 @@ input#search {
   padding: 5px 15px;
   text-decoration: none;
   color: white;
-  box-shadow: 1px 1px 4px black;
+  // box-shadow: 1px 1px 4px black;
 }
 #new_button_link:hover {
   background-color: $primary_color_alt_3;

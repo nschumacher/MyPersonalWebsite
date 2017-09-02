@@ -1,5 +1,4 @@
 @import 'color_palette';
-@import 'perspective';
 @import 'label_and_summary';
 a:link {
 	// text-decoration: none;
@@ -34,8 +33,10 @@ td {
 hr {
 	border-color: white;
 }
-.my-accordion-container {
-  // padding: 0px 10px 5px 20px;
+#self-portrait {
+	height: 350px;
+	margin-bottom:5px;
+	border: 3px solid rgba(42, 108, 120, 0.7);
 }
 $accordion-background:rgba($base_color_alt_2, .5) !important;
 $accordion-content-background:rgba($base_color_alt_2, .5) !important;
@@ -73,7 +74,7 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	font-family: 'Share Tech', sans-serif !important;
 	background: transparent;
 	border:none;
-	box-shadow: 6px 6px 10px $primary_box_shadow_color;
+	// box-shadow: 6px 6px 10px $primary_box_shadow_color;
 }
 #chartdiv {
 	height: 230px;
@@ -87,14 +88,18 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	margin-right: 5px;
 	margin-bottom: 10px;
 	padding: 10px;
-	box-shadow: $primary_box_shadow;
+	// box-shadow: $primary_box_shadow;
 	li {
 		font-size: .8em;
 		span {
 			position: relative;
-			left: -15px;
+			left: -10px;
 		}
 	}
+}
+#hobbies_box {
+	background: rgba($base_color_alt_2, .5);
+	padding: 10px;
 }
 .media-object-section{
 	min-width: 125px;
@@ -130,13 +135,16 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 .panel-heading {
 	background-color: rgba($primary_color_alt_2, .5); //rgba(0,110,170,.5);
 	border: 1px solid rgba($primary_color_alt_2, .7);//rgba(0,110,170,.7);
-	box-shadow: $primary_box_shadow;
+	// box-shadow: $primary_box_shadow;
 }
 .panel-group {
 	margin-bottom: 0px;
 }
 .pic {
 	width: 96px;
+}
+.cert_pic {
+	width: 100px;
 }
 .isSelected {
 	border-left: 4px solid white;
@@ -154,7 +162,7 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
   padding: 10px 0px 5px 0px;
   margin-bottom: 10px;
   background-color: rgba($base_color_alt_2, .5);
-  box-shadow: $primary_box_shadow;
+  // box-shadow: $primary_box_shadow;
 
   h1 {
     margin: 0px;
@@ -162,23 +170,3 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
     padding: 0px;
   }
 }
-// @media(max-width:767px) {
-// 	#test {
-// 		max-height: 200px;
-// 	}
-// }
-// @media only screen and (min-width:768px) and (max-width: 900px) {
-// 	#test {
-// 		max-height: 300px;
-// 	}
-// }
-// @media only screen and (min-width:901px)  and (max-width: 1100px) {
-// 	#test {
-// 		max-height: 310px;
-// 	}
-// }
-// @media(min-width:1101px) {
-// 	#test {
-// 		max-height: 400px;
-// 	}
-// }
