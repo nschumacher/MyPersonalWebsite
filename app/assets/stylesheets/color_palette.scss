@@ -10,6 +10,14 @@ $primary_box_shadow: 6px 6px 10px $primary_box_shadow_color;
 $primary_text_shadow: 1px 1px 2px $primary_text_shadow_color;
 
 // Color Pallet
+$gray: rgb(40, 40, 40);
+$purple: rgb(40, 24, 37);
+$green: rgb(24, 40, 26);
+$red: rgb(50, 12, 12); //rgb(40, 12, 12)
+$blue: rgb(23, 32, 42); // (28, 34, 40)
+$light_blue: #2A6C78;
+
+
 $base_color: #232323;
 $base_color_alt_1: #383838;
 $base_color_alt_2: #545454;
@@ -34,7 +42,7 @@ $accent_color_alt_2: #AC000D;
 $accent_color_alt_3: #C6000F;
 $accent_color_alt_4: #CF000F;
 
-$gray: #232323;
+// $gray: #232323;
 $gray_alt_1: #343434;
 $gray_alt_2: #505050;
 $gray_alt_3: #686868;

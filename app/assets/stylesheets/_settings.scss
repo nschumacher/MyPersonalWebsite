@@ -40,7 +40,7 @@
 //  35. Title Bar
 //  36. Tooltip
 //  37. Top Bar
-
+@import 'color_palette';
 @import 'util/util';
 
 // 1. Global
@@ -50,7 +50,9 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
+  // primary: #1779ba,
+  // primary: #2A6C78,
+  primary: $light_blue,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -618,4 +620,3 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-

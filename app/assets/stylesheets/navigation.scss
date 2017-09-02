@@ -1,5 +1,4 @@
 @import 'color_palette';
-@import 'perspective';
 
 .link:hover:visited{
 	text-decoration: none;
@@ -17,7 +16,7 @@
 	text-decoration: none;
 }
 #arctis_logo {
-	width:40px;
+	height: 40px;
 	margin-top: -10px;
 	margin-right: 8px;
 }
@@ -145,9 +144,10 @@
 	border: none;
 }
 .nav li a {
-    position: relative;
-    display: block;
-    padding: 5px 0px;
+	color: #2A6C78;
+  position: relative;
+  display: block;
+  padding: 5px 0px;
 }
 @media (max-width: 1200px) {
     .navbar-header {
@@ -171,8 +171,9 @@
         float: none;
     }
     .navbar-nav>li>a {
-        padding-top: 5px;
-        padding-bottom: 5px;
+			color: #2A6C78;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
     .navbar-text {
         float: none;

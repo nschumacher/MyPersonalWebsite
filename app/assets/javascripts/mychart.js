@@ -4,7 +4,7 @@ AmCharts.makeChart("chartdiv",
 		"categoryField": "skills",
 		"radius" : "34%",
 		"colors": [
-			"#00ace6",
+			"#6C0008",
 			"#aab9f7",
 			"#b6d2ff",
 			"#c9e6f2",

@@ -1,17 +1,12 @@
-<!-- amCharts javascript sources -->
-<!-- <script type="text/javascript" src="http://cdn.amcharts.com/lib/3/radar.js"></script>
-<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/dark.js"></script> -->
 <%= stylesheet_link_tag "about", media: "all" %>
-<%#= javascript_include_tag "mychart", "data-turbolinks-track" => true %>
-<%#= javascript_include_tag "customskillchart", "data-turbolinks-track" => true %>
 
 <!-- Skills & Education -->
 <div class="row" style="margin-bottom: 0px;">
 	<!-- Skill Chart -->
 	<div class="small-12 large-4 columns" style="margin-bottom: 10px">
 		<div class="skillBox" align="center">
-			<%= image_tag("/assets/me_2.jpg", :style=>'height: 350px; margin-bottom:5px; border: 3px solid rgba(42, 108, 120, 0.7)')%><br>
-			<span>I should wear suits more often...</span>
+			<%= image_tag("/assets/me_2.jpg", :id=>'self-portrait')%><br>
+			<span>I wish I owned more suits</span>
 		</div>
 		<div class="skillBox">
 			<span style="font-size: 1.2em;">Skills</span><br>
@@ -26,7 +21,7 @@
 				</tr>
 				<tr>
 					<td><li><span>Relational Databases</span></li></td>
-					<td><li><span>Teamwork</span></li></td>
+					<td><li><span>Salesforce</span></li></td>
 
 				</tr>
 				<tr>
@@ -35,7 +30,7 @@
 				</tr>
 				<tr>
 					<td><li><span>Web Development</span></li></td>
-					<td><li><span>Microsoft Office</span></li></td>
+					<td><li><span>GSuite</span></li></td>
 				</tr>
 				<tr>
 					<td><li><span>Interpersonal Communications</span></li></td>
@@ -53,7 +48,7 @@
 	<div class="small-12 large-8 my-accordion-container">
 
 		<!-- Hobbies/Interests/Fun Facts -->
-		<div>
+		<div id="hobbies_box">
 			<h4 style="color: #2A6C78">Some hobbies, intersts, and fun facts</h4>
 			<ol>
 				<li>I am a very picky eater, but I love food and am always hungry.</li>
@@ -65,7 +60,7 @@
 				<li>I love to play pool. Any bar that has a pool table is immediately cooler in my mind.</li>
 				<li>I am an ambidextrous shooter and fencer, but am a slightly better shot and fencer with the my left hand despite being right handed.</li>
 				<li>I have an interest in IoT and plans to develop smart systems and environments, but my current experience is limited to
-				    tinkering with Tasker, IFTTT, and some smart lights.</li>
+				    tinkering with Tasker, IFTTT, Alexa, and some smart lights.</li>
 				<li>I needed this list to end with a nicely rounded number.</li>
 			</ol>
 		</div>
@@ -102,7 +97,8 @@
 						  </div>
 					  	<div class="media-object-section">
 					    	<h4 class="media-heading">Online Classes</h4>
-					   		I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git version control, Android development, and others. I have also used CodeAcademy.com to further my comfort with Javascript.
+					   		I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git, Android development, and others.
+								I have also used CodeAcademy.com to further my comfort with Javascript.
 					  	</div>
 						</div>
       		</div>
@@ -128,8 +124,11 @@
 						  </div>
 						  <div class="media-object-section">
 						    I am one of 28 recent college graduates hired into the Ascend Program. Ascend is a 90 day rotational program that will teach us the
-								fundamentals of the company enabling us to be effective consultants when we come out of the other end. Appirio is much more than just
+								fundamentals of the company enabling us to be effective consultants when we come out on the other end. Appirio is much more than just
 								a cloud consulting company. Appirio works to enable change and growth via actionable strategies facilitated by cloud technologies.
+								One of Appirio's primary partners is Salesforce with whom we can earn several certifications. My certification(s) are listed below.
+								<br>
+								<img class="cert_pic" src="/assets/sf_certified_admin.png" alt="Certified Admin">
 						  </div>
 						</div>
 	      	</div>
@@ -154,7 +153,7 @@
 						    </a>
 						  </div>
 						  <div class="media-object-section">
-						    As a member of the Quality Management team, I work directly with a team of 4 other individuals to build automated
+						    As a member of the Quality Management team, I worked directly with a team of 4 other individuals to build automated
 								test suites to ensure functionality is maintained as development moves forward on Interactive's PureCloud product.
 						  </div>
 						</div>
@@ -180,7 +179,7 @@
 						    </a>
 						  </div>
 						  <div class="media-object-section">
-						    I worked for the NCAA's Information Services department as a full-stack developer taking part in the Xtern Program through TechPoint. My first project was building a Ruby on Rails web
+						    I worked for the NCAA's Information Services department as a full-stack developer while taking part in the Xtern Program through TechPoint. My first project was building a Ruby on Rails web
 								application written in PL/SQL to house pdf document. My second project was to teach myself Selenium, write the procedures for how the NCAA will automate their web application testing,
 								and give a presentation briefing the other developers on the basics of using Selenium. My final project was a Spring Boot web application to manage and generate internal reports for
 								other departments in the NCAA. Oracle was used for data storage in both web applications.
