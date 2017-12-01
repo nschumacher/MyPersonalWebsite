@@ -7,22 +7,91 @@ var content = "";
     }
   });
 </script>
+<div style="height: 50px;">&nbsp</div>
 
-	<div class="vaultEntry" align="left" style="padding: 10px">
-	  <h4 align="center" style="color: #85B5BE">
+<div class="row align-center large-collapse">
+  <div class="columns small-1 quick-nav">
+    <% if @previous_entry != nil %>
+      <%= link_to '<-<br/>'.html_safe + @previous_entry.title, good_to_know_path(@previous_entry), :class => "thislink hollow button primary" %>
+    <% else %>
+      <button type="button" class="button hollow primary" disabled> <- </button>
+    <% end %>
+  </div>
+	<div class="vault-entry columns small-10">
+	  <h4 align="center">
 	  		<%=@good_to_know.title %>
 	  </h4>
-	  <div style="padding: 10px">
+	  <div class="vault-entry-content">
 	    	<div data-good_to_know="<%= @good_to_know.content %>" id="my_content"></div>
 	  </div>
-	  <div style="padding:8px">
-	      	<div style="color: #85B5BE">Tags:</div>
-	      	<div style="padding-left: 5px">
-	        	<%= @good_to_know.tags %>
-	      	</div>
+	  <div class="vault-entry-tags-container">
+    	<h5 class="vault-entry-tags-label">Tags</h5>
+    	<div class="vault-entry-tags">
+        <% @relatedTags.each do |t| %>
+          <div class="vault-entry-tag">
+            <%= link_to t, search_good_to_knows_path(:search => t), class: 'hollow button warning' %>
+          </div>
+        <% end %>
+    	</div>
 	  </div>
 	  <div align="right">
-	  		<%= link_to 'Edit', edit_good_to_know_path(@good_to_know), style:"color:#85B5BE", :class => "thislink" , :remote => true %> |
-			<%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, style:"color:#85B5BE", :class => "thislink" %>
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_good_to_know_path(@good_to_know), :class => "thislink hollow button primary" %>
+        <%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, :class => "thislink hollow button alert" %>
+      <% else %>
+        <%= link_to 'Edit', edit_good_to_know_path(@good_to_know), :class => "thislink hollow button primary disabled" %>
+        <%= link_to 'Delete', @good_to_know, method: :delete, data: { confirm: 'Are you sure?'}, :class => "thislink hollow button alert disabled" %>
+      <% end %>
 	  </div>
   </div>
+  <div class="columns small-1 quick-nav" align="right">
+    <% if @next_entry != nil %>
+      <%= link_to '-><br/>'.html_safe + @next_entry.title, good_to_know_path(@next_entry), :class => "thislink hollow button primary" %>
+    <% else %>
+      <button type="button" class="button hollow primary" disabled> -> </button>
+    <% end %>
+  </div>
+</div>
+
+<hr>
+
+<h4 align="center" id="related-entries-title">Related Entries</h4>
+<% if @related.length > 0 %>
+  <div class="row" id="vault_container">
+    <% counter = 0 %>
+    <% @related.each do |r| %>
+      <div class="large-3 columns">
+        <div class="card-user-profile">
+          <img class="card-user-profile-img" src="https://pre00.deviantart.net/6eb0/th/pre/f/2013/318/9/2/grungy_blue_texture_by_waitq-d6u7g9q.jpg" alt="picture of space" />
+          <div class="card-user-profile-content card-section">
+            <div class="card-user-profile-avatar">
+              <img src="http://aravindsagar.github.io/EasyLock/images/app_icon.png" alt="lock icon" />
+            </div>
+            <p class="card-user-profile-name"><%= r.title %></p>
+            <p class="card-user-profile-status"><%= r.tags %></p>
+            <p class="card-user-profile-info" data-good_to_know="<%=h truncate(r.content, :length => 200) %>" id="my_content_<%= counter %>"></p>
+          </div>
+
+          <div class="card-user-profile-actions">
+            <%= link_to 'Open', good_to_know_path(r), :class => "thislink card-user-profile-button hollow button secondary" %>
+            <% if user_signed_in? %>
+    					<%= link_to 'Edit', edit_good_to_know_path(r), :class => "thislink card-user-profile-button hollow button primary" %>
+    				<% else %>
+    					<%= link_to 'Edit', edit_good_to_know_path(r), :class => "thislink card-user-profile-button hollow button primary disabled" %>
+    				<% end %>
+          </div>
+        </div>
+      </div>
+      <script>
+        var my_content = "";
+        my_content = document.getElementById("my_content_<%= counter %>").getAttribute("data-good_to_know");
+        if(my_content != "" && my_content != null) {
+          document.getElementById("my_content_<%= counter %>").innerHTML = my_content;
+        }
+      </script>
+      <% counter = counter +1 %>
+    <% end %>
+  </div>
+<% else %>
+  <h6 align="center">No Related Entries</h6>
+<% end %>

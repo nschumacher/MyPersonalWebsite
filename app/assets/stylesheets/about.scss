@@ -1,42 +1,23 @@
 @import 'color_palette';
 @import 'label_and_summary';
-a:link {
-	// text-decoration: none;
-}
+
 .Title:hover {
 	color: white;
 }
 .Title:link {
 	color: white;
 }
-.mylink:hover:visited{
-	color: $primary_blue_1;
-	background-color: transparent;
-}
-.mylink:hover{
-	color: $primary_blue_1;
-	background-color: transparent;
-	text-decoration: none;
-}
-.mylink:link{
-	color: $primary_blue;
-	margin-right: 0px;
-	text-decoration: none;
-}
-.mylink:visited{
-	color: $primary_blue;
-	background-color: none;
-}
+
 td {
 	padding-right: 10px;
-}
-hr {
-	border-color: white;
 }
 #self-portrait {
 	height: 350px;
 	margin-bottom:5px;
-	border: 3px solid rgba(42, 108, 120, 0.7);
+	border: 2px solid $fuschia;
+}
+#self-portrait-comment {
+	color: $stark;
 }
 $accordion-background:rgba($base_color_alt_2, .5) !important;
 $accordion-content-background:rgba($base_color_alt_2, .5) !important;
@@ -83,10 +64,11 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	text-shadow: $primary_text_shadow;
 }
 .skillBox {
-	background: rgba($base_color_alt_2, .5);
-	text-shadow: $primary_text_shadow;
+	background: transparent;
+	border: 1px solid $accent;
+	color: $stark;
 	margin-right: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	padding: 10px;
 	// box-shadow: $primary_box_shadow;
 	li {
@@ -98,8 +80,13 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	}
 }
 #hobbies_box {
-	background: rgba($base_color_alt_2, .5);
+	background: transparent;
+	border: 1px solid $accent;
 	padding: 10px;
+	color: $stark;
+	h4 {
+		color: $fuschia;
+	}
 }
 .media-object-section{
 	min-width: 125px;
