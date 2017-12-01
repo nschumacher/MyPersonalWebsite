@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'pages/inDevelopment'
 
-  root 'pages#simple_home'
+  root 'pages#home'
 
   match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]

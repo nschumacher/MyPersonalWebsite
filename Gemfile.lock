@@ -114,6 +114,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    modernizr-rails (2.7.1)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     nokogiri (1.6.7.2)
@@ -220,6 +221,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   mail_form
+  modernizr-rails
   pg
   rails (= 4.2.4)
   rails_12factor

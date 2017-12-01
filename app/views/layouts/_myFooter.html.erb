@@ -1,23 +1,29 @@
-<div align="center" style="display: inline">
-	<% if user_signed_in? %>
-		<%= link_to('Logout', destroy_user_session_path, :method => :get, id: 'logout') %>
-	<% else %>
-		<%= link_to('Sign In', new_user_session_path, :method => :get, id: 'sign_in') %>
-	<% end %>
-	<a href="https://www.facebook.com/nick.schumacher.357" style="margin-right: 10px">
-		<img src="/images/facebook-icon.png" style="width: 30px">
-	</a>
-	<a href="https://github.com/nschumacher" style="margin-right: 10px">
-		<img src="/images/github.png" style="width: 30px">
-	</a>
-	<a href="https://www.linkedin.com/in/nicholasaschumacher" style="margin-right: 10px">
-		<img src="/images/linkedin-icon.png" style="width: 30px">
-	</a>
-</div>
+<div style="color: #E7DFDD; background: #1D2529;">
+  <div class="row align-justify" style="height: 200px;">
+    <div class="column small-4 align-self-middle">
+      <img class="" src="/assets/email_icon.svg" alt="email" style="width: 25px; margin-right:3px;">
+      nick.schumacher07@gmail.com
+    </div>
+    <div class="column small-4 align-self-middle" align="right">
+      <a href="https://www.facebook.com/nick.schumacher.357" style="margin-right: 5px">
+        <img src="/assets/facebook_icon.svg" style="width: 30px">
+      </a>
+      <a href="https://github.com/nschumacher" style="margin-right: 5px">
+        <img src="/assets/github_icon.svg" style="width: 30px">
+      </a>
+      <a href="https://www.linkedin.com/in/nicholasaschumacher" style="margin-right: 5px">
+        <img src="/assets/linkedin_icon.svg" style="width: 30px;">
+      </a>
+			<div class="hollow button primary" style="display: inline-block; margin-bottom: 0px">
+				<% if user_signed_in? %>
+					<%= link_to('Logout', destroy_user_session_path, :method => :get, id: 'logout') %>
+				<% else %>
+					You are not logged in. You must be logged in to modify the Vault's contents:
+					<%= link_to('Secure Access', new_user_session_path, :method => :get, id: 'sign_in') %>
+				<% end %>
+			</div>
+    </div>
 
-<div align="center" style="display: inline; margin-top: 10px; margin-bottom:0px; text-shadow: 1px 1px 2px #00ACE6; padding: 10px 0px 0px 0px; ">
+  </div>
 
-	<span>
-		©2017 Nick Schumacher
-	</span>
 </div>

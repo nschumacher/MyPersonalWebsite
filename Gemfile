@@ -15,6 +15,8 @@ gem 'rails_12factor', group: :production
 # Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'
 
+gem 'modernizr-rails'
+
 # Foundation
 gem 'foundation-rails'
 

@@ -21,19 +21,19 @@
 
   <div class="">
     <div class="form-group">
-      <%= f.label :title, style:'color: #00ACE6' %><br>
+      <%= f.label :title, style:'color: #A239CA' %><br>
       <%= f.text_field :title, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :content, style:'color: #00ACE6' %><br>
-      <%= f.text_area :content, class: "ckeditor", style: "height: 75px" %>
+      <%= f.label :content, style:'color: #A239CA' %><br>
+      <%= f.text_area :content, class: "ckeditor"%>
     </div>
     <div class="form-group">
-      <%= f.label :tags, "Tags (add/edit tags to make searching easier)", style:'color: #00ACE6' %><br>
+      <%= f.label :tags, "Tags (add/edit tags to make searching easier)", style:'color: #A239CA' %><br>
       <%= f.text_field :tags, class: "form-control" %>
     </div>
     <div class="actions">
-      <%= f.submit 'Submit', :class=> "btn btn-primary"%>
+      <%= f.submit 'Submit', :class=> "hollow button primary"%>
     </div>
   </div>
 <% end %>

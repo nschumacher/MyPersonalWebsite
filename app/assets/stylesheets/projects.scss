@@ -1,8 +1,7 @@
 @import 'color_palette';
-@import 'label_and_summary';
 
 h2{
-	color: $primary_blue;
+	color: $fuschia;
 }
 #my_container{
 	background-color: rgba($primary_color_alt_2,.4);
@@ -23,10 +22,7 @@ h2{
   }
 }
 .sitelink {
-	// background-color: rgba(0,0,0,.6);
-	// padding: 5px;
-	// border-radius: 5px;
-	// text-decoration: none;
+
 	background-color: rgba($base_color_alt_2, .5) !important;
   padding: 5px 15px;
   text-decoration: none;
@@ -34,10 +30,7 @@ h2{
   box-shadow: 1px 1px 4px black;
 }
 .sitelink:link {
-	// background-color: rgba(0,0,0,.6);
-	// padding: 5px;
-	// border-radius: 5px;
-	// text-decoration: none;
+
 	background-color: rgba($base_color_alt_2, .5) !important;
   padding: 5px 15px;
   text-decoration: none;
@@ -51,10 +44,12 @@ h2{
 	border-bottom: 1px solid white;
 	font-size: 18px;
 }
+.orbit {
+	margin: 4px;
+}
 .orbit-container {
-	border: 1px solid rgba($primary_color_alt_2, .7);
-	margin-left: 20px;
-	margin-right: 20px;
+	border: 1px solid $fuschia;
+	margin: 5px 20px;
 }
 input:focus,
 select:focus,
@@ -62,4 +57,53 @@ textarea:focus,
 button:focus,
 .orbit-container:focus {
   outline: none;
+}
+
+
+// ---------------------------------------------------------
+
+$social-button-size: 2.5rem;
+$social-button-border-width: .125rem;
+$social-button-font-size: 1.25rem;
+$social-button-line-height: 1.8em;
+$social-button-border-radius: 1.6875rem;
+$social-button-transition: 0.5s ease all;
+$social-button-margin: .25rem;
+
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-linkedin: #007bb5;
+$social-brand-google-plus: #dd4b39;
+
+@mixin social-button($brand-color, $brand-icon) {
+  background: $brand-color;
+
+  &:before {
+    font-family: "FontAwesome";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: $white;
+    border-color: $brand-color;
+  }
+}
+
+.news-image-gallery-container {
+  background-color: transparent;
+  padding: 2rem 1.5rem 1rem;
+
+	.projects-container {
+		border: 1px solid $accent;
+		padding-top: 15px;
+	}
+
+
+  .news-image-gallery-title {
+    margin-top: .5rem;
+		color: $accent;
+  }
+
 }

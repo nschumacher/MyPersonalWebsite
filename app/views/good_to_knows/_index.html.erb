@@ -19,7 +19,7 @@
    <% @good_to_knows.each do |good_to_know| %>
      <div class="entryContainer">
          <div class="entry" align="left" style="padding: 8px">
-           <%= link_to good_to_know.title, good_to_know_path(good_to_know.id), :remote => true, :class => 'entryLinks' %>
+           <%= link_to good_to_know.title, good_to_know_path(good_to_know.id), :class => 'entryLinks' %>
          </div>
      </div>
      <script>

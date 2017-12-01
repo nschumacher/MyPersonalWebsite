@@ -1,0 +1,73 @@
+<%= stylesheet_link_tag "vaultIndex", media: "all" %>
+
+<h2 align="center">The Vault</h2>
+<div class="row" id="vault_intro" align="center">
+  The Vault is a collection of technical knowledge I have picked up over the years and felt the need to document.
+  Recently, I have started to use it like a blog. Feel free to peruse and utilize the knowledge!
+</div>
+
+<div class="row align-middle" style="margin-bottom: 15px;">
+ <div class="large-8 columns">
+   <%= form_tag search_good_to_knows_path, method: :get, id: "mysearch" do %>
+     <%= text_field_tag :search, params[:search], class: "", :placeholder => 'Search the Vault' %>
+   <% end %>
+ </div>
+   <div class="large-4 columns" align="right">
+     <%= button_to "New Entry", new_good_to_know_path, :method => 'get',  :class =>"hollow button primary", :id =>"new_button" %>
+ </div>
+</div>
+
+
+<div class="row align-center" id="vault_container">
+  <div style="height: 1px; margin-bottom: 10px"></div>
+
+
+    <% counter = 0 %>
+    <div class="row">
+    <% @good_to_knows.each do |good_to_know| %>
+
+      <div class="large-3 columns">
+        <%= link_to good_to_know_path(good_to_know.id), :class=>'entry_content' do %>
+        <div class="card-user-profile">
+          <img class="card-user-profile-img" src="https://pre00.deviantart.net/6eb0/th/pre/f/2013/318/9/2/grungy_blue_texture_by_waitq-d6u7g9q.jpg" alt="picture of space" />
+          <div class="card-user-profile-content card-section">
+            <div class="card-user-profile-avatar">
+              <img src="http://aravindsagar.github.io/EasyLock/images/app_icon.png" alt="picture of yeti" />
+            </div>
+            <p class="card-user-profile-name"><%=good_to_know.title%></p>
+            <p class="card-user-profile-status"><%=good_to_know.tags%></p>
+            <p class="card-user-profile-info" data-good_to_know="<%=h truncate(good_to_know.content, :length => 200) %>" id="my_content_<%= counter %>"></p>
+          </div>
+
+          <div class="card-user-profile-actions">
+            <%= link_to 'Open', good_to_know_path(good_to_know), :class => "thislink card-user-profile-button hollow button secondary" %>
+            <% if user_signed_in? %>
+              <%= link_to 'Edit', edit_good_to_know_path(good_to_know), :class => "thislink card-user-profile-button hollow button primary" %>
+            <% else %>
+              <%= link_to 'Edit', edit_good_to_know_path(good_to_know), :class => "thislink card-user-profile-button hollow button primary disabled" %>
+            <% end %>
+
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <script>
+        var content = "";
+        my_content = document.getElementById("my_content_<%= counter %>").getAttribute("data-good_to_know");
+        if(my_content != "" && my_content != null) {
+          document.getElementById("my_content_<%= counter %>").innerHTML = my_content;
+        }
+      </script>
+      <% counter = counter +1 %>
+
+    <% end %>
+    </div>
+    <div style="float:right">
+      <%= will_paginate @good_to_knows %>
+    </div>
+
+
+  <% counter = 0 %>
+
+</div>

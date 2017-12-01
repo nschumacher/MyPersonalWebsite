@@ -1,4 +1,7 @@
-<%= stylesheet_link_tag "about", media: "all" %>
+<%= javascript_include_tag "chart_radar" %>
+<%= javascript_include_tag "chart_dark_theme" %>
+<%= javascript_include_tag "customskillchart" %>
+<%= javascript_include_tag "mychart" %>
 
 <!-- Skills & Education -->
 <div class="row" style="margin-bottom: 0px;">
@@ -6,7 +9,7 @@
 	<div class="small-12 large-4 columns" style="margin-bottom: 10px">
 		<div class="skillBox" align="center">
 			<%= image_tag("/assets/me_2.jpg", :id=>'self-portrait')%><br>
-			<span>I wish I owned more suits</span>
+			<span id="self-portrait-comment"></span>
 		</div>
 		<div class="skillBox">
 			<span style="font-size: 1.2em;">Skills</span><br>
@@ -45,11 +48,11 @@
 	</div>
 
 	<!-- Additional Skills & Education -->
-	<div class="small-12 large-8 my-accordion-container">
+	<div class="small-12 large-8" style="height: 1800px">
 
 		<!-- Hobbies/Interests/Fun Facts -->
 		<div id="hobbies_box">
-			<h4 style="color: #2A6C78">Some hobbies, intersts, and fun facts</h4>
+			<h4 align="center">Some hobbies, intersts, and fun facts</h4>
 			<ol>
 				<li>I am a very picky eater, but I love food and am always hungry.</li>
 				<li>I have been playing golf since I was 5 years old.</li>
@@ -65,243 +68,7 @@
 			</ol>
 		</div>
 
-		<hr>
+		<%= render 'timeline' %>
 
-		<ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true" data-multi-expand="false">
-
-			<!-- Education -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-	          Education <br>
-	          <span class="panel-subTitle"><i>"Education is the most powerful weapon you can use to change the world."</i> -- Nelson Mandela</span>
-	     		</h4>
-      	</a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-					<div class="panel-body">
-      			<div class="media-object">
-					  	<div class="media-object-section">
-					      <img class="pic" src="/images/purdue.png" alt="Purdue">
-					  	</div>
-					  	<div class="media-object-section">
-								<h4 class="media-heading">Purdue University | BS in Computer Science | May 2017 </h4>
-						    I graduated from Purdue University with a Bachelor's in Computer Science. My studies focused on Software Engineering. In my free time, I worked with new
-								technologies trying to diversify my skillset. My interests inlcude, but are not limited to: web development, Android application development, computer security, and scripting. I enjoy attending
-								Hackathons and challenging myself to develop something new in a weekend. For instance, learning a new web development technique then applying it to my personal website or another
-								project I am working on. Another example being setting up a Raspberry Pi as a file server.
-						  </div>
-						</div>
-						<div class="media-object">
-					  	<div class="media-object-section">
-					      <img class="pic" src="/images/online.png" alt="Udemy">
-						  </div>
-					  	<div class="media-object-section">
-					    	<h4 class="media-heading">Online Classes</h4>
-					   		I have taken several online courses through Udemy.com which have enhanced by knowledge and abilities with web development, Git, Android development, and others.
-								I have also used CodeAcademy.com to further my comfort with Javascript.
-					  	</div>
-						</div>
-      		</div>
-	    	</div>
-	  	</li>
-
-			<!-- Appirio -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-          		Appirio<br>
-          		<span class="panel-subTitle"><i>Ascend Consultant</i></span>
-          		<span class="panel-subTitle" style="float:right; margin-right:5px;; margin-right:5px;"><i>Jun 2017 - Present</i></span>
-      		</h4>
-      	</a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-					<div class="panel-body">
-	      		<div class="media-object">
-						  <div class="media-object-section">
-						    <a href="https://www.appirio.com/">
-						      <img class="pic" src="/assets/appirio_logo.png" alt="Appirio">
-						    </a>
-						  </div>
-						  <div class="media-object-section">
-						    I am one of 28 recent college graduates hired into the Ascend Program. Ascend is a 90 day rotational program that will teach us the
-								fundamentals of the company enabling us to be effective consultants when we come out on the other end. Appirio is much more than just
-								a cloud consulting company. Appirio works to enable change and growth via actionable strategies facilitated by cloud technologies.
-								One of Appirio's primary partners is Salesforce with whom we can earn several certifications. My certification(s) are listed below.
-								<br>
-								<img class="cert_pic" src="/assets/sf_certified_admin.png" alt="Certified Admin">
-						  </div>
-						</div>
-	      	</div>
-		    </div>
-	  	</li>
-
-			<!-- Genesys - Interactive Intelligence -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-          		Genesys - Interactive Intelligence<br>
-          		<span class="panel-subTitle"><i>Automation Engineer</i></span>
-          		<span class="panel-subTitle" style="float:right; margin-right:5px;; margin-right:5px;"><i>Oct 2016 - May 2017</i></span>
-      		</h4>
-      	</a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-					<div class="panel-body">
-	      		<div class="media-object">
-						  <div class="media-object-section">
-						    <a href="https://www.inin.com/">
-						      <img class="pic" src="/images/genesys_logo.png" alt="Genesys">
-						    </a>
-						  </div>
-						  <div class="media-object-section">
-						    As a member of the Quality Management team, I worked directly with a team of 4 other individuals to build automated
-								test suites to ensure functionality is maintained as development moves forward on Interactive's PureCloud product.
-						  </div>
-						</div>
-	      	</div>
-		    </div>
-	  	</li>
-
-			<!-- NCAA -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-        		NCAA Information Services  -  Techpoint Xtern Program <br>
-        		<span class="panel-subTitle"><i>Full-Stack Developer | Software Tester</i></span>
-        		<span class="panel-subTitle" style="float:right; margin-right:5px;"><i>June 2016 - August 2016</i></span>
-      		</h4>
-      	</a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-					<div class="panel-body">
-	      		<div class="media-object">
-						  <div class="media-object-section">
-						    <a href="http://www.ncaa.org/">
-						      <img class="pic" src="/images/ncaa.png" alt="NCAA">
-						    </a>
-						  </div>
-						  <div class="media-object-section">
-						    I worked for the NCAA's Information Services department as a full-stack developer while taking part in the Xtern Program through TechPoint. My first project was building a Ruby on Rails web
-								application written in PL/SQL to house pdf document. My second project was to teach myself Selenium, write the procedures for how the NCAA will automate their web application testing,
-								and give a presentation briefing the other developers on the basics of using Selenium. My final project was a Spring Boot web application to manage and generate internal reports for
-								other departments in the NCAA. Oracle was used for data storage in both web applications.
-						  </div>
-						</div>
-		      </div>
-		    </div>
-	  	</li>
-
-			<!-- RSA -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-	          RSA, The Security Division of EMC  -  Purdue Pathmaker Program<br>
-	          <span class="panel-subTitle"><i>Shift Manager | Senior Analyst</i></span>
-	          <span class="panel-subTitle" style="float:right; margin-right:5px;"><i>July 2014 - October 2016</i></span>
-      		</h4>
-      	</a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-      		<div class="panel-body">
-      			<div class="media-object">
-					  	<div class="media-object-section">
-						    <a href="#">
-						      <img class="pic" src="/images/rsa.png" alt="RSA">
-						    </a>
-						  </div>
-					  	<div class="media-object-section">
-								I worked in the Anti-Fraud Command Center(AFCC).<br/>
-								As a Senior Analyst:
-								<ul>
-									<li>I was responsible for detecting and analyzing cyber-crimes (Phishing, Malware, Brand Abuse, etc.).</li>
-									<li>I take prevention steps, terminating online frauds, and performing computer forensic analysis.</li>
-									<li>I have comprehensive knowledge of website structures and related authorities (ISP’s, Registrar, Webhosting, etc.)</li>
-								</ul>
-								As a Shift Manager:
-								<ul>
-									<li>I was the face of RSA and the AFCC communicating with customers to update on attack status and manage their preferences and procedures.</li>
-									<li>I was the leader of the office managing the workflow and optimizing the efficiency of the office in any way I can.</li>
-								</ul>
-						  </div>
-						</div>
-	      	</div>
-	    	</div>
-	  	</li>
-
-			<!-- Android Dev -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-	          Android Developer<br>
-	          <span class="panel-subTitle"><i>Arctis</i></span>
-	          <span class="panel-subTitle" style="float:right; margin-right:5px;"><i>May 2013 - May 2014</i></span>
-		    	</h4>
-		    </a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-					<div class="panel-body">
-      			<div class="media-object">
-					  	<div class="media-object-section">
-					    	<a href="http://play.google.com">
-					      	<img class="pic" src="/images/android.png" alt="Android">
-					    	</a>
-					  	</div>
-					  	<div class="media-object-section">
-					    	In my free time, I am slowly teaching myself how to develop Android applications. I have done some dev work in the past, but that was
-								a while back now.<!--See <a class="mylink" href="/pages/projects">Projects</a> for examples. -->
-					  	</div>
-						</div>
-	      	</div>
-	    	</div>
-	  	</li>
-
-			<!-- Meijer -->
-			<li class="accordion-item">
-				<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-					<h4 class="panel-title">
-	          Meijer<br>
-	          <span class="panel-subTitle"><i>General Merchandise Clerk</i></span>
-	          <span class="panel-subTitle" style="float:right; margin-right:5px;"><i>May 2014 - August 2014</i></span>
-	        </h4>
-		    </a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-					<div class="panel-body">
-      			<div class="media-object">
-					  	<div class="media-object-section">
-						    <a href="#">
-						      <img class="pic" src="/images/meijer.png" alt="Meijer">
-						    </a>
-					  	</div>
-					  	<div class="media-object-section">
-					   		I was responsible for helping customers locate items, stocking shelves, organizing product and keeping shelves clean, organizing and maintaining the backroom, as well as odd tasks around the store.
-					  	</div>
-						</div>
-	      	</div>
-	    	</div>
-	  	</li>
-
-			<!-- Golf -->
-			<li class="accordion-item">
-						<a href="#panel1d" role="tab" class="accordion-title Title" id="panel1d-heading" aria-controls="panel1d">
-	      			<h4 class="panel-title">
-			          Birk BoilerMaker Golf Complex & Coyoted Crossing Golf Course<br>
-			          <span class="panel-subTitle"><i>Cart Staff</i></span>
-			          <span class="panel-subTitle" style="float:right; margin-right:5px;"><i>April 2011 - August 2013</i></span>
-			    	</h4>
-			    </a>
-				<div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-						<div class="panel-body">
-	      			<div class="media-object">
-					  <div class="media-object-section">
-					    <a href="#">
-					      <img class="pic" src="/images/purdueGolf.png" alt="Golf">
-					    </a>
-					  </div>
-					  <div class="media-object-section">
-					   	The role of cart staff is relatively standard accross the golf courses in West Lafayette. My responsibilities included: cleaning, prepping, and staging golf carts, picking the range clean of golf balls, greeting customers, helping with bag drops during outings, and anything else to help the course run more smoothly.
-					  </div>
-					</div>
-	      		</div>
-	    	</div>
-	  	</li>
-
-		</ul><!-- </div> end skills & edu accordion -->
 	</div>
 </div>
-<script src="https://cdn.jsdelivr.net/foundation/6.1.1/js/foundation.accordion.js"></script>
