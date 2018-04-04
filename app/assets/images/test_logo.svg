@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="524" height="524" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+  <polyline points="262 240 170 100 200 70 310 70 340 100 262 240" stroke="#086F9C" stroke-width="2"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+
+  <polyline points="340 100 262 240 170 100" stroke="#086F9C" stroke-width="2"
+      stroke-linecap="butt" fill="none" stroke-linejoin="bevel"/>
+
+  <polyline points="237 280 177 414 144 412 80 310 95 280 237 280" stroke="#086F9C" stroke-width="2"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+
+  <polyline points="95 280 237 280 177 414" stroke="#086F9C" stroke-width="2"
+      stroke-linecap="butt" fill="none" stroke-linejoin="bevel"/>
+
+  <polyline points="287 280 440 280 454 310 384 412 347 414 287 280" stroke="#086F9C" stroke-width="2"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+
+  <polyline points="347 414 287 280 440 280" stroke="#086F9C" stroke-width="2"
+      stroke-linecap="butt" fill="none" stroke-linejoin="bevel"/>
+</svg>

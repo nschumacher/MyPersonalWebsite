@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Nick Schumacher</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/custom_silver_sword.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/personal_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%= stylesheet_link_tag    "application" %>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%#= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag :modernizr %>
 
     <script type="text/javascript">$(function(){ $(document).foundation(); });</script>
@@ -21,19 +20,36 @@
     <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
 
    	<!-- Custom Font -->
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech|Play|Orbitron|Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Catamaran|Maven+Pro|Mr+Dafoe" rel="stylesheet">
+    <!-- Mr Dafoe for Nick signature -->
+    <!-- Catamaran for body -->
+    <!-- Maven Pro for accent font-->
+    <!-- Rajdhani for code -->
 
     <%= yield :javascript_includes %>
+    <%= javascript_include_tag "chart_radar" %>
+    <%= javascript_include_tag "chart_dark_theme" %>
+    <%= javascript_include_tag "customskillchart" %>
+    <%= javascript_include_tag "mychart" %>
 
     <%= stylesheet_link_tag "app", media: "all" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= render 'layouts/navigation3' %>
+    <% unless current_page?('/') || current_page?('/pages/simple_home') %>
+      <%= render 'layouts/navigation2' %>
+    <% end %>
+
     <div class="content">
       <%= yield %>
     </div>
+
     <%= render 'layouts/myFooter' %>
+    <div class="connections">
+      <div align="center" style="color:white; text-align: center">
+        © Nick Schumacher, 2018
+      </div>
+    </div>
   </body>
 </html>

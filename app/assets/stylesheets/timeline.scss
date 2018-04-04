@@ -1,7 +1,7 @@
-$timeline-color: $accent;
+$timeline-color: $gray;
 $timeline-transition: all 0.25s ease-in;
 $timeline-item-card-bg: $white;
-$timeline-item-font-color: $stark;
+$timeline-item-font-color: $gray;
 $timeline-item-card: false;
 $timeline-item-card-radius: $global-radius;
 
@@ -17,13 +17,13 @@ $timeline-item-card-radius: $global-radius;
 
 // Timeline
 .timeline {
-  border: 1px solid $accent;
+  //border: 1px solid $accent;
   margin: 20px auto;
   padding: 20px 10px 20px 10px;
   position: relative;
   transition: $timeline-transition;
   width: 100%;
-  height: 1275px;
+  //height: 1275px;
 
   h4 {
     color: $fuschia;
@@ -33,10 +33,10 @@ $timeline-item-card-radius: $global-radius;
   &::before {
     background: $timeline-color;
     content: '';
-    height: 82%;
-    left: 50%;
+    height: 85%;
+    left: 4%;
     position: absolute;
-    top: 75px;
+    top: 70px;
     width: 3px;
   }
 
@@ -59,15 +59,15 @@ $timeline-item-card-radius: $global-radius;
   }
 
   .timeline-item {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     position: relative;
     @extend %clearfix;
 
     .timeline-icon {
-      background: $timeline-color;
+      background: $gray;
       border-radius: 50%;
       height: 50px;
-      left: 50%;
+      left: 3%;
       margin-left: -23px;
       overflow: hidden;
       position: absolute;
@@ -87,23 +87,23 @@ $timeline-item-card-radius: $global-radius;
     }
 
     .timeline-content {
-      padding: 0px;
-      text-align: right;
+      padding: 0px 0px 0px 85px;
+      //text-align: right;
       transition: $timeline-transition;
-      width: 46%;
+      //width: 46%;
 
       @if $timeline-item-card == true {
         background: $timeline-item-card-bg;
         border-radius: $timeline-item-card-radius;
 
         p {
-          color: $black;
+          //color: $void;
         }
       } @else {
         background: transparent;
 
         p {
-          color: $timeline-item-font-color;
+          //color: $timeline-item-font-color;
         }
       }
 
@@ -118,11 +118,13 @@ $timeline-item-card-radius: $global-radius;
         font-weight: bold;
         margin-bottom: 0;
         color: $fuschia;
+        text-shadow: 1px 1px 0px black;
       }
 
       .timeline-content-title {
         font-size: 18px;
-        color: $accent;
+        color: $stark;
+        text-shadow: 1px 1px 0px black;
       }
 
       .timeline-content-month {
@@ -132,7 +134,7 @@ $timeline-item-card-radius: $global-radius;
       }
 
       &.right {
-        float: right;
+        //float: right;
         text-align: left;
       }
     }
