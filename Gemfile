@@ -9,7 +9,7 @@ gem 'searchkick'
 gem 'activesupport'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-gem 'pg', group: :production
+gem 'pg','~> 0.21.0', group: :production
 gem 'rails_12factor', group: :production
 
 # Gemfile for Rails 3+, Sinatra, and Merb
