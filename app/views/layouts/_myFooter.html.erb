@@ -18,7 +18,6 @@
 				<% if user_signed_in? %>
 					<%= link_to('Logout', destroy_user_session_path, :method => :get, id: 'logout') %>
 				<% else %>
-					You are not logged in. You must be logged in to modify the Vault's contents:
 					<%= link_to('Secure Access', new_user_session_path, :method => :get, id: 'sign_in') %>
 				<% end %>
 			</div>

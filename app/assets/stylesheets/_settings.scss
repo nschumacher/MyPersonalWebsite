@@ -63,7 +63,8 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $stark;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+//$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family:'Catamaran', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -371,7 +372,7 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $accent;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
@@ -402,7 +403,7 @@ $label-radius: $global-radius;
 // 21. Media Object
 // ----------------
 
-$mediaobject-margin-bottom: $global-margin;
+$mediaobject-margin-bottom: 1.5rem;//$global-margin;
 $mediaobject-section-padding: $global-padding;
 $mediaobject-image-width-stacked: 100%;
 
@@ -578,7 +579,7 @@ $tab-content-padding: 1rem;
 // 34. Thumbnail
 // -------------
 
-$thumbnail-border: solid 4px $white;
+$thumbnail-border: none; //solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
@@ -588,9 +589,9 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $void;
+$titlebar-background: #26292c;//$void;
 $titlebar-color: $white;
-$titlebar-padding: 0.5rem;
+$titlebar-padding: 0px;//0.5rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
 $titlebar-icon-color-hover: $medium-gray;

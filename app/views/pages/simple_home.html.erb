@@ -1,5 +1,5 @@
 <!-- Navigation pane -->
-<%= render 'layouts/navigation2' %>
+<%= render 'layouts/nav' %>
 <%= javascript_include_tag "chart_radar" %>
 <%= javascript_include_tag "chart_dark_theme" %>
 <%= javascript_include_tag "customskillchart" %>
@@ -7,29 +7,29 @@
 
 <div class="sections">
 	<!-- Intro Section -->
-	<section style="padding-top: 50px; padding-bottom: 100px;">
+	<section style="padding-top: 100px; padding-bottom: 100px; background-image: url('/assets/hawaii_landscape2.jpg'); min-height: 600px; background-position: left;">
 		<div class="row align-middle">
-			<div class="small-9 columns">
+			<div class="small-12 columns">
 				<!-- <h1 style="text-align: center">Hi!</h1> -->
-				<div style="text-align: center">
-					<br><br>
-					<h4>Purdue Computer Science graduate, security enthusiast, and self-taught web developer</h4>
-					<br>
-					<h4>A diverse skillset and love for a good challenge</h4>
-					<br>
-					Check out my current projects and send me an email if you have questions<br>
-					or any new challenges for me!
-					<br><br>
+				<div style="text-align: left; text-shadow: 1px 0px 3px black;">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<h1 style="margin-bottom: 10px"><b>Hi</b>, <span>my name is</span> &nbsp;<span style="font-family: 'Mr Dafoe', cursive; font-size: 55px; color: #086F9C">Nick</span></h1>
+					<h5>Partner Certified Salesforce consultant, tech connoisseur, security enthusiast<br/>
+						and diversified developer</h5>
+					<br/><br/><br/><br/><br/>
+					<div style="transform: rotate(-90deg); display: inline-block; float: right; font-size: 16px; text-shadow: 1px 0px 3px black;">
+						&larr; About me
+					</div>
 				</div>
 			</div>
-			<div class="columns" align="center">
+			<!--<div class="columns" align="center">
 				<img id="interests_pic" src="/assets/me_3.png" alt="Interests" style="border: 1px solid #8E000A; border-radius: 255px;">
-			</div>
+			</div>-->
 		</div>
 	</section>
 
 	<!-- Contact Divider -->
-	<div class="connections">
+	<!--<div class="connections">
 		<div class="row">
 			<div class="small-3 small-offset-1 large-offset-2 columns" id="my_email">
 				<img class="" src="/assets/email.png" alt="email" style="width: 25px; margin-right:3px;">
@@ -49,69 +49,106 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 	<!-- Magellen scrollpoint -->
 	<div class="scrollpoint" id="first" data-magellan-target="first">&nbsp</div>
 
 	<!-- About Section -->
-	<section>
-		<h3 style="text-align: center">Get to Know Me</h3>
+	<section style="background:white; color:black; padding-top:0px; padding-bottom:0px;">
 		<%= render 'about' %>
 	</section>
 
-	<!-- Projects Divider -->
-	<div class="connections">
-		<div class="row">
-			<div class="small-12" align="center">
-				<div align="center" style="display: inline">
-					If you have any questions, shoot me an email and I'll respond asap!
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Magellen scrollpoint -->
 	<div class="scrollpoint" id="second" data-magellan-target="second">&nbsp</div>
 
-	<!-- Projects Section -->
-	<section>
-		<h3 style="text-align: center">Projects</h3>
-		<%= render 'projects2' %>
+	<section style="background:#26292c;">
+		<div class="row">
+			<div class="large-9">
+				<%= render 'skills_section' %>
+			</div>
+			<div class="large-3 columns" style="padding-top: 80px; margin-top: 20%;" align="right">
+				<div style="transform: rotate(-90deg); display: inline-block; font-size: 16px; margin-bottom: 50px;">
+					&larr; My Experience
+				</div>
+				<h1>
+					My<br/>
+					<span style="color:#086F9C;margin-top: -25px;margin-left: -3px;display: inherit;">Skills</span>
+				</h1>
+			</div>
+		</div>
 	</section>
 
-	<!-- Vault Login Divider -->
+	<div class="scrollpoint" id="third" data-magellan-target="third">&nbsp</div>
+
+	<section style="background:#086F9C;">
+		<div class="row" id="cont">
+			<!--<div class="large-3 columns" data-sticky-container style="padding-top: 80px; margin-top: 10%;" align="left">-->
+			<div class="large-3 columns" data-sticky-container style="margin-top:50px" align="left">
+				<div class="sticky" data-margin-bottom="2" data-margin-top="6" data-sticky data-anchor="cont">
+					<div style="transform: rotate(-90deg); display: inline-block;; font-size: 16px; margin-bottom: 50px;">
+						&larr; The Vault
+					</div>
+					<h1>
+						My<br/>
+						<span style="color:#26292c;margin-top: -25px;margin-left: -3px;display: inherit;">Experience</span>
+					</h1>
+				</div>
+				<div>&nbsp;<br/></div>
+			</div>
+			<div class="large-9">
+				<%= render 'timeline' %>
+			</div>
+		</div>
+	</section>
+
+	<!-- Magellen scrollpoint -->
+	<div class="scrollpoint" id="fourth" data-magellan-target="fourth">&nbsp</div>
+
+	<!-- Projects Section
+	<section>
+		<h3 style="text-align: center">Projects</h3>
+		<%#= render 'projects2' %>
+	</section>-->
+
+	<!-- Vault Login Divider
 	<div class="connections">
 		<div class="row">
 			<div class="small-8 small-offset-2" align="center">
 				<div align="center" style="display: inline">
-					<% if user_signed_in? %>
+					<%# if user_signed_in? %>
 						You are logged in. Feel free to modify the Vault's contents:
-						<%= link_to('Logout', destroy_user_session_path, :method => :get, id: 'logout') %>
-					<% else %>
+						<%#= link_to('Logout', destroy_user_session_path, :method => :get, id: 'logout') %>
+					<%# else %>
 						You are not logged in. You must be logged in to modify the Vault's contents:
-						<%= link_to('Sign In', new_user_session_path, :method => :get, id: 'sign_in') %>
-					<% end %>
+						<%#= link_to('Sign In', new_user_session_path, :method => :get, id: 'sign_in') %>
+					<%# end %>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Magellen scrollpoint -->
-	<div class="scrollpoint" id="third" data-magellan-target="third">&nbsp</div>
+	</div>-->
 
 	<!-- Vault Section -->
-  <section>
-		<h3 style="text-align: center">The Vault</h3>
-		<div id="collapseBody">
-			<%= render '/good_to_knows/index3' %>
+  <section style="background: white;">
+		<div class="row align-middle" style="color: black">
+			<div class="large-9" align="center">
+				<div style="font-size: 20px">
+					<img src="/assets/vault_icon_1.png" alt="The Vault" style="margin-bottom: 50px; width: 100px;"/><br/>
+					The Vault is a collection of technical knowledge I have picked up over the years and felt the need to document.
+				  Recently, I have started to use it like a blog. Feel free to peruse and utilize the knowledge!
+				</div>
+				<div align="center" style="margin-top: 50px;">
+					<%= button_to "Enter the Vault", good_to_knows_path, :method => "get", :style => 'border-radius: 20px;', :class => 'button' %>
+				</div>
+			</div>
+			<div class="large-3 columns" style="padding-top: 0px; margin-top: 15%;" align="right">
+				<div style="transform: rotate(-90deg); display: inline-block;; font-size: 16px; margin-bottom: 50px;">
+					My Experience &rarr;
+				</div>
+				<h1>
+					The<br/>
+					<span style="color:#086F9C; margin-top: -25px; margin-left: -3px; display: inherit;">Vault</span>
+				</h1>
+			</div>
 		</div>
 	</section>
-
-	<!-- Footer -->
-	<div class="connections">
-		<div align="center" style="color:white; text-align: center">
-			© Nick Schumacher, 2017
-		</div>
-	</div>
 </div>

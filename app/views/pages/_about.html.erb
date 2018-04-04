@@ -3,9 +3,63 @@
 <%= javascript_include_tag "customskillchart" %>
 <%= javascript_include_tag "mychart" %>
 
-<!-- Skills & Education -->
+<div class="row">
+	<!-- Title Div -->
+	<div class="small-12 large-2 columns" style="padding-top: 80px; margin-top: 300px;">
+		<div style="transform: rotate(-90deg); display: inline-block;; font-size: 16px; margin-bottom: 50px;">
+			&larr; My Skills
+		</div>
+		<h1>
+			About<br>
+			<span style="color:#086F9C;margin-top: -25px;margin-left: -3px;display: inherit;">Me</span>
+		</h1>
+	</div>
+
+	<!-- Story Div -->
+	<div class="small-12 large-6" style="padding-top: 50px; padding-right: 45px">
+		<br><h5>
+			<b>Hello! I am Nick Schumacher, Partner Certified Salesforce Consultant and Developer based
+			in Indianapolis.</b>
+		</h5><br>
+
+		I graduated from Purdue University with a Bachelor's degree in Computer Science. After working in cyber security,
+		automated testing, and web development, my interest in consulting has evolved into a passion as I work for Appirio.<br><br>
+
+		My consulting role at Appirio is that of a Salesforce developer. Developing for the Lightning Experience has become
+		my specialty as I find building complex systems in the framework to be both challenging and extremely satisfying.<br><br>
+
+		While solving complex problems with code will always be entertaining, I do find other ways to relax. I am an avid
+		golfer and movie lover who loves trying new beers just as much as working out. Much of my free time is spent with friends,
+		but I also enjoy learning about new technologies and diversifying my development skills.
+		<br><br>
+		<span style="font-family: 'Mr Dafoe', cursive; font-size: 35px; display: inline-block; margin-left: 15px">Nick Schumacher</span>
+		<br>
+
+		<div style="margin-top: 20px;">
+			<a href="https://www.facebook.com/nick.schumacher.357" style="margin-right: 10px">
+				<img src="/assets/facebook_icon.svg" style="width: 30px">
+			</a>
+			<a href="https://github.com/nschumacher" style="margin-right: 10px">
+				<img src="/assets/github_icon.svg" style="width: 30px">
+			</a>
+			<a href="https://www.linkedin.com/in/nicholasaschumacher" style="margin-right: 10px">
+				<img src="/assets/linkedin_icon.svg" style="width: 30px;">
+			</a>
+		</div>
+	</div>
+
+	<!-- Portrait Div -->
+	<div class="small-12 large-4">
+		<%= image_tag("/assets/me_2.jpg", :id=>'self-portrait')%>
+	</div>
+
+</div>
+
+
+
+<!-- Skills & Education ->
 <div class="row" style="margin-bottom: 0px;">
-	<!-- Skill Chart -->
+	<!- Skill Chart ->
 	<div class="small-12 large-4 columns" style="margin-bottom: 10px">
 		<div class="skillBox" align="center">
 			<%= image_tag("/assets/me_2.jpg", :id=>'self-portrait')%><br>
@@ -45,30 +99,12 @@
 			<div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
-	<!-- Additional Skills & Education -->
-	<div class="small-12 large-8" style="height: 1800px">
 
-		<!-- Hobbies/Interests/Fun Facts -->
-		<div id="hobbies_box">
-			<h4 align="center">Some hobbies, intersts, and fun facts</h4>
-			<ol>
-				<li>I am a very picky eater, but I love food and am always hungry.</li>
-				<li>I have been playing golf since I was 5 years old.</li>
-				<li>I am quite fond of beer and trying new ones! I fancy myself a beer connoisseur in training.</li>
-				<li>I am fluent in English, sarcasm, and movie quotes. I also have an elementary proficiency in Spanish that I use to yell back at Dora.</li>
-				<li>I like staying up late swapping manly stories, and, in the morning, making waffles.</li>
-				<li>I like web development and design, but I also understand my design skills are lacking. Constructive criticism and pro tips are always welcome!</li>
-				<li>I love to play pool. Any bar that has a pool table is immediately cooler in my mind.</li>
-				<li>I am an ambidextrous shooter and fencer, but am a slightly better shot and fencer with the my left hand despite being right handed.</li>
-				<li>I have an interest in IoT and plans to develop smart systems and environments, but my current experience is limited to
-				    tinkering with Tasker, IFTTT, Alexa, and some smart lights.</li>
-				<li>I needed this list to end with a nicely rounded number.</li>
-			</ol>
-		</div>
-
-		<%= render 'timeline' %>
+<!--<div class="row">
+		<div class="large-12" style="">
+		<%#= render 'timeline' %>
 
 	</div>
-</div>
+</div>-->

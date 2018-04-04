@@ -12,9 +12,9 @@ td {
 	padding-right: 10px;
 }
 #self-portrait {
-	height: 350px;
-	margin-bottom:5px;
-	border: 2px solid $fuschia;
+	height: 600px;
+	margin-bottom:0px;
+	//border: 2px solid $fuschia;
 }
 #self-portrait-comment {
 	color: $stark;
@@ -89,7 +89,10 @@ $accordion-item-background-hover:rgba($base_color_alt_2, .5) !important;
 	}
 }
 .media-object-section{
-	min-width: 125px;
+	min-width: 55px;
+	h4{
+		color: #086F9C;
+	}
 }
 // THIS ONE
 .panel-body {

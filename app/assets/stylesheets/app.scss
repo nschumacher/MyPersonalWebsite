@@ -12,15 +12,15 @@
   background: rgba($primary_color_alt_2, 0.4);
 }
 /* End Scrollbar styling */
-$body-font-family:'Rajdhani', sans-serif;
+//$body-font-family:'Maven Pro', sans-serif;
 
 body {
   h4{
-    font-family:'Orbitron', sans-serif;
+    //font-family:'Rajdhani', sans-serif;
   }
 }
 .scrollpoint {
-  height: 50px;
+  height: 0px;
   background: $gray;
 }
 .connections {
@@ -40,28 +40,28 @@ body {
 body {
   // background: $gray;
   background: $void;
-  font-family: 'Rajdhani', sans-serif;
+  //font-family: 'Maven Pro', sans-serif;
 }
 
 section {
-  font-family: 'Rajdhani', sans-serif !important;
-  color: $stark;
+  //font-family: 'Rajdhani', sans-serif !important;
+  //color: $stark;
   padding: 40px 0px;
   h1 {
-    text-shadow: $primary_text_shadow;
-    margin-bottom: 40px;
-    font-family: 'Orbitron', sans-serif;
+    //text-shadow: $primary_text_shadow;
+    margin-bottom: 0px;
+    //font-family: 'Rajdhani', sans-serif;
   }
   h3 {
-    text-shadow: $primary_text_shadow;
+    //text-shadow: $primary_text_shadow;
     margin-bottom: 40px;
-    font-family: 'Orbitron', sans-serif;
+    //font-family: 'Rajdhani', sans-serif;
   }
   h4 {
-    font-family: 'Rajdhani', sans-serif;
+    //font-family: 'Rajdhani', sans-serif;
   }
   h6 {
-    font-family: 'Rajdhani', sans-serif;
+    //font-family: 'Rajdhani', sans-serif;
   }
  background: $void; /* For browsers that do not support gradients */
  // background-size: contain;
