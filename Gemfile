@@ -47,7 +47,7 @@ gem 'mail_form'
 gem 'simple_form'
 
 # used for fancy text-area
-gem 'ckeditor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
