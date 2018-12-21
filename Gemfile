@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '5.2.2'
 
 gem 'devise'
 gem 'searchkick'
-gem 'activesupport'
+#gem 'activesupport'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 gem 'pg','~> 0.21.0', group: :production
@@ -17,17 +17,23 @@ gem 'will_paginate', '~> 3.1.0'
 
 gem 'modernizr-rails'
 
+gem 'sprockets'
+gem 'sprockets-es6'
+
 # Foundation
 gem 'foundation-rails'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
+
+# Use Puma as the app server
+gem 'puma', '~> 3.11'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -40,11 +46,11 @@ gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+#gem 'sdoc', '~> 0.4.0', group: :doc
 
 # used for the contact page
-gem 'mail_form'
-gem 'simple_form'
+#gem 'mail_form'
+#gem 'simple_form'
 
 # used for fancy text-area
 gem 'ckeditor', github: 'galetahub/ckeditor'
@@ -68,6 +74,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+    # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'spring'
+    gem 'spring-watcher-listen', '~> 2.0.0'
 end

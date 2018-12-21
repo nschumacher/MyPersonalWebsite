@@ -1,7 +1,7 @@
 class GoodToKnowsController < ApplicationController
   before_action :set_good_to_know, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:new, :edit, :update, :destroy]
-  skip_before_filter  :verify_authenticity_token
+  skip_before_action  :verify_authenticity_token
 
   # GET /good_to_knows
   # GET /good_to_knows.json
