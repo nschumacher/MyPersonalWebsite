@@ -12,6 +12,9 @@ CKEDITOR.editorConfig = function( config )
 
   // Additional plugins
   config.extraPlugins = ' autogrow,googledocs,markdown,youtube';
+  config.autoGrow_bottomSpace = 50;
+  config.autoGrow_minHeight = 300;
+  config.autoGrow_onStartup = true;
 
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
