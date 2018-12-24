@@ -10,30 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2016_07_31_024813) do
+ActiveRecord::Schema.define(version: 2018_12_22_014233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
     t.integer "data_file_size"
-    t.integer "assetable_id"
-    t.string "assetable_type", limit: 30
+    t.string "data_fingerprint"
     t.string "type", limit: 30
     t.integer "width"
     t.integer "height"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
-    t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
-
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "good_to_knows", force: :cascade do |t|
+  create_table "good_to_knows", id: :serial, force: :cascade do |t|
     t.string "title"
     t.string "content"
     t.string "tags"
