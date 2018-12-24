@@ -1,4 +1,4 @@
-class CreateGoodToKnows < ActiveRecord::Migration
+class CreateGoodToKnows < ActiveRecord::Migration[5.2]
   def change
     create_table :good_to_knows do |t|
       t.string :title
