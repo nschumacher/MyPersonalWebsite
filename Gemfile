@@ -10,7 +10,9 @@ gem 'searchkick'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', group: :development
 gem 'pg'
-gem 'rails_12factor', group: :production
+
+# removed due to https://devcenter.heroku.com/articles/getting-started-with-rails5
+#gem 'rails_12factor', group: :production
 
 # Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'
