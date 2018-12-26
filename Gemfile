@@ -6,6 +6,9 @@ gem 'rails', '5.2.2'
 
 gem 'devise'
 gem 'searchkick'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 #gem 'activesupport'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', group: :development
