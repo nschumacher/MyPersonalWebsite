@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# needed for SearchBox https://devcenter.heroku.com/articles/searchbox
+Elasticsearch::Model.client = Elasticsearch::Client.new host: ENV['SEARCHBOX_URL']
+
 module MyWebsite
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

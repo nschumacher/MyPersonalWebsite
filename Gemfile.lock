@@ -82,6 +82,11 @@ GEM
       elasticsearch-transport (= 6.1.0)
     elasticsearch-api (6.1.0)
       multi_json
+    elasticsearch-model (6.0.0)
+      activesupport (> 3)
+      elasticsearch (> 1)
+      hashie
+    elasticsearch-rails (6.0.0)
     elasticsearch-transport (6.1.0)
       faraday
       multi_json
@@ -243,6 +248,8 @@ DEPENDENCIES
   ckeditor!
   coffee-rails
   devise
+  elasticsearch-model
+  elasticsearch-rails
   foreman
   foundation-rails
   jbuilder (~> 2.0)
