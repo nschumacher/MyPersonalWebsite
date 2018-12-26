@@ -54,7 +54,7 @@ gem 'jbuilder', '~> 2.0'
 #gem 'sdoc', '~> 0.4.0', group: :doc
 
 # used for the contact page
-#gem 'mail_form'
+gem 'mail_form'
 gem 'simple_form'
 
 # used for fancy text-area
