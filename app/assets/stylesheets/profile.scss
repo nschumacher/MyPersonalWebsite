@@ -1,0 +1,61 @@
+#profile-left-panel {
+    border-right: 1px solid #818181; 
+    padding-top: 20px;
+    overflow-y: auto;
+    height: -webkit-fill-available;
+}
+
+@media screen and (max-width: 1023px) {
+    #profile-left-panel {
+        border-right: none;
+        border-bottom: 1px solid #818181;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
+#profile-github-hex-icon {
+    position: relative;
+    left: 56px;
+}
+#profile-linkedin-hex-icon {
+    position: relative;
+    top: 21px;
+    left: 28px;
+}
+#profile-twitter-hex-icon {
+    position: relative;
+    top: 21px;
+    right: 27px;
+}
+#profile-fb-hex-icon {
+    position: relative;
+    right: 55px;
+}
+    
+#profile-right-panel {
+    padding-top: 20px;
+}
+    
+.profile-hex-icon {
+    display: inline-block;
+}
+    
+// --- icon positioning -----
+@media screen and (max-width: 350px) {
+    #profile-twitter-hex-icon {
+        position: relative;
+        top: 41px;
+        right: 64px;
+    }
+    #profile-fb-hex-icon {
+        right: 41px;
+        top: -9px;
+    }
+    #profile-linkedin-hex-icon {
+        left: 27px;
+    }
+    #profile-github-hex-icon {
+        left: 55px;
+    }
+}

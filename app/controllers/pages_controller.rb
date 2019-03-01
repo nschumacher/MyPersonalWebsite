@@ -2,6 +2,12 @@ class PagesController < ApplicationController
   def home
   end
 
+  def profile
+  end
+
+  def resume
+  end
+
   def return_home
     respond_to do |format|
       format.js

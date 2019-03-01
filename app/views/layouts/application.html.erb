@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Nick Schumacher</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/personal_logo.png">
+    <title>Sir Nicholas</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/sir_nicholas_blank.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application", media: "all" %>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -21,37 +21,27 @@
 
 
    	<!-- Custom Font -->
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Catamaran|Maven+Pro|Mr+Dafoe" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Maven+Pro|Mr+Dafoe|Megrim|Rubik" rel="stylesheet">
     <!-- Mr Dafoe for Nick signature -->
-    <!-- Catamaran for body -->
+    <!-- Rubik for body -->
     <!-- Maven Pro for accent font-->
     <!-- Rajdhani for code -->
-    <!-- Megrim to be added...4/29 -->
+    <!-- Megrim for @sirnicholas0 -->
 
     <%= yield :javascript_includes %>
-    <%= javascript_include_tag "chart_radar" %>
-    <%= javascript_include_tag "chart_dark_theme" %>
-    <%= javascript_include_tag "customskillchart" %>
-    <%= javascript_include_tag "mychart" %>
 
-    <%= stylesheet_link_tag "app", media: "all" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <% unless current_page?('/') || current_page?('/pages/simple_home') %>
-      <%= render 'layouts/navigation2' %>
-    <% end %>
+    
+    <%= render 'layouts/navigation' %>
 
-    <div class="content">
-      <%= yield %>
+    <div class="main">
+      <!--<div class="content">-->
+        <%= yield %>
+      <!--</div>-->
     </div>
 
-    <%= render 'layouts/myFooter' %>
-    <div class="connections">
-      <div align="center" style="color:white; text-align: center">
-        © Nick Schumacher, 2018
-      </div>
-    </div>
   </body>
 </html>

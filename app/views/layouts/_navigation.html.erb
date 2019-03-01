@@ -1,64 +1,98 @@
-<%= stylesheet_link_tag "navigation", media: "all" %>
+<div class="sidenav">
+  <div style="border-bottom: 1px solid #818181">
+    <a href="/">
+      <img src="/assets/sir_nicholas_blank.png" class="side_nav_icon" style="height: 50px; padding-left: 8px;">
+    </a>
+  </div>
 
-<script>
-$(document).ready(function () {
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
-
-
-
-<div class="navbar navbar-inverse">
-   <div class="container-fluid">
-      <div class="navbar-header" style='margin-top: -7px'>
-         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-         <span class="glyphicon glyphicon-chevron-down"></span>
-         </button>
-
-         <a class="navbar-brand pull-left hidden-xs" href="/" style="color: white">
-         	<img src="/images/arctis-logo.png" id="arctis_logo" class="pull-left">
-         	<div id="top_left_name">Nick Schumacher</div>
-         </a>
-         <a class="navbar-brand pull-left visible-xs" href="/" style="color: white">
-         	<img src="/images/arctis-logo.png" style="width:45px; margin-top: -13px; margin-right: 8px" class="pull-left">
-         </a>
+  <div class="side_nav_icons_container">
+    <!-- Home -->
+    <% if current_page?('/') || current_page?('/pages/home') %>
+    <a href="/">
+      <div id="selected" class="side_nav_icon_container" align="center">
+          <img src="/assets/home_icon.png" class="side_nav_icon">
       </div>
+    </a>
+    <% else %>
+      <a href="/">
+        <div class="side_nav_icon_container" align="center">
+          <img src="/assets/home_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% end %>
+    <!-- End Home -->
+    
+    <!-- Profile -->
+    <% if current_page?('/pages/profile') %>
+      <a href="/pages/profile">
+        <div class="side_nav_icon_container" align="center" id="selected">
+          <img src="/assets/person_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% else %>
+      <a href="/pages/profile">
+        <div class="side_nav_icon_container" align="center">
+          <img src="/assets/person_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% end %>
+    <!-- END Profile-->
 
-      <div class="navbar-collapse collapse">
-         <ul class="nav navbar-nav navbar-right">
-	     	<li>
-          <div class="nav-box" id="home" align="center">
-              <%= link_to 'Home', pages_return_home_path, :remote => true, :id => 'return_home_link', :class => 'link', :style => "color: white; text-shadow: 2px 2px 6px #00ACE6; font-style: italic" %>
-          </div>
-	     	</li>
-	     	<li>
-          <div class="nav-box" id="about" align="center">
-            <%= link_to 'About', pages_about_path, :remote => true, :id => 'about_link', :class => 'link' %>
-          </div>
-	     	</li>
-	     	<li>
-          <div class="nav-box" id="in_development" align="center">
-            <%= link_to 'In Development', pages_inDevelopment_path, :remote => true, :id => 'in_development_link', :class => 'link' %>
-          </div>
-	     	</li>
-	     	<li>
-          <div class="nav-box" id="projects" align="center">
-            <%= link_to 'Projects', pages_projects_path, :remote => true, :id => 'in_development_link', :class => 'link' %>
-          </div>
-	     	</li>
-	     	<li>
-          <div class="nav-box" id="vault" align="center">
-            <%= link_to 'Vault', good_to_knows_path, :remote => true, :id => 'vault_link', :class => 'link' %>
-          </div>
-	     	</li>
-	     	<li>
-            <div class="nav-box" id="contact" align="center">
-              <%= link_to 'Contact', new_contact_path, :remote => true, :id => 'contact_link', :class => 'link' %>
-            </div>
-	     	</li>
-         </ul>
+    <!-- Resume -->
+    <% if current_page?('/pages/resume') %>
+      <a href="/pages/resume">
+        <div class="side_nav_icon_container" align="center" id="selected">      
+          <img src="/assets/resume_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% else %>
+      <a href="/pages/resume">
+        <div class="side_nav_icon_container" align="center">
+          <img src="/assets/resume_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% end %>
+    <!-- End Resume -->
 
-      </div>
-      <!--/.navbar-collapse -->
-   </div>
+    <!-- The Vault -->
+    <% url = request.path_info %>
+    <% if url.include?('/good_to_knows') %>
+      <a href="/good_to_knows">
+        <div class="side_nav_icon_container" align="center" id="selected">
+          <img src="/assets/dev_board_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% else %>
+      <a href="/good_to_knows">
+        <div class="side_nav_icon_container" align="center">
+          <img src="/assets/dev_board_icon.png" class="side_nav_icon">
+        </div>
+      </a>
+    <% end %>
+    <!-- End The Vault -->
+  </div>
+</div>
+
+<div id="top_nav">
+  <a href='/'>
+    <div id="top_nav_logo">
+      <img src="/assets/sir_nicholas_blank.png" class="side_nav_icon" style="height: 50px; padding-left: 8px;">
+    </div>
+  </a>
+  <div id="top_container">
+    <div id="top_nav_icons_container" align="center">
+      <a href="/">
+        <img src="/assets/home_icon.png" class="top_nav_icon" style="">
+      </a>
+      <a href="/pages/profile">
+          <img src="/assets/person_icon.png" class="top_nav_icon" style="">
+      </a>
+      <a href="/pages/resume">
+          <img src="/assets/resume_icon.png" class="top_nav_icon" style="">
+      </a>
+      <a href="/good_to_knows">
+          <img src="/assets/dev_board_icon.png" class="top_nav_icon" style="">
+      </a>
+    </div>
+  </div>
 </div>

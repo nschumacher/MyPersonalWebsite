@@ -6,22 +6,19 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  
   get 'pages/home'
   get 'pages/simple_home'
-
+  get 'pages/profile'
+  get 'pages/resume'
   get 'pages/return_home'
-
   get 'pages/about'
-
   get 'pages/contact'
-
   get 'pages/test'
-
   get 'pages/projects'
-
   get 'pages/inDevelopment'
 
-  root 'pages#simple_home'
+  root 'pages#home'
 
   match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]

@@ -1,12 +1,12 @@
 @import 'color_palette';
 @import 'label_and_summary';
 
-.bod {
+/*.bod {
 	background-color: rgba($base_color_alt_2, .5);
-  margin: 10px 0px 10px 0px;
-  padding: 10px 0px 10px 10px;
-  text-shadow: $primary_text_shadow;
-  box-shadow: $primary_box_shadow;
+	margin: 10px 0px 10px 0px;
+	padding: 10px 0px 10px 10px;
+	text-shadow: $primary_text_shadow;
+	box-shadow: $primary_box_shadow;
 
 	h2 {
 		font-size: 1.2em;
@@ -27,6 +27,9 @@
 
 #pic_box {
 	margin-top: 5px;
+}*/
+#profile-picture-container {
+	margin-top: 30px;
 }
 #home_content {
 	max-height: 455px;
@@ -49,7 +52,7 @@
 	color: $primary_blue;
 }
 #interests_pic {
-	width: 225px;
+	height: 180px;
 }
 
 // Footer
