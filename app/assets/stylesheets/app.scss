@@ -14,7 +14,24 @@
 /* End Scrollbar styling */
 
 body {
+  height: 100% !important;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background: $void;
+  //background-color: #000000;
+  //background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  //background: -webkit-linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  //background:
+    //-webkit-linear-gradient(to left top, #26292c 0%/*bottom-right color*/,#2C3E50 50% /*middle color*/, #000000 100% /*top-left color*/),
+    //-webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))/*"faked" black background make sure to add last or it will appear before the transparent/colored layer*/;
+  //background:
+   //     linear-gradient(to left top, #26292c 0%/*bottom-right color*/,#2C3E50 50% /*middle color*/, #000000 100% /*top-left color*/),
+    //    linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))/*"faked" black background make sure to add last or it will appear before the transparent/colored layer*/;
+  //background: $void;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to left, #BA8B02, #181818 );  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to left, #BA8B02, #181818 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #9e9e9e;
 }
 

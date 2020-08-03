@@ -1,4 +1,4 @@
-<div class="sidenav">
+<!--<div class="sidenav">
   <div style="border-bottom: 1px solid #818181">
     <a href="/">
       <img src="/assets/sir_nicholas_blank.png" class="side_nav_icon" style="height: 50px; padding-left: 8px;">
@@ -6,7 +6,7 @@
   </div>
 
   <div class="side_nav_icons_container">
-    <!-- Home -->
+    <!- Home ->
     <% if current_page?('/') || current_page?('/pages/home') %>
     <a href="/">
       <div id="selected" class="side_nav_icon_container" align="center">
@@ -20,9 +20,9 @@
         </div>
       </a>
     <% end %>
-    <!-- End Home -->
+    <!- End Home ->
     
-    <!-- Profile -->
+    <!- Profile ->
     <% if current_page?('/pages/profile') %>
       <a href="/pages/profile">
         <div class="side_nav_icon_container" align="center" id="selected">
@@ -36,9 +36,9 @@
         </div>
       </a>
     <% end %>
-    <!-- END Profile-->
+    <!- END Profile->
 
-    <!-- Resume -->
+    <!- Resume ->
     <% if current_page?('/pages/resume') %>
       <a href="/pages/resume">
         <div class="side_nav_icon_container" align="center" id="selected">      
@@ -52,9 +52,9 @@
         </div>
       </a>
     <% end %>
-    <!-- End Resume -->
+    <!- End Resume ->
 
-    <!-- The Vault -->
+    <!- The Vault ->
     <% url = request.path_info %>
     <% if url.include?('/good_to_knows') %>
       <a href="/good_to_knows">
@@ -69,7 +69,7 @@
         </div>
       </a>
     <% end %>
-    <!-- End The Vault -->
+    <!- End The Vault ->
   </div>
 </div>
 
@@ -95,4 +95,26 @@
       </a>
     </div>
   </div>
-</div>
+</div>-->
+<nav class="top-bar topbar-responsive" style="background: transparent;">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+    </span>
+    <a href="/">
+      <img src="assets/sir_nicholas_blank.png" id="arctis_logo" class="menu" style="height:25px;">
+    </a>
+  </div>
+  <div id="topbar-responsive" class="topbar-responsive-links">
+    <div class="top-bar-right">
+      <ul class="menu simple vertical medium-horizontal" data-magellan>
+        <li><a href="#first">Home</a></li>
+        <li><a href="#second">About</a></li>
+        <li><a href="#third">Skills</a></li>
+        <li>
+          <%= link_to '<button type="button" class="button hollow topbar-responsive-button">The Vault</button>'.html_safe, good_to_knows_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
